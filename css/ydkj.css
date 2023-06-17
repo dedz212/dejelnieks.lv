@@ -1,0 +1,464 @@
+@font-face {
+    font-family: jack;
+    src: url(../css/JackExtraCond.ttf);
+}
+
+@font-face {
+    font-family: jackl;
+    src: url(../css/JackRoman.ttf);
+}
+
+@font-face {
+    font-family: andalemo;
+    src: url(../css/andalemo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: jack;
+    font-weight: 500;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+}
+
+body {
+    background-color: #000;
+    color: #eeedf1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+
+.boxn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    color: #fa2822;
+    width: 100%;
+    font-size: 3.5em;
+}
+
+p {
+    font-size: 3.5em; 
+    font-weight: 400;
+}
+
+.widthc {
+    width: 900px;
+    text-align: center;
+}
+
+.boxbtn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 3px;
+    right: 15%;
+}
+
+.h {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.old {
+    text-transform: uppercase;
+}
+
+.boxnbox {
+    background: linear-gradient(to top, #15152a, #1d1e34) padding-box,
+              linear-gradient(to bottom, #cccecf, #2b2a2d) border-box;
+    position: relative;
+    border: 0.5em solid transparent;
+    border-radius: 1em;
+    box-shadow: inset 6px 4px 6px 2px #34518f;
+    height: auto;
+}
+
+.stylebtn {
+    width: 44px;
+    height: 28px;
+    margin: 4px;
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    border-radius: 18px;
+    width: 48px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    background: linear-gradient(to top, #273797, #4a84da);
+    background-clip: padding-box;
+    color: #000000;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 3px;
+    box-shadow: 
+    2px 2px 8px 0px rgb(0, 0, 0),
+    0px -4px 6px 0px rgb(0, 0, 0),
+    inset 0px -2px 4px 0px #121d42,
+    inset 0px 2px 4px 0px #a0b2c6;
+}
+
+button.d {
+    background: linear-gradient(to top, #8a2321, #f42c27);
+    background-clip: padding-box;
+    width: 56px;
+    height: 38px;
+    color: #000000;
+    box-shadow: 
+    2px 2px 8px 0px rgb(0, 0, 0),
+    0px -3px 4px 0px #363130,
+    inset 0px -2px 4px 0px #6c211b,
+    inset 0px 2px 4px 0px #d88268;
+}
+
+button.d p {
+    font-size: 32px;
+    text-shadow:
+    1px 1px 4px #5f5346,
+    0px -1px 2px #ea9b97,
+    -0.5px -1.5px 2px #ffffff;
+}
+
+.d {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #9ea0a0;
+    z-index: 10;
+}
+
+.boxbtna {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 3px;
+    right: 22%;
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    100% { transform: translateY(-112px); }
+}
+
+.op {
+    animation: op 0.6s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+  
+@media screen and (max-width: 1855px) {
+    .boxbtna {
+        right: 18%;
+    }
+}
+
+@media screen and (max-width: 1670px) {
+    .boxbtna {
+        right: 16%;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .boxbtna {
+        right: 11%;
+    }
+}
+
+@media screen and (max-width: 1336px) {
+    .boxbtna {
+        right: 3%;
+    }
+}
+
+@media screen and (max-width: 1113px) {
+    .boxbtna {
+        right: 5%;
+        margin-top: 2px;
+    }
+}
+
+
+/* POPUP */
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.active {
+    opacity: 1; 
+    pointer-events: all;
+}
+
+.bg {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bg.content {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 15%;
+    height: 50%;
+    padding: 25px;
+
+    border: none #5e2c0d00;
+    border-top-left-radius: 8% 45%;
+    border-top-right-radius: 8% 45%;
+    border-bottom-right-radius: 8% 45%;
+    border-bottom-left-radius: 8% 45%;
+    background: #fd9147;
+    box-shadow:
+    inset 0 0px 82px 12px #000000,
+    inset 0 0px 20px 10px #6f2c03,
+    inset 0 0px 122px 82px #f95c17;
+}
+
+.content.active {
+    width: 500px;
+    height: 30%;
+}
+
+.actions {
+    background-color: #00000000;
+    cursor: pointer;
+}
+
+.fixmode {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.fixmodebtn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+button.r {
+    background: linear-gradient(to top, #125dcc, #399bfb);
+    background-clip: padding-box;
+    width: 73px;
+    height: 48px;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 
+    2px 2px 8px 0px rgb(0, 0, 0),
+    0px -4px 6px 0px #fc7b2b,
+    inset 0px -2px 8px 0px rgb(0, 0, 0),
+    inset 0px 2px 8px 0px rgb(255, 255, 255);
+}
+
+button.s {
+    background: linear-gradient(to top, #106b31, #40bf6b);
+    background-clip: padding-box;
+    width: 73px;
+    height: 48px;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 
+    2px 2px 8px 0px rgb(0, 0, 0),
+    0px -4px 6px 0px #fc7b2b,
+    inset 0px -2px 8px 0px #0e3d29,
+    inset 0px 2px 8px 0px #6ec493;
+}
+
+button.p {
+    background: linear-gradient(to top, #ac23b0, #dd72d6);
+    background-clip: padding-box;
+    width: 73px;
+    height: 48px;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 
+    2px 2px 8px 0px #773200,
+    0px -4px 6px 0px #f15c0f,
+    inset 0px -5px 10px 0px #732b53,
+    inset 0px 3px 3px 0px #dd7bd0;
+}
+
+button.r p,
+button.s p,
+button.p p {
+    color: #000000;
+    font-size: 48px;
+    text-shadow: -0.5px -0.5px 4px #ffffff95;
+    transform: translate(-3px, 0px);
+}
+
+button.p p {
+    transform: translate(-3px, -5px);
+}
+
+p.r,
+p.s {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    padding: 16px;
+    font-size: 52px;
+    color: #000001;
+    text-shadow: 1px 4px 5px #f95c17;
+}
+
+p.v {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 52px;
+    color: #000001;
+    text-shadow: 1px 4px 5px #b74d00;
+}
+  
+#volume-indicator {
+    display: flex;
+    background-color: #dddddd00;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-level {
+    width: 16px;
+    height: 10px;
+    border: none #00000000;
+    border-radius: 16px;
+    background-color: #000001;
+    box-shadow:
+    inset 0px 1px 2px 0px #ffffff,
+    inset 0px 3px 2px 0px #ffffff50;
+    z-index: 10;
+}
+
+.volume-level:nth-child(1) {
+    width: 48px;
+    margin: 1px;
+    height: 4px;
+}
+
+.volume-level:nth-child(2) {
+    width: 52px;
+    margin: 2px;
+    height: 6px;
+}
+
+.volume-level:nth-child(3) {
+    width: 56px;
+    margin: 3px;
+    height: 6px;
+}
+
+.volume-level:nth-child(4) {
+    width: 64px;
+    margin: 3.5px;
+    height: 8px;
+}
+
+.volume-level:nth-child(5) {
+    width: 72px;
+    margin: 4px;
+    height: 10px;
+}
+
+.i {
+    font-size: 32px;
+}

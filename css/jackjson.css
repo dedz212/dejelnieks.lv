@@ -1,0 +1,90 @@
+* {
+    color: var(--bgon);
+}
+
+#header {
+    background-color: var(--hbg);
+    padding: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#jsoncontent {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+}
+
+section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: center;
+    padding: 16px;
+    margin: 16px;
+    background-color: #2e3cc1;
+    border-radius: 8px;
+    border: solid;
+}
+
+#value {
+    text-align: right;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#text {
+    text-align: left;
+    padding:8px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+#padd {
+    padding: 8px;
+}
+
+input {
+    width: 1000px;
+    color: var(--cron);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+select, option {
+    color: #000;
+}
+
+#list {
+    padding: 16px;
+}
+
+#list li {
+    padding: 16px;
+    border: var(--abtn) solid 6px;
+    border-radius: 0.5vw;
+    width: 500px;
+}
+
+#list li a{
+    color: var(--abtn);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.b a{
+    color: var(--abtn);
+}

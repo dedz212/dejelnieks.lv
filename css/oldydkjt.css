@@ -1,0 +1,562 @@
+:root {
+    --jackbodyw: 1437px;
+}
+
+body {
+    animation: op 0.6s ease-in-out;
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+@font-face {
+    font-family: jack;
+    src: url(JackExtraCond.ttf);
+}
+
+@font-face {
+    font-family: bingo;
+    src: url(HousebrokenClean.ttf);
+}
+* {
+    font-family: jack;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+main {
+    margin-top: 84px;
+    margin-bottom: 84px;
+    padding: 0 32px 0 32px;
+}
+
+a {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tootables {
+    float: left;
+    text-align: center;
+}
+
+header a{
+    font-size: 40.5px;
+    padding: 16px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.text-3d{
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow:0 0px 0 rgb(190,190,190);
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;   
+
+    cursor: pointer;
+    height: 86px;
+    font-size: 24px;
+}
+
+.text-3d:hover {
+    font-size: 40.5px;
+    text-shadow:
+    0 1px 0 rgb(190,190,190),
+    1px 2px 0 rgb(185,185,185),
+    2px 3px 0 rgb(180,180,180),
+    3px 4px 0 rgb(175,175,175),
+    4px 5px 0 rgb(170,170,170),
+    5px 6px 0 rgb(165,165,165),
+    6px 7px 0 rgb(160,160,160),
+    7px 8px 0 rgb(155,155,155),
+    8px 9px 0 rgb(150,150,150),
+
+    0 1px 5px rgba(0,0,0,.05),
+    0 5px 5px rgba(0,0,0,.10),
+    0 10px 10px rgba(0,0,0,.15),
+    0 15px 10px rgba(0,0,0,.20),
+    0 20px 15px rgba(0,0,0,.25);
+    transition: all 0.3s ease-in-out;        
+    cursor: pointer;
+    transform: translate(-51% ,-51%);
+}
+
+.text-3da {
+    text-transform: uppercase;
+    font-size: 40.5px;
+    text-shadow:
+    0 1px 0 rgb(190,190,190),
+    1px 2px 0 rgb(185,185,185),
+    2px 3px 0 rgb(180,180,180),
+    3px 4px 0 rgb(175,175,175),
+    4px 5px 0 rgb(170,170,170),
+    5px 6px 0 rgb(165,165,165),
+    6px 7px 0 rgb(160,160,160),
+    7px 8px 0 rgb(155,155,155),
+    8px 9px 0 rgb(150,150,150),
+
+    0 1px 5px rgba(0,0,0,.05),
+    0 5px 5px rgba(0,0,0,.10),
+    0 10px 10px rgba(0,0,0,.15),
+    0 15px 10px rgba(0,0,0,.20),
+    0 20px 15px rgba(0,0,0,.25);
+    transition: all 0.3s ease-in-out;        
+    cursor: pointer;
+    transform: translate(-51% ,-51%);
+    padding: 0 16px 16px 0;
+}
+
+
+.ninefour {
+    height: 86px;
+}
+
+table.jackbody {
+    border: 0;
+}
+
+hr.jackbody {
+    size: 5;
+    width: var(--jackbodyw);
+}
+
+.jackbody td a {
+    font-size: 40px;
+}
+
+#spinner {
+    margin: 1px;
+    font-size: 96px;
+    text-align: center;
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+#spinner::before,
+#spinner::after {
+    content: "DEMOS";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: rotateY(0.5deg);
+    transform-origin: 0 50%;
+    color: #000000;
+    /*text-shadow:0 0px 90px rgb(190,190,190);*/
+}
+#spinner::after {
+    transform: rotateY(-0.5deg);
+    transform-origin: 100% 50%;
+}
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+}
+@keyframes depth {
+    0% { text-shadow: 0 0 black; }
+    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black, 6px 0 black; }
+    50% { text-shadow: 0 0 black; }
+    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black, -6px 0 black; }
+    100% { text-shadow: 0 0 black; }
+}
+
+h1 {
+    text-align: center;
+    font-size: 96px;
+    margin: 0;
+}
+
+.neon {
+    margin: 1rem auto;
+    animation: neon 1.5s ease infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef0000, 0 0 20px #ef0000a8, 0 0 4px #ef0000a8, 0 0 20px #ef0000a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 1px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #ffffff;
+    }
+}
+
+.wrapper.eight {
+    overflow: hidden;
+    color: transparent;
+    text-align: center;
+}
+.eight .smoke {
+    display: inline-flex;
+}
+.eight span {
+    display: inline-flex;
+    text-shadow: 0 0 0 #f5f5f5;
+    animation: smoke 5s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes smoke {
+    80% {
+        text-shadow: 0 0 40px #f5f5f5;
+    }
+    to {
+        transform: translate3d(12rem, -10rem, 0) skewX(50deg);
+        text-shadow: 0 0 20px #f5f5f5;
+        opacity: 0;
+    }
+}
+
+.eight span:nth-of-type(1) {
+    animation-delay: 3.1s;
+}
+.eight span:nth-of-type(2) {
+    animation-delay: 3.2s;
+}
+.eight span:nth-of-type(3) {
+    animation-delay: 3.3s;
+}
+.eight span:nth-of-type(4) {
+    animation-delay: 3.4s;
+}
+.eight span:nth-of-type(5) {
+    animation-delay: 3.5s;
+}
+.eight span:nth-of-type(6) {
+    animation-delay: 3.6s;
+}
+.eight span:nth-of-type(7) {
+    animation-delay: 3.7s;
+}
+.eight span:nth-of-type(8) {
+    animation-delay: 3.8s;
+}
+.eight span:nth-of-type(9) {
+    animation-delay: 3.9s;
+}
+.eight span:nth-of-type(10) {
+    animation-delay: 4s;
+}
+.eight span:nth-of-type(11) {
+    animation-delay: 4.1s;
+}
+.eight span:nth-of-type(12) {
+    animation-delay: 4.2s;
+}
+.eight span:nth-of-type(13) {
+    animation-delay: 4.3s;
+}
+.eight span:nth-of-type(14) {
+    animation-delay: 4.4s;
+}
+.eight span:nth-of-type(15) {
+    animation-delay: 4.5s;
+}
+.eight span:nth-of-type(16) {
+    animation-delay: 4.6s;
+}
+
+.ho1 {
+    text-align: center;
+    font-size: 96px;
+}
+
+.glow {
+    color: #111;
+}
+
+.text-container > span {
+    text-transform: uppercase;
+    animation: glow 4s ease-in-out infinite;
+    font-family: bingo;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      color: #ddd606;
+      text-shadow: 0 0 100px #efec7c, 0 0 50px #fbf66a;
+    }
+    
+    10%, 90% {
+      color: #111;
+      text-shadow: none;
+    }
+  }
+  
+  .text-container > span:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+  
+  .text-container > span:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+  .text-container > span:nth-child(4) {
+    animation-delay: 0.75s;
+  }
+  
+  .text-container > span:nth-child(5) {
+    animation-delay: 1s;
+  }
+  
+  .text-container > span:nth-child(6) {
+    animation-delay: 1.25s;
+  }
+  
+  .text-container > span:nth-child(7) {
+    animation-delay: 1.5s;
+  }
+
+
+body > header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 84px;
+    overflow: hidden;
+
+    background-color: #ffffff00;
+    display: flex;
+}
+
+.logo {
+    margin: 0;
+    padding: 0 1em;
+    line-height: 84px; /* Centers text vertically */
+
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.logo:hover {
+    background-color: #ffffff00;
+}
+
+.space {
+    flex-grow: 1; /* Causes this element to take up the remaining space, pushing logo and nav to the left and right sides */
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav > ul {
+    margin: 0;
+    padding: 0;
+    line-height: 84px; /* Centers text vertically */
+
+    list-style-type: none;
+}
+
+.nav > ul > li {
+    padding: 0 1em;
+    display: inline-block;
+}
+
+p.fade-in {
+    display: block;
+    border: 0;
+    font-size: 48px;
+    margin: 0;
+    padding: 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.screenblocker {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #000000;
+    z-index: 999;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 4s;
+    animation-fill-mode: forwards;
+  }
+
+  .fade-in.delayed {
+    animation-delay: 4s;
+  }
+
+tbody, table, .glist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+tbody, .glist {
+    width: 100%;
+}
+
+.flexgames {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.contentgame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 16px;
+}
+
+.a {
+    font-size: 48px;
+    text-align: left;
+}
+
+.boxli {
+    background-color: #fff;
+    border: 6px solid #fff;
+    border-radius: 25px;
+    padding: 16px;
+    width: 45%;
+
+    box-shadow:
+    0 1px 0 rgb(190,190,190),
+    1px 2px 0 rgb(185,185,185),
+    2px 3px 0 rgb(180,180,180),
+    3px 4px 0 rgb(175,175,175),
+    4px 5px 0 rgb(170,170,170),
+    5px 6px 0 rgb(165,165,165),
+    6px 7px 0 rgb(160,160,160),
+    7px 8px 0 rgb(155,155,155),
+    8px 9px 0 rgb(150,150,150),
+
+    0 1px 5px rgba(0,0,0,.05),
+    0 5px 5px rgba(0,0,0,.10),
+    0 10px 10px rgba(0,0,0,.15),
+    0 15px 10px rgba(0,0,0,.20),
+    0 20px 15px rgba(0,0,0,.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.boxli h1 {
+    text-transform: uppercase;
+    color:#000000;
+    font-size: 32px;
+}
+
+.boxli p.clp {
+    text-transform: uppercase;
+    color:#000000;
+    font-size: 32px;
+    cursor: default;
+}
+
+.boxli li {
+    list-style-type: square;
+}
+
+#boxli {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.boxli a {
+    color:#000000;
+}
+
+.splite2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+}
+
+@media screen and (max-width: 855px) {
+    .screenblocker {
+        opacity: 100;
+        z-index: 99999;
+        position: fixed;
+        text-align: center;
+        visibility: visible;
+    }
+
+    .center p {
+        font-size: 96px;
+    }
+
+    body > header {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @keyframes fadeInAnimation {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    
+    .splite2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: center;
+    }
+}

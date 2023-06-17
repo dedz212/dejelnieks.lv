@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>:D GAME</title>
+    <link rel="stylesheet" href="./css/game.css">
+    
+  </head>
+  <body>
+    <main id="gamegame">
+      <div>
+        <p>LOGO</p>
+      </div>
+      <div>
+        <ul>
+            <li class="h item active"><a class="lang-game_start">START</a></li>
+            <li class="h item open-popup"><a class="lang-game_settings">SETTINGS</a></li>
+            <li class="h item"><a class="lang-game_back" href="./index.html">BACK</a></li>
+        </ul>
+      </div>
+    </main>
+    <div id="popup">
+        <div id="modal" class="bg modal modal-transition-leave">
+            <div class="bg content">
+                <div class="popupup">
+                <p class="lang-game_settings">SETTINGS</p>
+                <div class="actions"><p>ОК</p></div>
+                </div>
+                <div class="popuplist">
+                  <ul class="se active" id="tobuttpn">
+                    <li>Language</li>
+                    <li class="btns">
+                      <button class="arrow prev" data-key="prev" onclick="switchLang(-1)">&#8249;</button>
+                      <p class="lang-language">English</p>
+                      <button class="arrow next" data-key="next" onclick="switchLang(1)">&#8250;</button>
+                    </li>
+                  </ul>
+                  <ul class="se" id="tobuttpn">
+                    <li class="lang-settings_size">Size</li>
+                    <li class="screen-size-switcher btns">
+                      <button class="arrow" data-key="prev" id="prev-size">&#8249;</button>
+                      <p id="current-size"></p>
+                      <button class="arrow" data-key="next" id="next-size">&#8250;</button>
+                    </li>  
+                  </ul>
+                  <ul class="se" id="themetoggle">
+                    <li class="lang-settings_theme">Theme</li>
+                    <li><a id="tct" class="toggle-theme"></a></li>  
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/renderer.js"></script>
+  </body>
+</html>

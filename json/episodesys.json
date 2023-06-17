@@ -1,0 +1,238 @@
+{
+    "1": {
+      "intro": {
+        "first": "Dachten Sie etwa, <br>das hier wäre ein ganz normaler <br>Bildschirmschoner? ",
+        "second": "Falsch gedacht!<br>Bei Jack müssen Sie<br>erst mal eine Frage<br>beantworten..."
+      },
+      "category": "Dein Körper & Der blanke Horror",
+      "question": "Wenn Ihr Körper eine Geisterbahn wäre, <br>wo könnten die Fahrgäste dann auf <br>Spinnweben treffen?",
+      "answer": {
+        "order": [
+            "In Ihrem Kopf",
+            "In Ihren Genitalien",
+            "Zwischen Ihren Zehen",
+            "In Ihrem Magen"
+        ],
+        "true_is": 1
+      },
+      "explanation": [
+            "Im Kopf gibt es die Spinnwebenhaut, <br>die das Gehirn vor Verletzungen schützen soll - <br>soweit man eines hat.",
+            "In Ihren Genitalien? Falsch. <br>Na ja, obwohl, in Ihrem Fall...",
+            "Zwischen Ihren Zehen? <br>Vielleicht sollten Sie öfter mal ein paar <br>Schritte gehen.",
+            "In Ihrem Magen? Wieso?<br>Essen Sie Spinnennetze?"
+      ]
+    },
+    "2": {
+      "intro": {
+        "first": "Hoppla, wollten Sie <br>etwa weiterarbeiten? ",
+        "second": "Wahrscheinlich eh <br>bloß wieder spielen!",
+        "third": "Ich hätte da mal eine<br>kleine Frage für Sie..."
+      },
+      "category": "Nackte Menschen & Verhängnisvolle Speisen",
+      "question": "Wenn Eva Ihrem Adam damals im Paradies <br>einen Liebesapfel angeboten hätte, <br>was hätte Adam dann zu ihr sagen können?",
+      "answer": {
+        "order": [
+           "„Igitt, ein Stechapfel!“",
+           "„Mh, ich liebe Tomaten!“",
+           "„Ich eß doch keinen Stierhoden!“",
+           "„Klar, her mit deiner Brust!“"
+        ],
+        "true_is": 2
+      },
+      "explanation": [
+            "Nein, der Stechapfel heiWt Stechapfel, weil er <br>Stechapfel heißt und nicht Liebesapfel.",
+            "Richtig. Liebesäpfel sind Tomaten. - Manchmal <br>zahlt es sich eben aus, wenn man nicht die <br>perverseste Antwort tippt.",
+            "Nein, wenn überhaupt, dann hießen Stierhoden<br>wohl eher LiebesSÄCKE.",
+            "Nennen SIE Ihre Brust etwa \"Liebesapfel?\""
+      ]
+    },
+    "3": {
+      "intro": {
+        "first": "Sie glauben doch wohl nicht,<br>daß ich Sie so einfach wieder<br>an Ihren Computer lasse.",
+        "second": "Vorher müssen Sie<br>mir schon eine Frage<br>beantworten..."
+      },
+      "category": "\"Liebling, du riechst nach toten Tieren\"",
+      "question": "Wenn Ihr Eau de Cologne den<br>Duftstoff Ambra enthält, was tupfen<br>Sie sich dann auf Ihre Haut?",
+      "answer": {
+        "order": [
+           "Den Saft ausgepreßter Heuschrecken",
+           "Den Urin von Warzenschweinen",
+           "Darmausscheidungen von Pottwalen",
+           "Geschlechtsdrüsensekrete von Stieren"
+        ],
+        "true_is": 3
+      },
+      "explanation": [
+            "Ausgepreßte Heuschrecken?<br>Ihnen graust wohl vor gar nichts, wie?",
+            "Urin von Warzenschweinen? Sprühen Sie sich <br>mal damit ein und beobachten Sie genau, <br>wie Ihre Freunde darauf reagieren.",
+            "Richtig. Ambra besteht aus<br>Darmausscheidungen von Pottwalen.<br>Unser Tip: Sparen Sie Geld! Verwenden Sie <br>Ihre eigenen Darmausscheidungen!",
+            "Das sieht Ihnen ähnlich, daß ausgerechnet SIE<br>diese Antwort tippen."
+      ]
+    },
+    "4": {
+      "intro": {
+        "first": "Oje, was haben Sie sich<br>denn da installiert?",
+        "second": "Einen Screensaver, der Sie<br>erst dann wieder an den<br>Rechner läßt, wenn Sie<br>eine Frage beantworten.",
+        "third": "Au weia..."
+      },
+      "category": "Verhütungsmittel & Die gute alte Zeit",
+      "question": "Welches der folgenden Materialien <br>wurde nie zur Herstellung von <br>Kondomen verwendet?",
+      "answer": {
+        "order": [
+           "Tiergedärme",
+           "Menschliches Muskelgewebe",
+           "Chinesisches Seidenpapier",
+           "Recyceltes Küchenkrepp"
+        ],
+        "true_is": 4
+      },
+      "explanation": [
+            "Nein, Tiergedärme wurden dafür verwendet.<br>Das bringt einen so richtig in Stimmung, was?",
+            "Doch, die Römer haben Kondome u. a. aus <br>menschlichem Muskelgewebe gebastelt -<br>Und da heiWt es immer, die Jungs wußten, <br>wie man sich amüsiert.",
+            "Doch die alten Chinesen haben Kondome aus<br>Seidenpapier gemacht - was vielleicht erklärt,<br>wieso es heute so viele von ihnen gibt",
+            "Richtig. Küchenkrepp wurde noch nie zur<br>Herstellung von Kondomen verwendet.<br>Tja, von wegen \"wisch und weg\"."
+      ]
+    },
+    "5": {
+      "intro": {
+        "first": "Hey, Sie haben<br>mich aufgeweckt!",
+        "second": "Zur Strafe spielen<br>wir eine Runde<br>YOU DON'T KNOW JACK®",
+        "third": "Die Kategorie lautet:<br>„Bildschirmschoner <br>   & ihre Folgen?..."
+      },
+      "category": "Bin ich besoffen, oder was?",
+      "question": "Wovon gibt es zwei Stück<br>auf unserer Erde?",
+      "answer": {
+        "order": [
+          "Internationale Datumsgrenzen",
+          "Nordpole",
+          "Äquatoren",
+          "Nullmeridiane"
+        ],
+        "true_is": 2
+      },
+      "explanation": [
+            "Nein, das ist falsch - und zwar diesseits und <br>jenseits der Datumsgrenze.",
+            "Richtig. Es gibt zwei Nordpole, einen<br>geografischen und einen magnetischen, nach <br>dem sich die Kompaßnadel ausrichtet. ",
+            "Zwei Äquatoren? Haben Sie jemals <br>einen Globus gesehen?",
+            "Nullmeridiane ist falsch. <br>Aber Null ist eine gute Bezeichnung <br>für das, was Sie sind."
+      ]
+    },
+    "6": {
+      "intro": {
+        "first": "Dachten Sie etwa, <br>das hier wäre ein ganz normaler <br>Bildschirmschoner?",
+        "second": "Falsch gedacht!<br>Bei Jack müssen Sie<br>erst mal eine Frage<br>beantworten..."
+      },
+      "category": "Mit Satan in der Mathestunde",
+      "question": "Wenn Sie Ihren Taschenrechner umdrehen, <br>welche Zahlen müssen Sie dann eintippen, <br>um das Wort „hOELLE“ lesen zu können?",
+      "answer": {
+        "order": [
+          "377304",
+          "403773",
+          "371034",
+          "379043"
+        ],
+        "true_is": 1
+      },
+      "explanation": [
+            "Richtig. Übrigens, habe ich Ihnen schon<br>gesagt, daß ich Sie als Typ ziemlich 7139 <br>finde?",
+            "403773? Oje. Wenn Sie jetzt Ihren Monitor auf <br>den Kopf stellen, werden Sie sich vermutlich <br>ziemlich blöd vorkommen - mit Recht.",
+            "371034? Fast. Aber eben nur fast.",
+            "379043? <br>Nein, aber Sie sollten <br>schleunigst 112 anrufen."
+      ]
+    },
+    "7": {
+      "intro": {
+        "first": "Hoppla, wollten Sie <br>etwa weiterarbeiten? ",
+        "second": "Wahrscheinlich eh<br>bloß wieder spielen!",
+        "third": "Ich hätte da mal eine <br>kleine Frage für Sie..."
+      },
+      "category": "Buchstäblich saudumme Pflanzen",
+      "question": "Welche der folgenden Pflanzen <br>gibt es wirklich?",
+      "answer": {
+        "order": [
+          "Dusselbeeren",
+          "Holzkopfkastanien",
+          "Armleuchteralgen",
+          "Lölibirnen"
+        ],
+        "true_is": 3
+      },
+      "explanation": [
+            "Nein, es gibt keine Dusselbeeren. <br>Aber wenn es sie gäbe, wären sie <br>vermutlich Ihre Lieblingsspeise.",
+            "„Holzkopfkastanien“ - Wieder eines <br>dieser Wörter, die so richtig klingen <br>und doch so falsch sind.",
+            "Armleuchteralgen gibt es wirklich. <br>Es heißt, sie sind noch zu dämlich, <br>um im Wasser zu treiben. ",
+            "Nein, aber Lölibirne wäre vielleicht<br>ein passender Ausdruck für Ihren Kopf, <br>finden Sie nicht?"
+      ]
+    },
+    "8": {
+      "intro": {
+        "first": "Sie glauben doch wohl nicht,<br>daß ich Sie so einfach wieder<br> an Ihren Computer lasse. ",
+        "second": "Vorher müssen Sie<br>mir schon eine Frage<br>beantworten..."
+      },
+      "category": "Tierisch guter Sex",
+      "question": "In welches Tier müßten Sie sich verwandeln,<br>um mit zwei Penissen bis zu <br>24 Stunden lang kopulieren zu können?",
+      "answer": {
+        "order": [
+          "In eine Schnecke",
+          "In eine Schlange",
+          "In einen Kater",
+          "In eine Stubenfliege"
+        ],
+        "true_is": 2
+      },
+      "explanation": [
+            "Zu Ihrer Information: Das was Schnecken da<br>am Kopf tragen, sind Fühler, keine Penisse.",
+            "Richtig. Schlangenmännchen haben zwei<br>Penisse und können bis zu 24 Stunden lang.</p><br><p>Weswegen Schlangendamen<br>nur selten zweimal wollen.",
+            "Nein, Kater haben nur einen Penis. <br>Der hat aber dafür reizvollerweise <br>Widerhaken. Tja, wer's mag... ",
+            "Sie wollen sich in eine Stubenfliege<br>verwandeln? Na ja, das Gehirn einer solchen <br>haben Sie immerhin schon."
+      ]
+    },
+    "9": {
+      "intro": {
+        "first": "Oje, was haben Sie sich <br>denn da installiert? ",
+        "second": "Einen Screensaver, der Sie<br>erst dann wieder an den <br>Rechner läßt, wenn Sie<br>eine Frage beantworten.",
+        "third": "Au weia..."
+      },
+      "category": "Alte Göttinnen & Ihre Unterwäsche",
+      "question": "Wo findet man einen Venusgürtel?",
+      "answer": {
+        "order": [
+          "In unserem Sonnensystem",
+          "In der Hautklinik",
+          "Im Beate Uhse® Shop",
+          "Im Pazifik"
+        ],
+        "true_is": 4
+      },
+      "explanation": [
+        "Falsch, in unserem Sonnensystem<br>gibt es keinen Venusgürtel. Kleiner Trost:<br>Im Weltall hört niemand Ihre falsche Antwort.",
+        "In der Hautklinik?<br>Nein, da finden Sie vielleicht eine Gürtelrose, <br>und das ist wieder was anderes.",
+        "Es gibt Dinge, die findet man<br>nicht bei Beate Uhse® - richtige Antworten<br>zum Beispiel.",
+        "Richtig. Venusgürtel sind Quallen.<br>Angeblich tragen sie so schicke<br>Harley-Davidson-Gürtelschnallen"
+      ]
+    },
+    "10": {
+      "intro": {
+        "first": "Hey, Sie haben<br>mich aufgeweckt!",
+        "second": "Zur Strafe spielen<br>wir eine Runde<br>YOU DON'T KNOW JACK®",
+        "third": "Die Kategorie lautet:<br>„Bildschirmschoner <br>   & ihre Folgen?..."
+      },
+      "category": "Merkwürdige Buchläden im Weltall",
+      "question": "Sie reisen mit einem Raumschiff in die<br>Gegenwelt und sehen dort beim Bummeln ein <br>Buch mit dem Titel \"Lemmorthcelb Eid\".<br>Wie heißt der Autor?",
+      "answer": {
+        "order": [
+          "Ssarg Retnüg",
+          "Thcerb Dlohtreb",
+          "Nnam Samoht",
+          "Ptschiaff Ptschi"
+        ],
+        "true_is": 4
+      },
+      "explanation": [
+        "Richtig. Ssarg Retnüg hat \"Lemmorthcelb Eid\" <br>geschrieben. Tja, dann Nehesredeiw Fua!",
+        "Nein, Thcerb Dlohtreb ist sozusagen hcslaf.",
+        "Nicht doch! Nnam Samoth hat doch<br>\"Skoorbneddub Eid\" geschrieben!",
+        "Ptschiaff Ptschi? Gesundheit."
+      ]
+    }
+}

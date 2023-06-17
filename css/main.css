@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+
+    scroll-behavior: auto;
+}
+
+:root {
+    --head: linear-gradient(180deg, rgba(5,5,3,1) 0%, rgba(2,3,0,0) 50%);
+    --bg: #e4e4e4;
+    --cr: #111111;
+    --bgon: #e4e4e4;
+    --cron: #111111;
+    --bgh: #222222;
+    --bglia: #1f2881;
+    --crlia: #e4e4e4;
+    --w1: #3241ce;
+    --hbg: #1f2881;
+    --jackface: url('../img/jackboxunolight.jpeg');
+    --agrey: linear-gradient(270deg, #929292, #8a8a8a, #a1a1a1);
+    --bgdali: #3241ce;
+    --crdali: #e4e4e4;
+    --red: #ff3d3d;
+    --bgvolume: linear-gradient(#1f2881, #1f2881);
+    --libtn: #3241be;
+    --abtn: #f5f7f7;
+}
+
+:root[data-theme='dark']{
+    --bg: #111111;
+    --cr: #e4e4e4;
+    --bglia: #111111;
+    --w1: #151515;
+    --hbg: #222222;
+    --jackface: url('../img/jackboxunonight.jpeg');
+    --agrey: linear-gradient(270deg, #434343, #323232, #3a3a3a);
+    --bgdali: #e4e4e4;
+    --crdali: #111111;
+    --bgvolume: linear-gradient(#222222, #222222);
+    --libtn: #010101;
+}
+
+body {
+    background-color: var(--w1);
+    color: var(--cr);
+    margin: 0;
+    padding: 0;
+/*
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+*/
+    font-size: 18px;
+    padding-bottom: 57px;
+}
+
+header {
+    background: var(--hbg);
+    width: 100%;
+    font-size: 32px;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    padding: 6px;
+}
+
+header ul div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .center {
+    background: var(--bg);
+    width: auto;
+    overflow: hidden;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#random-text {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+}
+
+#random-text.marquee {
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%); 
+    }
+        to {
+    transform: translateX(-100%);
+    }
+}
+
+div.center p{
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: 300;
+    color: var(--cr);
+    padding: 4px;
+}
+
+li {
+    list-style-type: none;
+}
+
+header ul div li {
+    margin: 2px;
+    font-weight: 900;
+}
+
+header .h a {
+    background: var(--bglia);
+    color: var(--crlia);
+    padding: 2px 10px 2px 10px;
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    border-radius: 5px;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.h {
+    opacity: 0;
+}
+  
+.h:nth-of-type(1) {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+  
+.h:nth-of-type(2) {
+    animation: fadeIn 0.5s ease-in 0.5s forwards;
+}
+  
+.h:nth-of-type(3) {
+    animation: fadeIn 0.5s ease-in 1s forwards;
+}
+
+/*
+#niceanim-1, #niceanim-2, #niceanim-3, #niceanim-4, #niceanim-5, #niceanim-6, #niceanim-7, #niceanim-8 {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+}
+*/
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+header .h a:hover {
+    font-size: 38px;
+    /*box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);*/
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+
+    color: var(--cron);
+}
+
+a:hover,
+a:visited {
+    color: var(--cron);
+}
+
+.logo {
+    color: var(--crlia);
+    font-size: 48px;
+    font-weight: 200;
+    padding: 2px 10px 2px 10px;
+}
+
+.toggle-theme {
+    background-color: #00000000;
+}
+
+section {
+    /*background: var(--w1);*/
+    padding: 2px 10px 2px 10px;
+}
+
+section div {
+    padding-top: 16px;
+}
+
+section div div {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.h1a {
+    background-color: var(--bgdali);
+    color: var(--crdali);
+    padding: 2px 10px 2px 10px;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 64px;
+}
+
+.contlisto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.contlist {
+    display: flex;
+    flex-flow: row wrap;
+    place-content: flex-start center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bgon);
+    color: var(--cron);
+    margin: 6px;
+    border-radius: 5px;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    width: 332px;
+    margin: 20px;
+    word-wrap: break-word;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.container p {
+    text-align: center;
+    line-height: 1;
+}
+
+.container h1 {
+    text-align: center;
+    line-height: 1;
+}
+
+.face {
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.jackface {
+    background-image: var(--jackface);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    transition: background-image 0.5s ease;
+    -webkit-transition: background-image 0.5s ease;
+}
+
+.ydkjface {
+    background-image: url('../img/ydkj.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.ms {
+    padding: 10px 0 0 0; /* top right bottom left */
+}
+
+.ms a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.asub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.asubh {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 40%;
+}
+
+#tct {
+    font-size: 32px;
+}
+
+.map {
+    position: relative;
+}
+
+.map a {
+    position: absolute;
+    top: 259px;
+    left: 108px;
+    width: 115px;
+    height: 30px;
+}
+  
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+@keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--crlia);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--w1);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bglia);
+  }
+
+  @media screen and (max-width: 1495px) {
+    .asubh {
+        width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 865px) {
+    .asubh {
+        width: 90%;
+    }
+  }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+footer {
+    position: fixed;
+    background: var(--hbg);
+    font-size: 32px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 5px;
+    animation: bottom 0.85s ease-in 0s forwards;
+}
+
+@keyframes bottom {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+footer div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    padding: 6px;
+}
+
+footer .l {
+    text-align: center;
+    font-size: 32px;
+    color: var(--bgon);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.l {
+    opacity: 0;
+}
+
+.l a{
+    color: var(--crlia);
+}
+  
+.l:nth-of-type(1) {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+  
+.l:nth-of-type(2) {
+    animation: fadeIn 0.5s ease-in 0.5s forwards;
+}
+  
+.l:nth-of-type(3) {
+    animation: fadeIn 0.5s ease-in 1s forwards;
+}
+
+.snap {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.selection {
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    padding: 2px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: var(--w1);
+    color: #f5f7f7;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+option:hover {
+    background-color: #f5f7f7;
+}
+
+.centerli {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+#beta {
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 2px;
+    margin: 6px;
+}
+
+@media screen and (max-width: 540px) {
+    footer .l,
+    .selection {
+        font-size: 22px;
+    }
+
+    #tct {
+        font-size: 28px;
+    }
+}
+
+/* JACKBOX BALTIC */
+label, input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    margin-top: 5px;
+  }
+  #translations {
+    margin-top: 20px;
+  }
+
+
+
+
+  #general {
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#subsite {
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
