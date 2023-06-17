@@ -30,8 +30,8 @@ const langArr = {
         playlocal: "Original spielen",
         playonline: "Online spielen",
         language: "Deutsch",
-        settings: "Ajustes",
-        volume: "Volumen",
+        settings: "Einstellungen",
+        volume: "Lautstärke",
         back: "Zurück",
         click: "Klicken Sie hier, wenn Sie keinen Ton haben",
         credits: "Credits",
@@ -944,7 +944,7 @@ function extraLoading() {
 
 // Loading the game after the page is fully loaded
 window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('vertime').innerHTML = 'v.1687033396';
+    document.getElementById('vertime').innerHTML = 'v.1687033861';
     loading();
     pleaseBeRedIntro();
 });
