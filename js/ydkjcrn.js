@@ -520,6 +520,26 @@ function startGame() {
         document.getElementById("question").style.display = "flex";
         stopAudio();
         playRandomQuestionSound();
+        let answerEC = false;
+        document.addEventListener("keydown", function(event) {
+            if (answerEC) {
+                return;
+            }
+    
+            if (event.keyCode === 49) {
+                document.querySelector('.a1').click();
+            }
+            if (event.keyCode === 50) {
+                document.querySelector('.a2').click();
+            }
+            if (event.keyCode === 51) {
+                document.querySelector('.a3').click();
+            }
+            if (event.keyCode === 52) {
+                document.querySelector('.a4').click();
+            }
+            answerEC = true;
+        });
     }, 1000);
 }
 
@@ -549,36 +569,12 @@ function showQuestion(question, answer, category) {
     }
 
     let selected = false;
-    let answerEC = false;
 
     const addClickListener = (index) => {
         const pl = document.querySelector(`.pl${index}`);
         const a = document.querySelector(`.a${index}`);
         const ma = document.querySelector(`.ma${index}`);
 
-        document.addEventListener("keydown", function(event) {
-            if (answerEC) {
-                return;
-            }
-
-            if (event.keyCode === 49) {
-                document.querySelector('.a1').click();
-                answerEC = true;
-            }
-            if (event.keyCode === 50) {
-                document.querySelector('.a2').click();
-                answerEC = true;
-            }
-            if (event.keyCode === 51) {
-                document.querySelector('.a3').click();
-                answerEC = true;
-            }
-            if (event.keyCode === 52) {
-                document.querySelector('.a4').click();
-                answerEC = true;
-            }
-        });
-    
         a.addEventListener("click", function() {
             if (!selected) {
                 selected = true;
@@ -859,20 +855,17 @@ function skipLoading() {
 
                 if (event.keyCode === 49) {
                     document.querySelector('.pi1').click();
-                    skipLEC = true;
                 }
                 if (event.keyCode === 50) {
                     document.querySelector('.pi2').click();
-                    skipLEC = true;
                 }
                 if (event.keyCode === 51) {
                     document.querySelector('.ms2').click();
-                    skipLEC = true;
                 }
                 if (event.keyCode === 52) {
                     document.querySelector('.mt3').click();
-                    skipLEC = true;
                 }
+                skipLEC = true;
             });
 
             document.querySelector('.pi1').addEventListener("click", function() {
@@ -951,6 +944,7 @@ function extraLoading() {
 
 // Loading the game after the page is fully loaded
 window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('vertime').innerHTML = 'v.1687033396';
     loading();
     pleaseBeRedIntro();
 });
