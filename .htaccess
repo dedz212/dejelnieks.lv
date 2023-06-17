@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^ydkjscreen$ http://ydkj.dejelnieks.lv [L,R=301]
