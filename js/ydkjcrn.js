@@ -489,7 +489,7 @@ function showIntro(intro) {
         } else {
             setTimeout(() => {
                 startGame();
-            }, 1500);
+            }, 3000);
         }
     }, 3000);
 

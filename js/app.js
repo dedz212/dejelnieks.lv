@@ -98,39 +98,50 @@ if (document.querySelector('footer')) {
 		link1.textContent = ':DEJELNIEKS';
 
 
-		const langsect1 = document.createElement('option');
-		langsect1.value = 'en';
-		langsect1.textContent = 'English';
-
-		const langsect2 = document.createElement('option');
-		langsect2.value = 'lv';
-		langsect2.textContent = 'Latviešu';
-
-		const langsect3 = document.createElement('option');
-		langsect3.value = 'ru';
-		langsect3.textContent = 'Русский';
-
-		const langsecto = document.createElement('select');
-		langsecto.className = 'selection';
-		langsecto.appendChild(langsect1);
-		langsecto.appendChild(langsect2);
-		langsecto.appendChild(langsect3);
-
-
 		const li1 = document.createElement('li');
 		li1.className = 'centerli';
 		li1.appendChild(link1);
 
 
+		const lbtn = document.createElement('a');
+		lbtn.id = 'lbtn';
+		lbtn.innerHTML = '🌐';
+		lbtn.className = 'toggle toggle-lang';
+
+		const lbtnli = document.createElement('li');
+		lbtnli.className = 'centerli';
+		lbtnli.appendChild(lbtn);
+
+		
+		const en = document.createElement('a');
+		en.id = 'lang-en';
+		en.textContent = 'English';
+
+		const lv = document.createElement('a');
+		lv.id = 'lang-lv';
+		lv.textContent = 'Latviešu';
+
+		const ru = document.createElement('a');
+		ru.id = 'lang-ru';
+		ru.textContent = 'Русский';
+
+		const divlang = document.createElement('div');
+		divlang.className = 'dropdown-content';
+		divlang.appendChild(en);
+		divlang.appendChild(lv);
+		divlang.appendChild(ru);
+
+
 		const tct = document.createElement('a');
 		tct.id = 'tct';
-		tct.className = 'toggle-theme';
+		tct.className = 'toggle toggle-theme';
 
 		const tctli = document.createElement('li');
 		tctli.className = 'centerli';
 		tctli.appendChild(tct);
 
-		div.appendChild(langsecto);
+		div.appendChild(divlang);
+		div.appendChild(lbtnli);
 		div.appendChild(tctli);
 
 		ul.appendChild(li1);
@@ -207,7 +218,9 @@ const langArr = {
 		game: "GAME",
 		about: "ABOUT",
 		h1g: "MY SITES",
+		h2ss: "MY SUBSITES",
 		pjack: "Is the site for choosing the controller Estonian, Latvian and Lithuanian language of fun games from Jackbox Games!",
+		pydkj: "Is the site where everything related to You Don't Know Jack (almost everything) is stored!",
 
 		language: "English",
 		game_start: "START",
@@ -217,13 +230,17 @@ const langArr = {
 		settings_size: "Screen Size",
 
 		back: "◄ＢＡＣＫ",
+
+		hello: "Hello",
 	},
 	ru: {
 		home: "ГЛАВНОЕ",
 		game: "ИГРА",
 		about: "ОБО МНЕ",
 		h1g: "МОИ САЙТЫ",
+		h2ss: "МОИ ПОДСАЙТЫ",
 		pjack: "Это сайт для выбора контроллера на эстонском, латышском и литовском языках для веселых игр от Jackbox Games!",
+		pydkj: "Это сайт, где хранится все, что связано с You Don't Know Jack (почти все)!",
 
 		language: "Русский",
 		game_start: "НАЧАТЬ",
@@ -233,13 +250,17 @@ const langArr = {
 		settings_size: "Размер экрана",
 
 		back: "◄ＨＡ３ＡＤ",
+
+		hello: "Привет",
 	},
 	lv: {
 		home: "MĀJĀSLAPA",
 		game: "SPĒLE",
 		about: "PAR MANI",
 		h1g: "MANAS SAITES",
+		h2ss: "MANAS APAKŠSAITES",
 		pjack: "Ir vietne, kur izvēlēties kontrolieris igauņu, latviešu un lietuviešu valodā jautras spēles no Jackbox Games!",
+		pydkj: "Ir vietne, kurā glabājas viss, kas saistīts ar You Don't Know Jack (gandrīz viss)!",
 
 		language: "Latviešu",
 		game_start: "SĀKT",
@@ -247,6 +268,8 @@ const langArr = {
 		game_back: "ATPAKAĻ",
 
 		settings_size: "Ekrāna lielums",
+
+		hello: "Sveiki",
 	},
 };
 
@@ -339,15 +362,6 @@ if (prevLangButton) {
 	  switchLang("next");
 	});
   }
-  
-
-if (langSelect) {
-  langSelect.addEventListener("change", function() {
-    const selectedOption = langSelect.options[langSelect.selectedIndex];
-    const selectedLang = selectedOption.getAttribute("value");
-    setLang(selectedLang);
-  });
-}
 
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 setLang(lang);
@@ -704,3 +718,93 @@ if (niceanim) {
 	  
 }
 */
+
+// FIRST
+
+let clickdrop = false;
+var dropdownContent = document.querySelector('.dropdown-content');
+var currentPath = window.location.pathname;
+currentPath = currentPath.replace(/^\/+/, '');
+
+if (currentPath === '' ||
+	currentPath === '/' ||
+	currentPath === '/index.html' ||
+	currentPath === 'dejelnieks.lv' ||
+	currentPath === 'dejelnieks.lv/' ||
+	currentPath === 'dejelnieks.lv/index.html') {
+	dTheme();
+	document.getElementById('d').addEventListener('click', function() {
+		dTheme();
+	});
+	document.getElementById('t').addEventListener('click', function() {
+		tTheme();
+	});
+	document.getElementById('lbtn').addEventListener('click', function() {
+			if (!clickdrop) {
+				dropdownContent.style.display = 'block';
+				clickdrop = true;
+			} else {
+				dropdownContent.style.display = 'none';
+				clickdrop = false;
+			}
+	});
+	document.addEventListener('click', function(event) {
+		var targetElement = event.target;
+		var lbtnElement = document.getElementById('lbtn');
+	  
+		if (targetElement !== lbtnElement) {
+		  dropdownContent.style.display = 'none';
+		  clickdrop = false;
+		}
+	  });
+	document.getElementById('lang-en').addEventListener('click', function() {
+		dropdownContent.style.display = 'none';
+		clickdrop = false;
+	});
+	document.getElementById('lang-lv').addEventListener('click', function() {
+		dropdownContent.style.display = 'none';
+		clickdrop = false;
+	});
+	document.getElementById('lang-ru').addEventListener('click', function() {
+		dropdownContent.style.display = 'none';
+		clickdrop = false;
+	});
+}
+
+function dTheme() {
+	document.getElementById('ava').classList.add('avad');
+		document.getElementById('ava').classList.remove('avat');
+		document.getElementById('1').classList.add('bgd');
+		document.getElementById('1').classList.remove('bgt');
+		var fsg = document.querySelectorAll('#fsg');
+		for (var i = 0; i < fsg.length; i++) {
+			fsg[i].classList.remove('fsg');
+		}
+		document.getElementById('2').classList.remove('bg2t');
+		document.getElementById('2').classList.add('bg2d');
+		document.getElementById('t').classList.remove('sth');
+		document.getElementById('d').classList.remove('sth');
+		document.getElementById('t').classList.add('sdh');
+		document.getElementById('d').classList.add('sdh');
+}  
+
+function tTheme() {
+	document.getElementById('ava').classList.add('avat');
+	document.getElementById('ava').classList.remove('avad');
+	document.getElementById('1').classList.add('bgt');
+	document.getElementById('1').classList.remove('bgd');
+	var fsg = document.querySelectorAll('#fsg');
+	for (var i = 0; i < fsg.length; i++) {
+		fsg[i].classList.add('fsg');
+	}
+	document.getElementById('2').classList.add('bg2t');
+	document.getElementById('2').classList.remove('bg2d');
+	document.getElementById('t').classList.add('sth');
+	document.getElementById('d').classList.add('sth');
+	document.getElementById('t').classList.remove('sdh');
+	document.getElementById('d').classList.remove('sdh');
+} 
+
+
+
+// ?
