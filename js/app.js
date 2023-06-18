@@ -728,11 +728,16 @@ currentPath = currentPath.replace(/^\/+/, '');
 
 if (currentPath === '' ||
 	currentPath === '/' ||
+	currentPath === 'index.html' ||
 	currentPath === '/index.html' ||
 	currentPath === 'dejelnieks.lv' ||
 	currentPath === 'dejelnieks.lv/' ||
 	currentPath === 'dejelnieks.lv/index.html') {
-	dTheme();
+	if (window.location.hash === '#t' || window.location.hash === '#tere-zander') {
+		tTheme();
+	} else {
+		dTheme();
+	}
 	document.getElementById('d').addEventListener('click', function() {
 		dTheme();
 	});
