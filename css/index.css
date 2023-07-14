@@ -1,6 +1,6 @@
 .logo {
     color: var(--crlia);
-    font-size: 5.vh;
+    font-size: 5vh;
     font-weight: 200;
     padding: 2px 10px 2px 10px;
 }
@@ -10,12 +10,17 @@
 }
 
 section {
-    padding: 0.2vh 1vh 0.2vh 1vh;
+    padding: 1vh ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
 
 h1 {
     color: var(--abtn);
-    padding: 0.2vh 1vh 0.2vh 1vh;
+    padding: 0.5vh ;
     cursor: default;
     text-align: center;
     font-size: 6vh;
@@ -23,10 +28,19 @@ h1 {
 
 p {
     color: var(--abtn);
-    padding: 0.2vh 1vh 0.2vh 1vh;
+    padding: 1vh ;
     cursor: default;
     text-align: center;
     font-size: 3vh;
+}
+
+#la {
+    color: var(--crlia);
+    font-weight: 600;
+}
+
+#la:hover {
+    text-shadow: 0 0 1vh rgba(255, 255, 255, 0.5);
 }
 
 .contlist {
@@ -54,7 +68,7 @@ p {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 
-    width: 34vh;
+    width: 30vh;
     word-wrap: break-word;
     padding: 1vh;
     margin: 1.5vh;
@@ -66,6 +80,9 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .leftcont {
@@ -90,12 +107,12 @@ p {
 
 .container h1{
     line-height: 1;
-    font-size: 3vh;
-    text-align: left;
+    font-size: 2.2vh;
+    text-align: center;
 }
 
 .ms {
-    padding: 1vh 0 0 0;
+    padding: 0 0 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -121,8 +138,23 @@ p {
     -webkit-transition: background-image 0.5s ease;
 }
 
-.ydkjface {
-    background-image: url('../img/ydkj.jpeg');
+.face.nowonderwhy,
+.face.soilbout {
+    width: auto;
+    height: 28vh;
+    border-radius: 0.25vh;
+    padding: 1vh;
+    margin-bottom: 0.5vh;
+}
+
+.nowonderwhy {
+    background-image: url('../img/41iCZCwgIQL._UXNaN_FMjpg_QL85_.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.soilbout {
+    background-image: url('../img/31aV+GfnMlL._UXNaN_FMjpg_QL85_.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -134,13 +166,18 @@ p {
     align-content: center;
     align-items: center;
     justify-content: center;
+    text-align: left;
+    width: max-content;
 }
 
 .asubh {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: row;
     width: 90%;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
 
 .toggle {
@@ -234,14 +271,6 @@ footer .l {
     height: 100vh;
 }
 
-section {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-}
-
 .selection {
     cursor: pointer;
     border: none;
@@ -272,8 +301,14 @@ option:hover {
     background-color: #ff0000;
     border-radius: 0.5vh;
     font-size: 1.9vh;
-    padding: 0.2vh;
+    padding: 0.5vh;
     margin: 0.6vh;
+    position: relative;
+    top: -20px;
+    right: 35px;
+    height: fit-content;
+    font-weight: 700;
+    line-height: 1;
 }
 
 #general {
@@ -286,6 +321,9 @@ option:hover {
     align-content: center;
     justify-content: space-around;
     width: 100%;
+    height: 90vh;
+    position: relative;
+    top: -20px;
 }
 
 #subsite {
@@ -354,10 +392,6 @@ option:hover {
     transition: all 0.3s ease;
 }
 
-#t:hover, #d:hover {
-    font-size: 6.1vh;
-}
-
 .sdh:hover {
     text-shadow: 0 0 1vh rgba(255, 255, 255, 0.5);
 }
@@ -372,7 +406,7 @@ option:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: -12vh;
+    top: -8vh;
     right: 4vh;
     background-color: var(--bglia);
     min-width: 16vh;
@@ -420,15 +454,15 @@ option:hover {
 @media screen and (max-width: 450px) {
     h1 {
         color: var(--abtn);
-        padding: 0.2vh 1vh 0.2vh 1vh;
-        cursor: default;
-        text-align: center;
         font-size: 4vh;
     }
     .container h1 {
         font-size: 2vh;
     }
-
+    p {
+        font-size: 2.5vh;
+        padding: 0.5vh;
+    }
     .container {
         padding: 0.5vh;
         margin: 1vh;

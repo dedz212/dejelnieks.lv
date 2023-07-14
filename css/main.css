@@ -67,7 +67,6 @@ body {
     align-items: center;
 */
     font-size: 3vh;
-    padding-bottom: 57px;
 }
 
 li {
@@ -164,10 +163,6 @@ label, input {
   #translations {
     margin-top: 20px;
   }
-
-
-
-
 
 
 /* ? */

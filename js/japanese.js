@@ -28,20 +28,24 @@
 	function changeSymbols() {
 		const toggle = document.getElementById("toggle");
 		const symbolElements = document.querySelectorAll("[data-id]");
-
+	  
 		fetch("../json/symbols.json")
-			.then(response => response.json())
-			.then(data => {
-				const symbolData = toggle.checked ? data.On.symbols : data.Off.symbols;
-				symbolElements.forEach(element => {
-					const symbolId = element.getAttribute("data-id");
-					element.textContent = symbolData[symbolId];
-					element.addEventListener("click", () => playSound(symbolId));
-				});
-				localStorage.setItem("toggleState", toggle.checked);
-			})
-			.catch(error => console.error(error));
-	}
+		  .then(response => response.json())
+		  .then(data => {
+			const symbolData = toggle.checked ? data.On.symbols : data.Off.symbols;
+			symbolElements.forEach(element => {
+			  const symbolId = element.getAttribute("data-id");
+			  element.textContent = symbolData[symbolId];
+			  element.addEventListener("click", () => {
+				playSound(symbolId);
+				showTooltip(symbolId); // Добавлен вызов функции showTooltip()
+			  });
+			});
+			localStorage.setItem("toggleState", toggle.checked);
+		  })
+		  .catch(error => console.error(error));
+	  }
+	  
 
 	// загружаем состояние переключателя из localStorage при загрузке страницы
 	window.addEventListener("load", () => {
@@ -66,76 +70,54 @@
 
 	// TOOLTIP
 
-	async function loadTooltipText(id) {
-		const response = await fetch('../json/tooltip.json');
-		const tooltips = await response.json();
+	// Обработчик событий при наведении на символ
+// TOOLTIP
 
-		const pronun = tooltips.pronuns[id];
-		if (!pronun) {
-			return null;
-		}
-
-		const mfa = tooltips.mfa[id];
-		if (!mfa) {
-			return null;
-		}
-
-		if (localStorage.getItem('toggleState') === 'false') {
-			var img = tooltips.imgfalse[id];
-			if (!img) {
-				return null;
-			}
-		} else {
-			var img = tooltips.imgtrue[id];
-			if (!img) {
-				return null;
-			}
-		}
-		return `
-		<div>
-			<p>Pronunciation: ${pronun}</p>
-			<p>MFA: [${mfa}]</p>
-		</div>
-		<img src="${img}">
+// Обработчик событий при наведении на символ
+async function loadTooltipText(id) {
+	const tooltipResponse = await fetch('../json/tooltip.json');
+	const tooltipData = await tooltipResponse.json();
+  
+	const pronun = tooltipData.pronuns[id];
+	const mfa = tooltipData.mfa[id];
+  
+	if (!pronun || !mfa) {
+	  return null;
+	}
+  
+	const symbolsResponse = await fetch('../json/symbols.json');
+	const symbolsData = await symbolsResponse.json();
+  
+	const symbol = symbolsData.On.symbols[id];
+	if (!symbol) {
+	  return null;
+	}
+  
+	return `
+	  <div>
+		<p>Pronunciation: ${pronun}</p>
+		<p>MFA: [${mfa}]</p>
+	  </div>
 	`;
-
-	}
-
-	function addTooltip(element, text) {
-		const tooltip = document.createElement('div');
-		tooltip.className = 'tooltip twotooltip';
-		tooltip.innerHTML = text;
-		element.appendChild(tooltip);
-
-	}
-
-	function removeTooltip(element) {
-		const tooltips = element.querySelectorAll('.tooltip');
-		tooltips.forEach((tooltip) => {
-			element.removeChild(tooltip);
-		});
-	}
-
-	function addTooltipToElements() {
-		const elements = document.querySelectorAll('[data-id]');
-		elements.forEach((element) => {
-			const id = element.dataset.id;
-			element.addEventListener('mouseover', async () => {
-				const tooltipText = await loadTooltipText(id);
-				if (tooltipText) {
-					addTooltip(element, tooltipText);
-				}
-			});
-			element.addEventListener('mouseout', () => {
-				removeTooltip(element);
-			});
-		});
-	}
-
-	document.addEventListener('DOMContentLoaded', () => {
-			addTooltipToElements();
-	});
-
+  }
+  
+  
+  async function showTooltip(symbolId) {
+	const tooltipContainer = document.getElementById("tooltip-container");
+	const tooltipContent = await loadTooltipText(symbolId);
+	tooltipContainer.innerHTML = tooltipContent;
+	tooltipContainer.style.display = "flex";
+  }
+	  
+/*
+	window.addEventListener('load', function() {
+		var element1 = document.querySelector('.splittwoinline');
+		var element2 = document.getElementById('tooltip-container');
+		
+		var element1Height = element1.clientHeight;
+		element2.style.height = element1Height + 'px';
+	  });
+*/
 	//VOLUME
 
 	const rangeInputs = document.querySelectorAll('input[type="range"]')

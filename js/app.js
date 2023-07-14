@@ -121,15 +121,11 @@ if (document.querySelector('footer')) {
 		lv.id = 'lang-lv';
 		lv.textContent = 'Latviešu';
 
-		const ru = document.createElement('a');
-		ru.id = 'lang-ru';
-		ru.textContent = 'Русский';
 
 		const divlang = document.createElement('div');
 		divlang.className = 'dropdown-content';
 		divlang.appendChild(en);
 		divlang.appendChild(lv);
-		divlang.appendChild(ru);
 
 
 		const tct = document.createElement('a');
@@ -218,9 +214,20 @@ const langArr = {
 		game: "GAME",
 		about: "ABOUT",
 		h1g: "MY SITES",
-		h2ss: "MY SUBSITES",
+		h2ss: "I MAKE WEBSITES",
+		h3ss: "I MAKE MUSIC",
+		h4ss: "I'M",
 		pjack: "Is the site for choosing the controller Estonian, Latvian and Lithuanian language of fun games from Jackbox Games!",
 		pydkj: "Is the site where everything related to You Don't Know Jack (almost everything) is stored!",
+
+		im1: "Dejelnieks just call me Dale.",
+		im2: "also known online as Tere-Zander.",
+		im3: "an 18 year old student living in Latvia.",
+		im4: "a music lover (melomaniac), I like all genres of songs!",
+		im5: "a language learner. As a result, I know English, Latvian, Russian and Japanese a little bit.",
+		im6: "also watching anime. You can see my list <a id=\"la\" href=\"https://shikimori.me/%E3%83%87%E3%82%A4%E3%83%AB\">here.</a>",
+		im7: "not a gamer. But from games, I play Minecraft and Jackbox.",
+		im8: "",
 
 		language: "English",
 		game_start: "START",
@@ -231,27 +238,7 @@ const langArr = {
 
 		back: "◄ＢＡＣＫ",
 
-		hello: "Hello",
-	},
-	ru: {
-		home: "ГЛАВНОЕ",
-		game: "ИГРА",
-		about: "ОБО МНЕ",
-		h1g: "МОИ САЙТЫ",
-		h2ss: "МОИ ПОДСАЙТЫ",
-		pjack: "Это сайт для выбора контроллера на эстонском, латышском и литовском языках для веселых игр от Jackbox Games!",
-		pydkj: "Это сайт, где хранится все, что связано с You Don't Know Jack (почти все)!",
-
-		language: "Русский",
-		game_start: "НАЧАТЬ",
-		game_settings: "НАСТРОЙКИ",
-		game_back: "НАЗАД",
-
-		settings_size: "Размер экрана",
-
-		back: "◄ＨＡ３ＡＤ",
-
-		hello: "Привет",
+		hello: "Tetrahedron [he/him]",
 	},
 	lv: {
 		home: "MĀJĀSLAPA",
@@ -274,7 +261,6 @@ const langArr = {
 };
 
 const langEn = document.querySelector("#lang-en");
-const langRu = document.querySelector("#lang-ru");
 const langLv = document.querySelector("#lang-lv");
 
 const prevLangButton = document.querySelector(".prev");
@@ -286,16 +272,12 @@ let langs = Object.keys(langArr);
 if (langEn) {
 	langEn.addEventListener("click", setLang.bind(null, "en"));
 }
-if (langRu) {
-	langRu.addEventListener("click", setLang.bind(null, "ru"));
-}
 if (langLv) {
 	langLv.addEventListener("click", setLang.bind(null, "lv"));
 }
 
 const langSelect = document.querySelector(".selection");
 if (langSelect) {
-	// Добавляем обработчик события на выбор языка в select
 	langSelect.addEventListener("change", function() {
 	const selectedLang = langSelect.value;
 	setLang(selectedLang);
@@ -319,49 +301,17 @@ function setLang(lang) {
 		let elem = document.querySelectorAll(".lang-" + key);
 		for (var i = 0; i < elem.length; i++) {
 			if (elem) {
-				elem[i].textContent = langArr[lang][key];
+				elem[i].innerHTML = langArr[lang][key];
 			}
 		}
 	}
 	if (lang == "en") {
 		console.log("English");
 	}
-	if (lang == "ru") {
-		console.log("Русский");
-	}
 	if (lang == "lv") {
 		console.log("Latviešu");
 	}
 }
-
-function switchLang(direction) {
-	if (direction === "prev") {
-	  currentLangIndex--;
-	  if (currentLangIndex < 0) {
-		currentLangIndex = langs.length - 1;
-	  }
-	} else if (direction === "next") {
-	  currentLangIndex++;
-	  if (currentLangIndex >= langs.length) {
-		currentLangIndex = 0;
-	  }
-	}
-	setLang(langs[currentLangIndex]);
-  }  
-
-if (prevLangButton) {
-	prevLangButton.removeEventListener("click", switchLang);
-	prevLangButton.addEventListener("click", function() {
-	  switchLang("prev");
-	});
-  }
-  
-  if (nextLangButton) {
-	nextLangButton.removeEventListener("click", switchLang);
-	nextLangButton.addEventListener("click", function() {
-	  switchLang("next");
-	});
-  }
 
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 setLang(lang);
@@ -770,10 +720,7 @@ if (currentPath === '' ||
 		dropdownContent.style.display = 'none';
 		clickdrop = false;
 	});
-	document.getElementById('lang-ru').addEventListener('click', function() {
-		dropdownContent.style.display = 'none';
-		clickdrop = false;
-	});
+	console.log("1689299096");
 }
 
 function dTheme() {
