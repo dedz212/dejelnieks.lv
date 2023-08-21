@@ -13,14 +13,18 @@ if (document.querySelector('footer')) {
 
 		const link1 = document.createElement('a');
 		link1.href = './index.html';
-		link1.className = 'l';
-		link1.textContent = ':DEJELNIEKS';
-
+		link1.id = "ava"
+/*
+		const title = document.createElement('a');
+		title.id = 'title';
+		title.innerHTML = '　:D';
+		title.className = 'l';
+		li1.appendChild(title);
+*/
 
 		const li1 = document.createElement('li');
 		li1.className = 'centerli';
 		li1.appendChild(link1);
-
 
 		const lbtn = document.createElement('a');
 		lbtn.id = 'lbtn';
@@ -245,7 +249,9 @@ function setLang(lang) {
 
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 setLang(lang);
-
+if (localStorage.getItem("lang") === "de") {
+    localStorage.setItem("lang", "en");
+}
 
 
 // BINJPIPE
@@ -650,7 +656,7 @@ if (currentPath === '' ||
 		dropdownContent.style.display = 'none';
 		clickdrop = false;
 	});
-	console.log("1689299096");
+	console.log("1692632245");
 }
 
 function dTheme() {

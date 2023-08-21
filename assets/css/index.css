@@ -10,8 +10,7 @@
 }
 
 section {
-    padding: 1vh ;
-    height: 100%;
+    padding: 1vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +43,11 @@ p, span {
 
 .contlist {
     display: flex;
-    flex-flow: row wrap;
     place-content: flex-start center;
     align-items: flex-start;
     justify-content: center;
     align-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -142,12 +140,19 @@ p, span {
 }
 
 .face.nowonderwhy,
-.face.soilbout {
+.face.soilbout,
+.face.mz {
     width: auto;
     height: 28vh;
     border-radius: 0.25vh;
     padding: 1vh;
     margin-bottom: 0.5vh;
+}
+
+.mz {
+    background-image: url('../img/mz.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .nowonderwhy {
@@ -199,7 +204,13 @@ p, span {
     height: 30px;
 }
 
-
+.blur {
+    background-color: #000000a0;
+    border-radius: 1vh;
+    filter: blur(1px);
+    width: 80%;
+    padding: 0.5vh;
+}
 footer {
     position: fixed;
     background: var(--hbg);
@@ -301,8 +312,6 @@ option:hover {
     padding: 0.5vh;
     margin: 0.6vh;
     position: relative;
-    top: -20px;
-    right: 35px;
     height: fit-content;
     font-weight: 700;
     line-height: 1;
@@ -324,7 +333,7 @@ option:hover {
     width: 100%;
     height: fit-content;
     position: relative;
-    padding-top: -6vh;
+    padding: 6dvh 0 6dvh 0;
     margin-bottom: 2vh;
 }
 
@@ -340,11 +349,12 @@ option:hover {
 }
 
 #ava {
-    width: 41vh;
-    height: 41vh;
+    width: 4vh;
+    height: 4vh;
     background-size: cover;
     position: relative;
     z-index: 2;
+    border-radius: 50%;
 }
 
 .avad {
@@ -371,33 +381,15 @@ option:hover {
 }
 
 .bgd {
-    background-color: var(--bgd);
+    background: linear-gradient(180deg, var(--bgd) 0%, var(--w1) 100%);
     transition: background-color 0.5s;
     display: flex;
-    height: 100vh;
-}
-
-.bg2d {
-    background: linear-gradient(180deg, var(--bgd) 0%, var(--w1) 100%);
+    flex-direction: column;
 }
 
 #t, #d {
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.whitebound {
-    width: 6.5em;
-    height: 6.5em;
-    background: #3c3c3c;
-    position: absolute;
-    top:33.4vh;
-    left:8.8vh;
-    box-shadow: 0px 0px 8vh #3c3c3c;
-    border: #fbfbfb solid 2vh;
-    border-radius: 50%;
-    z-index: 1;
-    display: none;
 }
 
 
@@ -429,14 +421,8 @@ option:hover {
 }
 
 @media screen and (max-width: 1394px) {
-    .contlist {
-        flex-direction: column;
-    }
     #general {
         flex-direction: column;
-    }
-    .whitebound {
-        display: none;
     }
 }
 @media screen and (max-width: 1394px) {
@@ -457,12 +443,6 @@ option:hover {
 
     .ms {
         padding: 0vh 0 0 0;
-    }
-
-    .whitebound {
-        display: none;
-        top:11vh;
-        left:40.7vh;
     }
 }
 @media screen and (max-width: 880px) {
@@ -485,10 +465,6 @@ option:hover {
     .container {
         padding: 0.5vh;
         margin: 1vh;
-    }
-    #ava {
-        width: 21vh;
-        height: 21vh;
     }
     #t:hover, #d:hover {
         font-size: 4.1vh;

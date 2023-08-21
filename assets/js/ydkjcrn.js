@@ -188,7 +188,9 @@ if (nextLangButton) {
   
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "de";
 setLang(lang);
-
+if (localStorage.getItem("lang") === "lv") {
+    localStorage.setItem("lang", "de");
+}
 
 
 var volumeUpButton = document.getElementById("volumeUp");
@@ -952,11 +954,11 @@ function extraLoading() {
 
 // Loading the game after the page is fully loaded
 window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('vertime').innerHTML = 'v.1690001283';
+    document.getElementById('vertime').innerHTML = 'v.1692632245';
     loading();
     pleaseBeRedIntro();
 });
 
 function info() {
-    console.log('1690001283 - fix skipping on loading');
+    console.log('1692632245 - language system fix');
 }
