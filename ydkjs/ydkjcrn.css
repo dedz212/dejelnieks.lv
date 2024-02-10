@@ -1,11 +1,11 @@
 @font-face {
     font-family: jack;
-    src: url(../fonts/JackCondensed.ttf);
+    src: url(./fonts/JackCondensed.ttf);
 }
 
 @font-face {
     font-family: a;
-    src: url(../fonts/andalemo.ttf);
+    src: url(./fonts/andalemo.ttf);
 }
 
 *, body {
@@ -247,6 +247,7 @@ ol {
     align-items: flex-start;
     justify-content: center;
     z-index: 2;
+    margin: 0 0 10vh 0;
 }
 
 .seli {
@@ -493,7 +494,7 @@ button {
 }
 
 #sad {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     padding: 8px;
     background-color: #ffffff00;

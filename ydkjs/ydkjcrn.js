@@ -60,7 +60,7 @@ const prevLangButton = document.querySelector(".prev");
 const nextLangButton = document.querySelector(".next");
 
 let langs = Object.keys(langArr);
-let currentLangIndex = langs.indexOf(window.localStorage.getItem("lang")) || 0;
+let currentLangIndex = langs.indexOf(window.localStorage.getItem("langis")) || 0;
 
 if (langEn) {
 	langEn.addEventListener("click", setLang.bind(null, "en"));
@@ -72,7 +72,7 @@ if (langDe) {
 function setLang(lang) {
 	if (!langArr.hasOwnProperty(lang)) return;
 	if (window.hasOwnProperty("localStorage"))
-		window.localStorage.setItem("lang", lang);
+		window.localStorage.setItem("langis", lang);
 	for (let key in langArr[lang]) {
 		let elem = document.querySelectorAll(".lang-" + key);
 		for (var i = 0; i < elem.length; i++) {
@@ -186,11 +186,8 @@ if (nextLangButton) {
 	});
 }
   
-var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "de";
+var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("langis", lang)) || "de";
 setLang(lang);
-if (localStorage.getItem("lang") === "lv") {
-    localStorage.setItem("lang", "de");
-}
 
 
 var volumeUpButton = document.getElementById("volumeUp");
@@ -235,9 +232,11 @@ function updateVolumeDisplay() {
 
 let isMusicPlaying = false;
 
+const cels = "./sounds/"
+
 function playPreIntroMusic() {
     audioElement = new Audio();
-    audioElement.src = "../assets/sounds/looped.mp3";
+    audioElement.src = cels + "looped.mp3";
     audioElement.loop = true;
     isMusicPlaying = true;
 
@@ -246,7 +245,7 @@ function playPreIntroMusic() {
 
 function playIntroMusic() {
     audioElement = new Audio();
-    audioElement.src = "../assets/sounds/5.mp3";
+    audioElement.src = cels + "5.mp3";
 //    audioElement.loop = true;
 
     audioSetConf()
@@ -301,13 +300,13 @@ function increaseVolume() {
   }
   
 var questionSounds = [
-  "../assets/sounds/17.mp3",
-  "../assets/sounds/20.mp3",
-  "../assets/sounds/22.mp3",
-  "../assets/sounds/22_.mp3",
-  "../assets/sounds/24.mp3",
-  "../assets/sounds/44.mp3",
-  "../assets/sounds/46.mp3"
+  cels + "17.mp3",
+  cels + "20.mp3",
+  cels + "22.mp3",
+  cels + "22_.mp3",
+  cels + "24.mp3",
+  cels + "44.mp3",
+  cels + "46.mp3"
 ];
 
 function stopAudio() {
@@ -338,21 +337,21 @@ function playByIdQuestionSound(id) {
 
 function playStopSound() {
     audioElement = new Audio();
-    audioElement.src = "../assets/sounds/124.mp3";
+    audioElement.src = cels + "124.mp3";
   
     audioSetConf()
 }
 
 function playYeySound() {
     audioElement = new Audio();
-    audioElement.src = "../assets/sounds/58.mp3";
+    audioElement.src = cels + "58.mp3";
   
     audioSetConf()
 }
 
 function playOoOhSound() {
     audioElement = new Audio();
-    audioElement.src = "../assets/sounds/69.mp3";
+    audioElement.src = cels + "69.mp3";
   
     audioSetConf()
 }
@@ -362,7 +361,7 @@ let currentEpisode;
 // Function for loading the game
 function loadRandomEpisode() {
     // Loading a JSON file with episodes
-    fetch('../assets/json/episodesys.json')
+    fetch('./episodesys.json')
         .then(response => response.json())
         .then(data => {
             // Selecting a random episode
@@ -381,7 +380,7 @@ function loadRandomEpisode() {
 }
 
 function loadEpisodeById(episodeId) {
-    fetch('../assets/json/episodesys.json')
+    fetch('./episodesys.json')
       .then(response => response.json())
       .then(data => {
         if (selected) {
@@ -516,6 +515,28 @@ function showIntro(intro) {
     document.getElementById("intro").style.display = "flex";
 }
 
+let answerEC;
+function secondL(event) {
+    if (answerEC) {
+        console.log('denied')
+        return;
+    }
+
+    if (event.keyCode === 49) {
+        document.querySelector('.a1').click();
+    }
+    if (event.keyCode === 50) {
+        document.querySelector('.a2').click();
+    }
+    if (event.keyCode === 51) {
+        document.querySelector('.a3').click();
+    }
+    if (event.keyCode === 52) {
+        document.querySelector('.a4').click();
+    }
+    answerEC = true;
+};
+
 // Function to start the game
 function startGame() {
     setTimeout(() => {
@@ -524,26 +545,8 @@ function startGame() {
         document.getElementById("question").style.display = "flex";
         stopAudio();
         playRandomQuestionSound();
-        let answerEC = false;
-        document.addEventListener("keydown", function(event) {
-            if (answerEC) {
-                return;
-            }
-    
-            if (event.keyCode === 49) {
-                document.querySelector('.a1').click();
-            }
-            if (event.keyCode === 50) {
-                document.querySelector('.a2').click();
-            }
-            if (event.keyCode === 51) {
-                document.querySelector('.a3').click();
-            }
-            if (event.keyCode === 52) {
-                document.querySelector('.a4').click();
-            }
-            answerEC = true;
-        });
+        answerEC = false;
+        document.addEventListener("keydown", secondL);
     }, 1000);
 }
 
@@ -686,6 +689,7 @@ function playAgain() {
 let selected = false;
 
 function switchBack() {
+    document.addEventListener("keydown", firstL);
     isClicked = false;
     skipLEC = false;
     answerEC = false;
@@ -841,6 +845,26 @@ function preIntroCL(s1, s2, s3) {
 
 let skipLEC = false;
 
+function firstL(event) {
+    if (skipLEC) {
+        return;
+    }
+
+    if (event.keyCode === 49) {
+        document.querySelector('.pi1').click();
+    }
+    if (event.keyCode === 50) {
+        document.querySelector('.pi2').click();
+    }
+    if (event.keyCode === 51) {
+        document.querySelector('.ms2').click();
+    }
+    if (event.keyCode === 52) {
+        document.querySelector('.mt3').click();
+    }
+    skipLEC = true;
+};
+
 function skipLoading() {
     document.getElementById("loading").style.display = "none";
         document.getElementById("preintro").style.display = "flex";
@@ -852,25 +876,7 @@ function skipLoading() {
             preIntroCL('.ms2', '.mb2', '.lang-settings');
             preIntroCL('.mt3', '.mb3', '.lang-credits');
 
-            document.addEventListener("keydown", function(event) {
-                if (skipLEC) {
-                    return;
-                }
-
-                if (event.keyCode === 49) {
-                    document.querySelector('.pi1').click();
-                }
-                if (event.keyCode === 50) {
-                    document.querySelector('.pi2').click();
-                }
-                if (event.keyCode === 51) {
-                    document.querySelector('.ms2').click();
-                }
-                if (event.keyCode === 52) {
-                    document.querySelector('.mt3').click();
-                }
-                skipLEC = true;
-            });
+            document.addEventListener("keydown", firstL);
 
             document.querySelector('.pi1').addEventListener("click", function() {
                 if (!selected) {
@@ -878,6 +884,7 @@ function skipLoading() {
                     setTimeout(() => {
                         document.getElementById("preintro").style.display = "none";
                         document.getElementById("intro").style.display = "flex";
+                        document.removeEventListener("keydown", firstL);
                         playAgain();
                         stopAudio();
                     }, 1000);
@@ -951,14 +958,15 @@ function extraLoading() {
     location.reload();
 }
 
+const version = '1707591037';
 
 // Loading the game after the page is fully loaded
 window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('vertime').innerHTML = 'v.1692632245';
+    document.getElementById('vertime').innerHTML = `v.${version}`;
     loading();
     pleaseBeRedIntro();
 });
 
 function info() {
-    console.log('1692632245 - language system fix');
+    console.log(`${version} - button selection fix`);
 }

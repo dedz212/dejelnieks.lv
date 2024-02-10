@@ -9,7 +9,7 @@ function translate() {
 
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
-    xhr.open('GET', '../assets/json/translations.json', true);
+    xhr.open('GET', './translations.json', true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var translations = JSON.parse(xhr.responseText);
