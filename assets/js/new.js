@@ -1,3 +1,4 @@
+console.log(`1707667648 - Mobile Responsive Fix`)
 /*  TOOGLE THEME */
 const tct = document.querySelectorAll("#tct");
 tct.forEach(function(tct) {
