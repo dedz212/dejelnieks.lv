@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>:D | JS Instruments | Timer</title>
+        <meta name="description" content="Timer in javascript with pause and resume">
+        <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        
+        <meta name="og:url" content="http://dejelnieks.lv/">
+        <meta name="og:title" content=":D | JS Instruments | Timer">
+        <meta name="og:type" content="website">
+        <meta name="og:description" content="Timer in javascript with pause and resume">
+        <meta name="og:image" content="images/icon.png">
+    
+        <link rel="icon" href="images/icon.ico" sizes="any">
+        <link rel="icon" type="image/png" href="images/icon.png" sizes="502x502">
+        <link rel="apple-touch-icon" href="images/icon.png">
+    
+        <meta name="application-name" content="YDKA">
+        <meta name="mobile-web-app-capable" content="yes">
+    
+        <link rel="stylesheet" type="text/css" href="../assets/css/jsi.css">
+    </head>
+<body>
+    <div id="one">
+        <div id="timer"></div>
+        <input type="text" id="seconds" placeholder="" value="10">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="resume">Resume</button>
+        <p id="console">　</p>
+    </div>
+    <div id="two">
+        <div id="shadow" class="u"></div>
+        <div id="here"></div>
+        <div id="shadow" class="d"></div>
+    </div>
+<script>
+let timerId;
+let secondsLeft;
+let timerStarted = false;
+let lastOrNot;
+let isPaused = true;
+let doResume = false;
+
+const timerInput = document.getElementById('timer');
+const secondsId = document.getElementById("seconds");
+const pConsole = document.getElementById("console");
+timerInput.innerHTML = document.getElementById("seconds").value;
+secondsId.addEventListener('input', async (event) => {
+    if (!timerStarted) {timerInput.innerHTML = document.getElementById("seconds").value; }
+});
+secondsId.focus();
+
+const startButton = document.getElementById("start");
+const pauseButton = document.getElementById("pause");
+const resumeButton = document.getElementById("resume");
+startButton.addEventListener("click", () => {
+    if (isPaused) {startTimer();}
+});
+pauseButton.addEventListener("click", () => {
+    if (!isPaused) {pauseTimer();}
+});
+resumeButton.addEventListener("click", () => {
+    if (isPaused) {pauseTimer();}
+});
+pauseButton.classList.add('no');
+
+function startTimer() {
+//    timerInput.classList.remove('isup');
+    isPaused = false;
+    startButton.classList.add('started');
+    pauseButton.classList.remove('no');
+    resumeButton.classList.add('no');
+    if (!timerStarted) {
+        timerInput.innerHTML = secondsId.value;
+        lastOrNot = secondsId.value;
+    }
+    console.log(timerStarted);
+    let seconds;
+    if (!doResume) {
+        seconds = secondsId.value;
+    } else {
+        seconds = secondsLeft;
+        doResume = false;
+    }
+    if (lastOrNot !== secondsId.value) {
+        seconds = secondsId.value;
+    }
+    timerStarted = true;
+    secondsLeft = seconds;
+    pConsole.innerHTML = 'Timer started for ' + seconds + ' seconds';
+    timerId = setInterval(function() {
+        secondsLeft--;
+        if (secondsLeft > 0) {
+            timerInput.innerHTML = secondsLeft;
+            pConsole.innerHTML = secondsLeft + ' seconds left';
+        } else {
+            timerInput.innerHTML = '0';
+            pConsole.innerHTML = 'Time is up';
+//            timerInput.classList.add('isup');
+            isPaused = true;
+            startButton.classList.remove('started');
+            clearInterval(timerId);
+            secondsId.focus();
+        }
+    }, 1000);
+}
+
+function pauseTimer() {
+    clearInterval(timerId);
+    pConsole.innerHTML = 'Timer paused for ' + secondsLeft + ' seconds';
+    isPaused = true;
+    startButton.classList.remove('started');
+    pauseButton.classList.add('no');
+    resumeButton.classList.remove('no');
+    secondsId.focus();
+}
+
+function resumeTimer() {
+    doResume = true;
+    startTimer(secondsLeft);
+    pConsole.innerHTML = 'Timer resumes for ' + secondsLeft + ' seconds';
+}
+
+document.getElementById('here').innerText =
+`<!DOCTYPE html>
+<html>
+  <body>
+    <input type="number" id="seconds" name="seconds" min="1" max="60">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resumeTimer()">Resume</button>
+    <script>
+      let timerId;
+      let secondsLeft;
+
+      function startTimer() {
+        let seconds = document.getElementById("seconds").value;
+        secondsLeft = seconds;
+        console.log('Timer started for ' + seconds + ' seconds');
+        timerId = setInterval(function() {
+          secondsLeft--;
+          if (secondsLeft > 0) {
+            console.log(secondsLeft + ' seconds left');
+          } else {
+            console.log('Time is up');
+            clearInterval(timerId);
+          }
+        }, 1000);
+      }
+
+      function pauseTimer() {
+        console.log('Timer paused for ' + secondsLeft + ' seconds');
+        clearInterval(timerId);
+      }
+
+      function resumeTimer() {
+        console.log('Timer resumes for ' + secondsLeft + ' seconds');
+        startTimer(secondsLeft);
+      }
+    <\/script>
+  <\/body>
+<\/html
+`;
+</script>
+</body>
+</html>

@@ -23,7 +23,10 @@
     --b1: #141414;
     --b2: #1b1b1b;
 
-    --neuro: 0.5dvh 0.5dvh 3dvh var(--c1), -0.5dvh -0.5dvh 3dvh var(--c2);
+    --neuro: 0.5dvh 0.5dvh 3dvh var(--c1),
+            -0.5dvh -0.5dvh 3dvh var(--c2),
+            inset 0.5dvh 0.5dvh 3dvh var(--c1),
+            inset -0.5dvh -0.5dvh 3dvh var(--c2);
     --ty: translateY(-7dvh);
     
     --two: 2.25dvh;
@@ -154,13 +157,13 @@ a:visited {
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--c2);
-    box-shadow: inset 0.5dvh 0.5dvh 0.5dvh #d9d9d9, inset -0.5dvh -0.5dvh 0.5dvh #ffffff;
+    box-shadow: var(--neuro);
 }
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--c1);
-    box-shadow: inset 0.5dvh 0.5dvh 0.5dvh #a2a2a2, inset -0.5dvh -0.5dvh 0.5dvh #dbdbdb;
+    box-shadow: var(--neuro);
 }
   
 /* Handle on hover */
@@ -196,7 +199,8 @@ a:visited {
     width: var(--img);
     border: none;
     border-radius: 50%;
-    box-shadow: 0.5dvh 0.5dvh 3dvh #851d2d, -0.5dvh -0.5dvh 3dvh #b5273d;
+    box-shadow: 0.5dvh 0.5dvh 3dvh #851d2d,
+                -0.5dvh -0.5dvh 3dvh #b5273d;
     margin: 1dvh;
 }
 
