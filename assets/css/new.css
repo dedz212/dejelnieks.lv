@@ -56,11 +56,19 @@ body {
     flex-direction: column;
     align-content: center;
     flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
 
     background-color: var(--bg);
     color: var(--b1);
+}
+
+#body2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 nav p {
@@ -189,7 +197,7 @@ a:visited {
     padding: 1dvh;
     border: none;
     border-radius: 1dvh;
-    width: 90%;
+    width: 80%;
 
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -661,4 +669,205 @@ a:visited {
         --cnf: 14dvh;
         --img: 17dvh;
     }
+}
+
+/* POPUP*/
+#popup {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.25);
+    z-index: 3;
+    opacity: 1; 
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.modal-transition-leave {
+    transition: opacity .15s;
+}
+
+.contentt {
+    text-align: left;
+}
+
+.contentt {
+    position: absolute;
+    max-width: 100dvh;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    z-index: 4;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 1;
+    background-color: var(--b2);
+}
+
+.contentt .bubz {
+    width: auto;
+    height: 15vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.cnt.mz2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 1dvh;
+    padding: 1dvh;
+    border: none;
+    border-radius: 1dvh;
+    box-shadow: var(--neuro);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transform: translateY(0dvh);
+    word-wrap: break-word;
+    box-shadow: 0.5dvh 0.5dvh 3dvh var(--c1), -0.5dvh -0.5dvh 3dvh var(--c2), inset 0.5dvh 0.5dvh 1dvh #1b174c, inset -0.5dvh -0.5dvh 1dvh #251f66;
+    background-color: #201b59;
+}
+
+.contentt .actions {
+    margin-top: 10px;
+}
+
+.contentt .inline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.divleft {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30%;
+}
+.divright {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    margin: 0 1dvh 0 1dvh;
+}
+
+.itemname {
+    font-size: 5dvh;
+    line-height: 1;
+    margin: 1dvh 0 1dvh 0;
+    color: #ffb6ff;
+    text-shadow: 0 0 1dvh #be78e2;
+}
+
+.authoritem {
+    font-size: 1.5dvh;
+    font-weight: 600;
+    margin: 0.5dvh 0 0.5dvh 0;
+}
+
+.listname {
+    padding: 1dvh;
+    font-size: 2dvh;
+    margin: 0 0 0.5dvh 0;
+    border: none;
+    border-radius: 0.5dvh;
+    color: #201b59;
+    background-color: #fed8ff;
+    line-height: 1;
+    box-shadow: 
+    inset 0.5dvh 0.5dvh 3dvh #ffb6ff,
+    inset -0.5dvh -0.5dvh 3dvh #be78e2;
+}
+
+.listname:hover {
+    cursor: pointer;
+    color: #fff8ff;
+    background-color: #8dd27d;
+    box-shadow: 
+    inset 0.5dvh 0.5dvh 3dvh #e5ffdf,
+    inset -0.5dvh -0.5dvh 3dvh #78aa74;
+}
+
+.listname.current-song {
+    color: #fed8ff;
+    background-color: #201b59;
+    line-height: 1;
+    box-shadow: 
+    inset 0.5dvh 0.5dvh 3dvh #1d1958,
+    inset -0.5dvh -0.5dvh 3dvh #0c102e;
+}
+
+.listdesc {
+    margin: 1dvh;
+    width: 75%;
+    font-size: 1.15dvh;
+}
+
+.playlist {
+    margin: 1dvh;
+}
+
+
+#playButton,
+#nextButton {
+    border: 0.1dvh #e0e0e0 solid;
+    padding: 0.5dvh;
+    border-radius: 0.5dvh;
+    font-size: 1.5dvh;
+}
+
+#customAudioPlayer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1dvh 0 1dvh 0;
+}
+
+#progressBar {
+    width: 100%;
+    height: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin: 0.5dvh;
+}
+#progressBar div {
+    height: 5px;
+    background-color: #4CAF50;
+}
+
+.clickabel {
+    cursor: pointer;
+}
+.adivlink {
+    margin: 0 0.5dvh 0 0;
 }

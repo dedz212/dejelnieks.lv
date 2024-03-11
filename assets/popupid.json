@@ -1,0 +1,53 @@
+{
+    "0": {
+        "name": "Zeme",
+        "link": {
+            "spotify": "https://open.spotify.com/album/0jOd5ZgJhWwbUZOD88wF64",
+            "amazon": "https://music.amazon.com/albums/B0CVVRSZ12",
+            "yandex": "https://music.yandex.ru/album/29797276",
+            "zvuk": "https://zvuk.com/release/32906057",
+            "tidal": "https://tidal.com/browse/album/346146340"
+        },
+        "author": "Dejelnieks",
+        "description": [
+            "The album is called \"Earth\". Each track title and its sequence make sense. All the tracks describe the situation and history of the universe, specifically the planet \"Earth\". Why Earth? Because that's what people named their home planet, where they were born and live, it's just called \"Earth\".",
+            "Iziet pasaulē (Adaptation \"Venturing into the World\") - This phrase in Latvian means \"To leave a familiar, usually remote, secluded place and get to know life.\" The plot is that humanity discovers another planet where life is possible. Hope for a fresh start!",
+            "Vienmuļība (\"Monotony\" or \"Sameness\") - Nothing has changed, just like on the \"Old Earth\" - one job, the same action, nothing has changed, all the same problems and expenses.",
+            "Planetārā Mēroga Sekas (Consequences of Planetary Scale) - Humanity learns that \"Earth\" is on the brink of death, created by humans. Global warming, depletion, pollution, etc. Authorities try to figure out, like detectives, what can be done for the planet \"Earth\".",
+            "Vientulīgums (Loneliness) - One surviving person lives out their last days witnessing the death of Earth. Authorities did nothing, despite the attempt. It's already too late!",
+            "Pēdējā Elpa (Last Breath) - The last seconds of enjoyment before the end of life. The whole life flashes before the eyes, look at the cover how it looks...",
+            "Mirdzošas Zvaigznes (Shining Stars) - Earth is dead, life doesn't exist, there's only a shell where only stars can be seen from here.",
+            "Palaist Pasaulē (Venturing into the world/light (literally - Launch into the world)) - A new planet is born, a new life, for someone it will also be Earth. In Latvian, this is a whole idiom (as with the first track) despite the similar translation, the meaning is completely different. It means \"To create, to give life; also to animate\"."
+        ],
+        "list": [
+            {
+                "name": "Iziet pasaulē",
+                "src": "../assets/music/zeme/1.wav"
+            },
+            {
+                "name": "Vienmuļība",
+                "src": "../assets/music/zeme/2.wav"
+            },
+            {
+                "name": "Planetārā Mēroga Sekas",
+                "src": "../assets/music/zeme/3.wav"
+            },
+            {
+                "name": "Vientulīgums",
+                "src": "../assets/music/zeme/4.wav"
+            },
+            {
+                "name": "Pēdējā Elpa",
+                "src": "../assets/music/zeme/5.wav"
+            },
+            {
+                "name": "Mirdzošas Zvaigznes",
+                "src": "../assets/music/zeme/6.wav"
+            },
+            {
+                "name": "Palaist Pasaulē",
+                "src": "../assets/music/zeme/7.wav"
+            }
+        ]
+    }
+}
