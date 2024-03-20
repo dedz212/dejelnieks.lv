@@ -22,31 +22,31 @@
         "list": [
             {
                 "name": "Iziet pasaulē",
-                "src": "../assets/music/zeme/1.wav"
+                "src": "../assets/music/zeme/1.mp3"
             },
             {
                 "name": "Vienmuļība",
-                "src": "../assets/music/zeme/2.wav"
+                "src": "../assets/music/zeme/2.mp3"
             },
             {
                 "name": "Planetārā Mēroga Sekas",
-                "src": "../assets/music/zeme/3.wav"
+                "src": "../assets/music/zeme/3.mp3"
             },
             {
                 "name": "Vientulīgums",
-                "src": "../assets/music/zeme/4.wav"
+                "src": "../assets/music/zeme/4.mp3"
             },
             {
                 "name": "Pēdējā Elpa",
-                "src": "../assets/music/zeme/5.wav"
+                "src": "../assets/music/zeme/5.mp3"
             },
             {
                 "name": "Mirdzošas Zvaigznes",
-                "src": "../assets/music/zeme/6.wav"
+                "src": "../assets/music/zeme/6.mp3"
             },
             {
                 "name": "Palaist Pasaulē",
-                "src": "../assets/music/zeme/7.wav"
+                "src": "../assets/music/zeme/7.mp3"
             }
         ]
     }
