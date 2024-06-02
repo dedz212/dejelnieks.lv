@@ -1,0 +1,637 @@
+{
+	"010624": {
+		"gajusiboja": "3",
+		"ievainoti": "17",
+		"citi": {
+			"negadijumi": "157",
+			"apl": {
+				"kopa": "491",
+				"ap": "194",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Traģiska avārija Saulkrastos: gājējs iet bojā pēc sadursmes ar automašīnu",
+				"soseja": "",
+				"vieta": "Saulkrasti",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://www.tvnet.lv/8032227/aizvaditaja-diennakti-avarijas-latvija-boja-gajusi-tris-cilveki"
+			},
+			{
+				"nosaukums": "Frontāla sadursme Salaspils pagastā ar diviem bojāgājušiem",
+				"soseja": "<span class=\"ac pi\">P5</span>",
+				"vieta": "Salaspils pagasts",
+				"gajusiboja": "2",
+				"ievainoti": "0",
+				"attels": "https://i.jauns.lv/t/2024/06/01/3076528/1000x500_precise.webp?v=1717226147",
+				"avots": "https://jauns.lv/raksts/zinas/607684-video-salaspils-pagasta-frontala-sadursme-ar-kravas-auto-dzivibu-zaude-divi-cilveki"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1796784693188215270"
+	},
+	"310524": {
+		"gajusiboja": "1",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "102",
+			"apl": {
+				"kopa": "552",
+				"ap": "262",
+				"ab": "1",
+				"app": "1",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1796411268775154142"
+	},
+	"300524": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "147",
+			"apl": {
+				"kopa": "457",
+				"ap": "171",
+				"ab": "1",
+				"app": "4",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Traģiska avārija Iecavā: vieglā spēkrata un kravas auto sadursmē viens bojāgājušais",
+				"soseja": "<span class=\"ac sh\">A7</span>",
+				"vieta": "pie Iecavas stacijas",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "https://f7.pmo.ee/OcLR5ekIIUBpzZQiiPEnELUDuYg=/1442x0/filters:focal(114x104:515x467):format(webp)/nginx/o/2024/05/31/16111158t1hc5f2.png",
+				"avots": "https://www.tvnet.lv/8031588/video-tragiska-avarija-iecava-viegla-spekrata-un-kravas-auto-sadursme-viens-bojagajusais"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1796051106318930300"
+	},
+	"290524": {
+		"gajusiboja": "1",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "116",
+			"apl": {
+				"kopa": "414",
+				"ap": "193",
+				"ab": "4",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1795693189162312141"
+	},
+	"280524": {
+		"gajusiboja": "0",
+		"ievainoti": "26",
+		"citi": {
+			"negadijumi": "169",
+			"apl": {
+				"kopa": "446",
+				"ap": "204",
+				"ab": "2",
+				"app": "4",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Avārijā Zemgalē gājis bojā cilvēks",
+				"soseja": "",
+				"vieta": "Dobeles novads, Bikstu pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "3",
+				"attels": "",
+				"avots": "https://www.apollo.lv/8030085/avarija-zemgale-gajis-boja-cilveks"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": [
+			"https://x.com/Valsts_policija/status/1795326825574600862",
+			"https://www.1188.lv/zinas/pirmdien-celu-satiksmes-negadijumos-cietusi-astoni-velosipedisti/31482"
+		]
+	},
+	"270524": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "79",
+			"apl": {
+				"kopa": "457",
+				"ap": "238",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "13"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1794962735194611896"
+	},
+	"260524": {
+		"gajusiboja": "0",
+		"ievainoti": "21",
+		"citi": {
+			"negadijumi": "163",
+			"apl": {
+				"kopa": "561",
+				"ap": "286",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1794618760315457893"
+	},
+	"250524": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "174",
+			"apl": {
+				"kopa": "507",
+				"ap": "246",
+				"ab": "2",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1794251690373534199"
+	},
+	"240524": {
+		"gajusiboja": "0",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "152",
+			"apl": {
+				"kopa": "457",
+				"ap": "196",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1793872914019680443"
+	},
+	"230524": {
+		"gajusiboja": "0",
+		"ievainoti": "21",
+		"citi": {
+			"negadijumi": "149",
+			"apl": {
+				"kopa": "509",
+				"ap": "225",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1793512122489721069"
+	},
+	"220524": {
+		"gajusiboja": "0",
+		"ievainoti": "21",
+		"citi": {
+			"negadijumi": "153",
+			"apl": {
+				"kopa": "434",
+				"ap": "183",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1793150094927397296"
+	},
+	"210524": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "142",
+			"apl": {
+				"kopa": "463",
+				"ap": "212",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1792790171198660756"
+	},
+	"200524": {
+		"gajusiboja": "1",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "84",
+			"apl": {
+				"kopa": "500",
+				"ap": "206",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1792426240399290439"
+	},
+	"190524": {
+		"gajusiboja": "1",
+		"ievainoti": "26",
+		"citi": {
+			"negadijumi": "124",
+			"apl": {
+				"kopa": "535",
+				"ap": "261",
+				"ab": "2",
+				"app": "2",
+				"kp_tvar": "17"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Smagā avārijā Rīgas centrā iet bojā “Bolt Drive” auto vadītājs",
+				"soseja": "",
+				"vieta": "Rīga",
+				"gajusiboja": "1",
+				"ievainoti": "2",
+				"attels": "https://images.delfi.lv/media-api-image-cropper/v1/ee58da33-cfd3-47f2-94c9-4a66208f394c.jpg?w=882&h=496",
+				"avots": "https://www.delfi.lv/auto/42826678/celu-reportieris/120027395/bojagajusais-bolt-drive-autovaditajs-esot-braucis-loti-atri-un-par-sarkano-gaismu"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1792426240399290439"
+	},
+	"180524": {
+		"gajusiboja": "5",
+		"ievainoti": "19",
+		"citi": {
+			"negadijumi": "196",
+			"apl": {
+				"kopa": "511",
+				"ap": "288",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1791758093346292184"
+	},
+	"170524": {
+		"gajusiboja": "1",
+		"ievainoti": "31",
+		"citi": {
+			"negadijumi": "149",
+			"apl": {
+				"kopa": "447",
+				"ap": "154",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1791339584518812020"
+	},
+	"160524": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "147",
+			"apl": {
+				"kopa": "472",
+				"ap": "188",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1790972391763365895"
+	},
+	"150524": {
+		"gajusiboja": "1",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "164",
+			"apl": {
+				"kopa": "601",
+				"ap": "266",
+				"ab": "2",
+				"app": "0",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1790613092625174655"
+	},
+	"140524": {
+		"gajusiboja": "1",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "137",
+			"apl": {
+				"kopa": "433",
+				"ap": "154",
+				"ab": "4",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Lielā ātrumā braucošs mikroautobuss Jēkabpilī ietriecas kravas auto, šoferis zaudē dzīvību",
+				"soseja": "<span class=\"ac sh\">A6</span>",
+				"vieta": "Jēkabpils",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "https://www.radio1.lv/userfiles/more_image/728aeacf9eeaec975c5d24fea0ec51e0.jpg",
+				"avots": "https://www.radio1.lv/lv/JekKriminalzinas/1/56687/Otrdienas-vakara-Jekabpili-Rigas-iela-notikusi-smaga-divu-automasinu-sadursme-#"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1790262834728771841"
+	},
+	"130524": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "81",
+			"apl": {
+				"kopa": "542",
+				"ap": "243",
+				"ab": "1",
+				"app": "7",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Notika ceļu satiksmes negadījums starp pasažieru autobusu un vieglo automašīnu “Ford”",
+				"soseja": "<span class=\"ac sh\">A9</span>",
+				"vieta": "Jelgavas novads, Valgundes pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1790266152385425560"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1789890392424317408"
+	},
+	"120524": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "104",
+			"apl": {
+				"kopa": "451",
+				"ap": "225",
+				"ab": "0",
+				"app": "6",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1789549417436966920"
+	},
+	"110524": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "128",
+			"apl": {
+				"kopa": "580",
+				"ap": "245",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1789187947473834326"
+	},
+	"100524": {
+		"gajusiboja": "0",
+		"ievainoti": "4",
+		"citi": {
+			"negadijumi": "106",
+			"apl": {
+				"kopa": "444",
+				"ap": "192",
+				"ab": "5",
+				"app": "3",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1788801134586393082"
+	},
+	"090524": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "136",
+			"apl": {
+				"kopa": "419",
+				"ap": "178",
+				"ab": "3",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1788440059340812525"
+	},
+	"080524": {
+		"gajusiboja": "1",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "131",
+			"apl": {
+				"kopa": "387",
+				"ap": "205",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1788078781506216344"
+	},
+	"070524": {
+		"gajusiboja": "0",
+		"ievainoti": "4",
+		"citi": {
+			"negadijumi": "64",
+			"apl": {
+				"kopa": "569",
+				"ap": "292",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kravas auto “DAF” vadītājs nobrauca no ceļa braucamās daļas un transportlīdzeklis apgāzās",
+				"soseja": "<span class=\"ac pi\">P80</span>",
+				"vieta": "Ogres novads, Ogresgala pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1788078781506216344"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1787718295950393362"
+	},
+	"060524": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "73",
+			"apl": {
+				"kopa": "503",
+				"ap": "264",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1787374433306357865"
+	},
+	"050524": {
+		"gajusiboja": "0",
+		"ievainoti": "20",
+		"citi": {
+			"negadijumi": "114",
+			"apl": {
+				"kopa": "606",
+				"ap": "270",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1787000723915350159"
+	},
+	"040524": {
+		"gajusiboja": "0",
+		"ievainoti": "19",
+		"citi": {
+			"negadijumi": "163",
+			"apl": {
+				"kopa": "489",
+				"ap": "199",
+				"ab": "2",
+				"app": "0",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1786639316933820522"
+	},
+	"030524": {
+		"gajusiboja": "1",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "140",
+			"apl": {
+				"kopa": "658",
+				"ap": "269",
+				"ab": "2",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1786267508674068859"
+	},
+	"020524": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "110",
+			"apl": {
+				"kopa": "859",
+				"ap": "425",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Automašīnu “VW Caravelle” un “Renault Captur” sadursme",
+				"soseja": "",
+				"vieta": "Olaines novads, Grēnes",
+				"gajusiboja": "1",
+				"ievainoti": "3",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1786267510574067989"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1785905913879986334"
+	},
+	"010524": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "128",
+			"apl": {
+				"kopa": "493",
+				"ap": "215",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1785547664219640007"
+	}
+}

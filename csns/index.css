@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    scroll-behavior: auto;
+}
+
+:root {
+    --c1: #2b2d42;
+    --c2: #2b2d4240;
+    --c3: #edf2f4;
+    --c4: #ef233c;
+    --c5: #d90429;
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+    color: var(--c1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c3);
+}
+
+.astondesmit {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1dvh;
+}
+
+.title {
+    font-size: 5dvh;
+    text-align: center;
+    padding: 6dvh 0 6dvh 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    margin: 1dvh;
+    padding: 1dvh;
+    background-color: var(--c2);
+    min-width: 70vh;
+    max-width: 70vh;
+}
+
+#situacijalr {
+    display: grid;
+    column-gap: 1dvh;
+}
+
+#left {
+    margin-top: 1dvh;
+    grid-column: 1;
+    color: var(--c1);
+    font-weight: 400;
+    font-size: 1.75dvh;
+}
+#right {
+    grid-column: 2;
+}
+
+#data {
+    font-size: 2.5dvh;
+    color: var(--c1);
+    font-weight: 500;
+}
+
+#data3 {
+    margin-top: 1dvh;
+    font-size: 2.5dvh;
+    color: var(--c1);
+}
+
+.nosaukums, #data2 {
+    font-size: 2dvh;
+    color: var(--c1);
+}
+
+.situacija {
+    margin-top: 1dvh;
+    padding: 1dvh;
+    background-color: var(--c3);
+}
+
+.situacija2 {
+    display: flex;
+    margin-top: 1dvh;
+    padding: 1dvh;
+    background-color: var(--c3);
+}
+
+.aa {
+    font-size: 1.5dvh;
+}
+
+.ac {
+    padding: 0.2dvh;
+    border-radius: 0.25dvh;
+    color: var(--c3);
+    font-weight: 500;
+
+    &.sh {
+        background-color: var(--c4); 
+    }
+    &.pi {
+        background-color: #213595;
+    }
+}
+
+img {
+    height: 13dvh;
+}
+
+button {
+    background-color: var(--c3);
+    border: none;
+    margin: 0;
+    padding: 0.5dvh;
+    font-weight: 400;
+    font-size: 1.5dvh;
+
+    &:hover {
+        background-color: var(--c1);
+        color: var(--c3);
+        cursor: pointer;
+    }
+}
+
+.active {
+    background-color: var(--c5);
+    color: var(--c3);
+    &:hover {
+        background-color: var(--c5);
+        color: var(--c3);
+        cursor: default;
+    }
+}
+
+#filters {
+    width: 80%;
+}
