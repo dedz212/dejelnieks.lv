@@ -1,46 +1,85 @@
 {
     "music": [
         {
-            "div": "mz2",
-            "div2": "mz",
-            "href": "",
+            "div": "mz",
+            "href": "zeme.html",
             "id": "mza",
             "tt": "Zeme",
-            "rednew": ""
+            "type": "album",
+            "rednew": "",
+            "link": {
+                "spotify": "https://open.spotify.com/album/0jOd5ZgJhWwbUZOD88wF64",
+                "amazon": "https://music.amazon.com/albums/B0CVVRSZ12",
+                "yandex": "https://music.yandex.ru/album/29797276",
+                "zvuk": "https://zvuk.com/release/32906057",
+                "tidal": "https://tidal.com/browse/album/346146340"
+            }
         },
         {
-            "div": "nowonderwhy2",
-            "div2": "nowonderwhy",
-            "href": "https://open.spotify.com/album/0pJLdKxy3EFcs80YwngDJP",
+            "div": "nowonderwhy",
+            "href": "",
             "tt": "No Wonder Why: Alpha (Original Soundtrack)",
-            "rednew": ""
+            "type": "album",
+            "rednew": "",
+            "link": {
+                "spotify": "https://open.spotify.com/album/0pJLdKxy3EFcs80YwngDJP",
+                "amazon": "https://music.amazon.com/albums/B0C2VZTBBG",
+                "yandex": "https://music.yandex.ru/album/25574927",
+                "zvuk": "https://zvuk.com/release/29472095",
+                "tidal": "https://tidal.com/browse/album/290130379"
+            }
         },
         {
-            "div": "soilbout2",
-            "div2": "soilbout",
-            "href": "https://open.spotify.com/album/4d9ddZjtrPQ60qOv9ZOpTF",
+            "div": "soilbout",
+            "href": "",
             "tt": "Soil Bout: the Special Edition",
-            "rednew": ""
+            "rednew": "",
+            "type": "album",
+            "link": {
+                "spotify": "https://open.spotify.com/album/4d9ddZjtrPQ60qOv9ZOpTF",
+                "amazon": "https://music.amazon.com/albums/B0C5DDY81S",
+                "yandex": "https://music.yandex.ru/album/25858586",
+                "zvuk": "https://zvuk.com/release/29804536",
+                "tidal": "https://tidal.com/browse/album/295097689"
+            }
         }
     ],
     "web": [
         {
             "href": "https://jackboxbalt.icu",
             "tt": "jackboxbalt.icu",
-            "ttt": "Is the site for choosing the controller Estonian, Latvian and Lithuanian language of fun games by Jackbox Games!",
+            "t": "p_jbu",
             "rednew": ""
         },
         {
             "href": "https://ydkjarchive.com",
             "tt": "ydkjarchive.com",
-            "ttt": "Is the site where everything related to You Don't Know Jack (almost everything) is stored!",
+            "t": "p_ydka",
             "rednew": ""
         },
         {
             "href": "/ydkjs",
             "tt": "YDKJ Screensaver",
-            "ttt": "YDKJ German Screensaver game created on April 1999 now in website!",
+            "t": "p_ydkjs",
             "rednew": ""
+        },
+        {
+            "href": "/csns",
+            "tt": "Ceļu Satiksmes Negadījumu Statistika",
+            "t": "p_csns",
+            "rednew": ""
+        },
+        {
+            "href": "/jsinstruments/timer.html",
+            "tt": "Timer",
+            "t": "p_timer",
+            "rednew": ""
+        },
+        {
+            "href": "",
+            "tt": "monitori.lv",
+            "t": "Aplūko visus monitorus Latvijā! Salīdzini cenas un atrodi savu kritēriju prasībām atbilstošu monitoru!",
+            "hide": true
         }
     ]
 }

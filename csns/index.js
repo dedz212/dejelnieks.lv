@@ -1,11 +1,23 @@
 import { convertDate } from './convertDate.js';
 
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('../data.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log("Version: " + data.version);
+            console.log('URL: ' + window.location.pathname)
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+});
+
 const content = document.getElementById('content');
 const timeFilter = document.getElementById('time-filter');
 const monthFilter = document.getElementById('month-filter');
+const mmFilter = document.getElementById('mmfilter');
 var myChart = null
+var activeMax = true;
 
-if (content && timeFilter && monthFilter) {
+if (content && timeFilter && monthFilter && mmFilter) {
     let filteredData = null;
     let activeYear = null;
     let activeMonth = null;
@@ -14,6 +26,7 @@ if (content && timeFilter && monthFilter) {
         .then(response => response.json())
         .then(data => {
             filteredData = data;
+            renderMetrics(data, 1);
             renderData(filteredData);
             renderChart(filteredData);
         })
@@ -27,6 +40,11 @@ if (content && timeFilter && monthFilter) {
                 setActiveFilter(timeFilter, 'all-time');
                 renderData(filteredData);
                 renderChart(filteredData);
+                if (activeMax) {
+                    renderMetrics(filteredData, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredData, 2);
+                }
             } else if (filter.startsWith('year-')) {
                 const selectedYear = parseInt(filter.split('-')[1]);
                 activeYear = selectedYear;
@@ -39,10 +57,20 @@ if (content && timeFilter && monthFilter) {
                     console.log(filteredByMonth)
                     renderData(filteredByYearAndMonth);
                     renderChart(filteredByYearAndMonth);
+                    if (activeMax) {
+                        renderMetrics(filteredByYearAndMonth, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredByYearAndMonth, 2);
+                    }
                 } else {
                     const filteredByYear = filterDataByYear(filteredData, selectedYear);
                     renderData(filteredByYear);
                     renderChart(filteredByYear);
+                    if (activeMax) {
+                        renderMetrics(filteredByYear, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredByYear, 2);
+                    }
                 }
             }
         }
@@ -58,13 +86,24 @@ if (content && timeFilter && monthFilter) {
                     const filteredByYear = filterDataByYear(filteredData, activeYear);
                     renderData(filteredByYear);
                     renderChart(filteredByYear);
+                    if (activeMax) {
+                        renderMetrics(filteredByYear, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredByYear, 2);
+                    }
                 } else {
                     renderData(filteredData);
                     renderChart(filteredData);
+                    if (activeMax) {
+                        renderMetrics(filteredData, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredData, 2);
+                    }
                 }
             } else if (filter.startsWith('month-')) {
                 const selectedMonth = filter.split('-')[1];
                 activeMonth = selectedMonth;
+                console.log(activeMonth);
                 setActiveFilter(monthFilter, filter);
                 if (activeYear) {
                     const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
@@ -74,6 +113,11 @@ if (content && timeFilter && monthFilter) {
                     console.log(filteredByMonth)
                     renderData(filteredByYearAndMonth);
                     renderChart(filteredByYearAndMonth);
+                    if (activeMax) {
+                        renderMetrics(filteredByYearAndMonth, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredByYearAndMonth, 2);
+                    }
                 } else {
                     console.log(filteredData)
                     console.log(activeMonth)
@@ -81,6 +125,79 @@ if (content && timeFilter && monthFilter) {
                     console.log(filteredByMonth)
                     renderData(filteredByMonth);
                     renderChart(filteredByMonth);
+                    if (activeMax) {
+                        renderMetrics(filteredByMonth, 1);
+                    } else if (!activeMax) {
+                        renderMetrics(filteredByMonth, 2);
+                    }
+                }
+            }
+        }
+    });
+
+    mmFilter.addEventListener('click', event => {
+        if (event.target.tagName === 'BUTTON') {
+            const filter = event.target.id;
+            if (filter === 'max') {
+                activeMax = true;
+                setActiveFilter(mmFilter, 'max');
+            } else if (filter === 'min') {
+                activeMax = false;
+                setActiveFilter(mmFilter, 'min');
+            }
+        }
+        if (activeYear === null) {
+            if (activeMax) {
+                renderMetrics(filteredData, 1);
+            } else if (!activeMax) {
+                renderMetrics(filteredData, 2);
+            }
+        } else {
+            if (activeMonth){
+                const filteredByYearAndMonth = filterDataByYear(filterDataByMonth(filteredData, activeMonth), activeYear);
+                if (activeMax) {
+                    renderMetrics(filteredByYearAndMonth, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredByYearAndMonth, 2);
+                }
+            } else {
+                const filteredByYear = filterDataByYear(filteredData, selectedYear);
+                if (activeMax) {
+                    renderMetrics(filteredByYear, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredByYear, 2);
+                }
+            }
+        }
+        if (activeMonth == null) {
+            if (activeYear) {
+                const filteredByYear = filterDataByYear(filteredData, activeYear);
+                if (activeMax) {
+                    renderMetrics(filteredByYear, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredByYear, 2);
+                }
+            } else {
+                if (activeMax) {
+                    renderMetrics(filteredData, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredData, 2);
+                }
+            }
+        } else {
+            if (activeYear) {
+                const filteredByYearAndMonth = filterDataByYear(filterDataByMonth(filteredData, activeMonth), activeYear);
+                if (activeMax) {
+                    renderMetrics(filteredByYearAndMonth, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredByYearAndMonth, 2);
+                }
+            } else {
+                const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
+                if (activeMax) {
+                    renderMetrics(filteredByMonth, 1);
+                } else if (!activeMax) {
+                    renderMetrics(filteredByMonth, 2);
                 }
             }
         }
@@ -262,7 +379,7 @@ function renderData(data) {
                         if (situacija.ievainoti) {
                             ievainoti.innerText = "Ievainotie: " + situacija.ievainoti;
                         }
-
+                        
                         const attels = document.createElement('img');
                         if (situacija.attels) {
                             attels.src = situacija.attels;
@@ -273,7 +390,9 @@ function renderData(data) {
                         situacijaLContainer.appendChild(vieta);
                         situacijaLContainer.appendChild(gajusiboja);
                         situacijaLContainer.appendChild(ievainoti);
+                        if (situacija.attels) {
                         situacijaRContainer.appendChild(attels);
+                        }
                         situacijaContainer.appendChild(situacijaLContainer);
                         situacijaContainer.appendChild(situacijaRContainer);
                         container.appendChild(situacijaContainer);
@@ -323,127 +442,681 @@ function renderChart(data) {
         })
 
         const ctx = document.getElementById('myChart').getContext('2d');
-        myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: labels,
-                datasets: [
-                    {
-                        label: 'Gājuši bojā',
-                        data: gajusibojaData,
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 2
-                    },
-                    {
-                        label: 'Ievainotie',
-                        data: ievainotiData,
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 2
-                    },
-                    {
-                        label: 'Negadījumi',
-                        data: negadijumiData,
-                        backgroundColor: 'rgba(23,177,105, 0.2)',
-                        borderColor: 'rgba(23,177,105, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    },
-                    {
-                        label: 'Administratīvie pārkāpumi',
-                        data: citiKopaData,
-                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                        borderColor: 'rgba(255, 206, 86, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    },
-                    {
-                        label: 'Ātruma pārsniegšana',
-                        data: citiApData,
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    },
-                    {
-                        label: 'Agresīva braukšana',
-                        data: citiAbData,
-                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                        borderColor: 'rgba(153, 102, 255, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    },
-                    {
-                        label: 'Administratīvā pārkāpuma process',
-                        data: citiAppData,
-                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                        borderColor: 'rgba(255, 159, 64, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    },
-                    {
-                        label: 'Kriminālprocess',
-                        data: citiKpTvarData,
-                        backgroundColor: 'rgba(255, 99, 71, 0.2)',
-                        borderColor: 'rgba(255, 99, 71, 1)',
-                        borderWidth: 2,
-                        hidden: true
-                    }
-                ]
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        display: true,
-                        onClick: (e, legendItem, legend) => {
-                            const index = legendItem.datasetIndex;
-                            const ci = legend.chart;
-                            const meta = ci.getDatasetMeta(index);
-
-                            // Toggle the visibility of the dataset
-                            meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
-
-                            // Update the chart
-                            ci.update();
+        if (window.innerWidth < 500) {
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Gājuši bojā',
+                            data: gajusibojaData,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Ievainotie',
+                            data: ievainotiData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Negadījumi',
+                            data: negadijumiData,
+                            backgroundColor: 'rgba(23,177,105, 0.2)',
+                            borderColor: 'rgba(23,177,105, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvie pārkāpumi',
+                            data: citiKopaData,
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            borderColor: 'rgba(255, 206, 86, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Ātruma pārsniegšana',
+                            data: citiApData,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Agresīva braukšana',
+                            data: citiAbData,
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvā pārkāpuma process',
+                            data: citiAppData,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Kriminālprocess',
+                            data: citiKpTvarData,
+                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
+                            borderColor: 'rgba(255, 99, 71, 1)',
+                            borderWidth: 2,
+                            hidden: true
                         }
-                    },
-                    tooltip: {
-                        // Custom cursor when hovering over tooltips
-                        position: 'nearest',
-                        callbacks: {
-                            beforeBody: (tooltipItems) => {
-                                tooltipItems.forEach((tooltipItem) => {
-                                    tooltipItem.element.cursor = 'pointer';
-                                });
-                            }
-                        }
-                    }
+                    ]
                 },
-                scales: {
-                    x: {
-                        ticks: {
-                            font: {
-                                size: 16 // Set the font size for x-axis labels
+                options: {
+                    maintainAspectRatio: true,
+                    aspectRatio: 0.75,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            onClick: (e, legendItem, legend) => {
+                                const index = legendItem.datasetIndex;
+                                const ci = legend.chart;
+                                const meta = ci.getDatasetMeta(index);
+    
+                                // Toggle the visibility of the dataset
+                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
+    
+                                // Update the chart
+                                ci.update();
+                            },
+                            labels: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        },
+                        tooltip: {
+                            // Custom cursor when hovering over tooltips
+                            position: 'nearest',
+                            callbacks: {
+                                beforeBody: (tooltipItems) => {
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        tooltipItem.element.cursor = 'pointer';
+                                    });
+                                }
+                            },
+                            titleFont: {
+                                size: 14
+                            },
+                            bodyFont: {
+                                size: 14
+                            }
+                        },
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: {
+                                    size: 12
+                                }
                             }
                         }
                     },
-                    y: {
-                        ticks: {
-                            font: {
-                                size: 16 // Set the font size for y-axis labels
-                            }
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false,
+                        onHover: (event, chartElement) => {
+                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
                         }
-                    }
-                },
-                interaction: {
-                    mode: 'nearest',
-                    axis: 'x',
-                    intersect: false,
-                    onHover: (event, chartElement) => {
-                        event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
                     }
                 }
-            }
-        });
+            });
+        } else if (window.innerWidth < 1000) {
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Gājuši bojā',
+                            data: gajusibojaData,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Ievainotie',
+                            data: ievainotiData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Negadījumi',
+                            data: negadijumiData,
+                            backgroundColor: 'rgba(23,177,105, 0.2)',
+                            borderColor: 'rgba(23,177,105, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvie pārkāpumi',
+                            data: citiKopaData,
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            borderColor: 'rgba(255, 206, 86, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Ātruma pārsniegšana',
+                            data: citiApData,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Agresīva braukšana',
+                            data: citiAbData,
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvā pārkāpuma process',
+                            data: citiAppData,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Kriminālprocess',
+                            data: citiKpTvarData,
+                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
+                            borderColor: 'rgba(255, 99, 71, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: true,
+                    aspectRatio: 1,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            onClick: (e, legendItem, legend) => {
+                                const index = legendItem.datasetIndex;
+                                const ci = legend.chart;
+                                const meta = ci.getDatasetMeta(index);
+    
+                                // Toggle the visibility of the dataset
+                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
+    
+                                // Update the chart
+                                ci.update();
+                            },
+                            labels: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        },
+                        tooltip: {
+                            // Custom cursor when hovering over tooltips
+                            position: 'nearest',
+                            callbacks: {
+                                beforeBody: (tooltipItems) => {
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        tooltipItem.element.cursor = 'pointer';
+                                    });
+                                }
+                            },
+                            titleFont: {
+                                size: 14
+                            },
+                            bodyFont: {
+                                size: 14
+                            }
+                        },
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false,
+                        onHover: (event, chartElement) => {
+                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
+                        }
+                    }
+                }
+            });
+        } else if (window.innerWidth < 1300) {
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Gājuši bojā',
+                            data: gajusibojaData,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Ievainotie',
+                            data: ievainotiData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Negadījumi',
+                            data: negadijumiData,
+                            backgroundColor: 'rgba(23,177,105, 0.2)',
+                            borderColor: 'rgba(23,177,105, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvie pārkāpumi',
+                            data: citiKopaData,
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            borderColor: 'rgba(255, 206, 86, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Ātruma pārsniegšana',
+                            data: citiApData,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Agresīva braukšana',
+                            data: citiAbData,
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvā pārkāpuma process',
+                            data: citiAppData,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Kriminālprocess',
+                            data: citiKpTvarData,
+                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
+                            borderColor: 'rgba(255, 99, 71, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: true,
+                    aspectRatio: 1.5,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            onClick: (e, legendItem, legend) => {
+                                const index = legendItem.datasetIndex;
+                                const ci = legend.chart;
+                                const meta = ci.getDatasetMeta(index);
+    
+                                // Toggle the visibility of the dataset
+                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
+    
+                                // Update the chart
+                                ci.update();
+                            },
+                            labels: {
+                                font: {
+                                    size: 22
+                                }
+                            }
+                        },
+                        tooltip: {
+                            // Custom cursor when hovering over tooltips
+                            position: 'nearest',
+                            callbacks: {
+                                beforeBody: (tooltipItems) => {
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        tooltipItem.element.cursor = 'pointer';
+                                    });
+                                }
+                            },
+                            titleFont: {
+                                size: 18
+                            },
+                            bodyFont: {
+                                size: 18
+                            }
+                        },
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false,
+                        onHover: (event, chartElement) => {
+                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
+                        }
+                    }
+                }
+            });
+        } else {
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Gājuši bojā',
+                            data: gajusibojaData,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Ievainotie',
+                            data: ievainotiData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Negadījumi',
+                            data: negadijumiData,
+                            backgroundColor: 'rgba(23,177,105, 0.2)',
+                            borderColor: 'rgba(23,177,105, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvie pārkāpumi',
+                            data: citiKopaData,
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            borderColor: 'rgba(255, 206, 86, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Ātruma pārsniegšana',
+                            data: citiApData,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Agresīva braukšana',
+                            data: citiAbData,
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Administratīvā pārkāpuma process',
+                            data: citiAppData,
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        },
+                        {
+                            label: 'Kriminālprocess',
+                            data: citiKpTvarData,
+                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
+                            borderColor: 'rgba(255, 99, 71, 1)',
+                            borderWidth: 2,
+                            hidden: true
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            onClick: (e, legendItem, legend) => {
+                                const index = legendItem.datasetIndex;
+                                const ci = legend.chart;
+                                const meta = ci.getDatasetMeta(index);
+    
+                                // Toggle the visibility of the dataset
+                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
+    
+                                // Update the chart
+                                ci.update();
+                            },
+                            labels: {
+                                font: {
+                                    size: 22
+                                }
+                            }
+                        },
+                        tooltip: {
+                            // Custom cursor when hovering over tooltips
+                            position: 'nearest',
+                            callbacks: {
+                                beforeBody: (tooltipItems) => {
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        tooltipItem.element.cursor = 'pointer';
+                                    });
+                                }
+                            },
+                            titleFont: {
+                                size: 18
+                            },
+                            bodyFont: {
+                                size: 18
+                            }
+                        },
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false,
+                        onHover: (event, chartElement) => {
+                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
+                        }
+                    }
+                }
+            });
+        }
 }
+
+const topMetricsDiv = document.getElementById('top-metrics');
+function renderMetrics(data, number) {
+    topMetricsDiv.innerHTML = ''; // Очищаем содержимое div перед обновлением
+
+    let Gajusiboja;
+    let Ievainoti;
+    let Negadijumi;
+    let Kopa;
+    let Ap;
+    let Ab;
+    let App;
+    let Kp;
+
+    if (number === 1) {
+        Gajusiboja = findTopMetric(data, 'gajusiboja');
+        Ievainoti = findTopMetric(data, 'ievainoti');
+        Negadijumi = findTopMetric(data, 'citi.negadijumi');
+        Kopa = findTopMetric(data, 'citi.apl.kopa');
+        Ap = findTopMetric(data, 'citi.apl.ap');
+        Ab = findTopMetric(data, 'citi.apl.ab');
+        App = findTopMetric(data, 'citi.apl.app');
+        Kp = findTopMetric(data, 'citi.apl.kp_tvar');
+    } else if (number === 2) {
+        Gajusiboja = findMinMetric(data, 'gajusiboja');
+        Ievainoti = findMinMetric(data, 'ievainoti');
+        Negadijumi = findMinMetric(data, 'citi.negadijumi');
+        Kopa = findMinMetric(data, 'citi.apl.kopa');
+        Ap = findMinMetric(data, 'citi.apl.ap');
+        Ab = findMinMetric(data, 'citi.apl.ab');
+        App = findMinMetric(data, 'citi.apl.app');
+        Kp = findMinMetric(data, 'citi.apl.kp_tvar');
+    }
+
+    const gajusibojaDiv = document.createElement('div');
+    gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.value} (${convertDate(Gajusiboja.date)})`;
+
+    const ievainotiDiv = document.createElement('div');
+    ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.value} (${convertDate(Ievainoti.date)})`;
+
+    const negadijumiDiv = document.createElement('div');
+    negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.value} (${convertDate(Negadijumi.date)})`;
+
+    const kopaDiv = document.createElement('div');
+    kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.value} (${convertDate(Kopa.date)})`;
+
+    const apDiv = document.createElement('div');
+    apDiv.textContent = `Ātruma pārsniegšana: ${Ap.value} (${convertDate(Ap.date)})`;
+
+    const abDiv = document.createElement('div');
+    abDiv.textContent = `Agresīva braukšana: ${Ab.value} (${convertDate(Ab.date)})`;
+
+    const appDiv = document.createElement('div');
+    appDiv.textContent = `Administratīvā pārkāpuma process: ${App.value} (${convertDate(App.date)})`;
+
+    const kpDiv = document.createElement('div');
+    kpDiv.textContent = `Kriminālprocess: ${Kp.value} (${convertDate(Kp.date)})`;
+
+    topMetricsDiv.appendChild(gajusibojaDiv);
+    topMetricsDiv.appendChild(ievainotiDiv);
+    topMetricsDiv.appendChild(negadijumiDiv);
+    topMetricsDiv.appendChild(kopaDiv);
+    topMetricsDiv.appendChild(apDiv);
+    topMetricsDiv.appendChild(abDiv);
+    topMetricsDiv.appendChild(appDiv);
+    topMetricsDiv.appendChild(kpDiv);
+}
+
+function findTopMetric(data, metricKey) {
+    let maxValue = 0;
+    let maxDate = '';
+    for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+            const metricValue = parseInt(getNestedValue(data[key], metricKey));
+            if (metricValue > maxValue) {
+                maxValue = metricValue;
+                maxDate = key;
+            }
+        }
+    }
+    return { value: maxValue, date: maxDate };
+}
+
+function findMinMetric(data, metricKey) {
+    let minValue = Infinity;
+    let minDate = '';
+    for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+            const metricValue = parseInt(getNestedValue(data[key], metricKey));
+            if (metricValue < minValue) {
+                minValue = metricValue;
+                minDate = key;
+            }
+        }
+    }
+    return { value: minValue, date: minDate };
+}
+
+function getNestedValue(obj, keyPath) {
+    const keys = keyPath.split('.');
+    let value = obj;
+    for (const key of keys) {
+        if (value.hasOwnProperty(key)) {
+            value = value[key];
+        } else {
+            return null;
+        }
+    }
+    return value;
+}
+
+const openb = document.getElementById("open");
+const maxb = document.getElementById("max");
+const minb = document.getElementById("min");
+let openbc = false;
+openb.addEventListener('click', () => {
+    if (openbc) {
+        openbc = false;
+        openb.textContent = "Atvērt";
+        maxb.style.display = "none"
+        minb.style.display = "none"
+        topMetricsDiv.style.display = "none"
+    } else if (!openbc) {
+        openbc = true;
+        openb.textContent = "Aizvērt";
+        maxb.style.display = "block"
+        minb.style.display = "block"
+        topMetricsDiv.style.display = "block"
+    }
+});

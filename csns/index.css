@@ -17,10 +17,12 @@
 
 :root {
     --c1: #2b2d42;
-    --c2: #2b2d4240;
+    --c2: #ddd;
     --c3: #edf2f4;
     --c4: #ef233c;
     --c5: #d90429;
+
+    --sevenzero: 70dvh;
 }
 
 a,
@@ -51,18 +53,37 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
+/*    margin-top: 26dvh;*/
     margin-bottom: 1dvh;
 }
 
 .title {
-    font-size: 5dvh;
+    font-size: 3.75dvw;
     text-align: center;
-    padding: 6dvh 0 6dvh 0;
+    padding: 4dvh 0 4dvh 0;
+}
+
+footer {
+    margin: 5dvh 0 5dvh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    font-size: 2dvh;
+
+    & a {
+        font-weight: 700;
+    }
+}
+
+#mmfilter {
+    display: flex;
+    flex-direction: row;
 }
 
 #content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
@@ -70,11 +91,11 @@ body {
 }
 
 #container {
-    margin: 1dvh;
+    margin: 0.5dvh;
     padding: 1dvh;
     background-color: var(--c2);
-    min-width: 70vh;
-    max-width: 70vh;
+    min-width: var(--sevenzero);
+    max-width: var(--sevenzero);
 }
 
 #situacijalr {
@@ -169,7 +190,76 @@ button {
         cursor: default;
     }
 }
-
-#filters {
+ 
+.onlyfixed {
+/*     position: fixed;
+    top:0;*/
     width: 80%;
+}
+
+main {
+    width: 50%;
+}
+h2 {
+    color: var(--c1);
+    font-size: 4dvh;
+}
+p, ol {
+    margin-bottom: 1.5dvh;
+}
+p, li {
+    font-size: 2dvh;
+}
+pre {
+    background-color: var(--c1);
+    color: var(--c3);
+    padding: 1dvh;
+    border-radius: 0.5dvh;
+    font-size: 1.75dvh;
+}
+
+#top-metrics {
+    display: none;
+    width: 80%;
+    & div {
+        font-size: 2dvh;
+    }
+}
+#max, #min {
+    display: none;
+}
+
+@media screen and (max-width: 849px) {
+    :root {
+        --sevenzero: 60dvh;
+    }
+}
+@media screen and (max-width: 749px) {
+    :root {
+        --sevenzero: 50dvh;
+    }
+}
+@media screen and (max-width: 629px) {
+    :root {
+        --sevenzero: 40dvh;
+    }
+}
+@media screen and (max-width: 499px) {
+    :root {
+        --sevenzero: 35dvh;
+    }
+    #left {
+        grid-column: 1;
+    }
+    #right {
+        grid-column: 1;
+    }
+    .situacija2 {
+        flex-direction: column;
+    }
+    footer {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
 }

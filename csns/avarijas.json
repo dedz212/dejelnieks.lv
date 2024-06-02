@@ -1,4 +1,39 @@
 {
+	"020624": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "105",
+			"apl": {
+				"kopa": "434",
+				"ap": "190",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Traģiska avārija Saulkrastos: gājējs iet bojā pēc sadursmes ar automašīnu",
+				"soseja": "",
+				"vieta": "Saulkrasti",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://www.tvnet.lv/8032227/aizvaditaja-diennakti-avarijas-latvija-boja-gajusi-tris-cilveki"
+			},
+			{
+				"nosaukums": "Frontāla sadursme Salaspils pagastā ar diviem bojāgājušiem",
+				"soseja": "<span class=\"ac pi\">P5</span>",
+				"vieta": "Salaspils pagasts",
+				"gajusiboja": "2",
+				"ievainoti": "0",
+				"attels": "https://i.jauns.lv/t/2024/06/01/3076528/1000x500_precise.webp?v=1717226147",
+				"avots": "https://jauns.lv/raksts/zinas/607684-video-salaspils-pagasta-frontala-sadursme-ar-kravas-auto-dzivibu-zaude-divi-cilveki"
+			}
+		],
+		"upd": "01.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1796784693188215270"
+	},
 	"010624": {
 		"gajusiboja": "3",
 		"ievainoti": "17",

@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>:D</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-  </head>
-  <body>
-    <main>
-      <section class="bgd">
-        <div id="general">
-          <div class="onelist">
-            <div class="onelist">
-              <h1 id="fsg"><snap id="d">DEJELNIEKS</snap> AKA <snap id="t">TERE-ZANDER</snap></h1>
-              <p id="fsg" class="lang-hello"></p>
-            </div>
-            <p id="fsg" class="lang-desc"></p>
-          </div>
-        </div>
-        <div class="btnhei">
-          <div class="onelist">
-            <div>
-              <h1 class="lang-h3ss"></h1>
-            </div>
-            <div class="contlist">
-              <div class="container">
-                <div class="face mz"></div>
-                <h1><a class="ms" href="https://open.spotify.com/album/0pJLdKxy3EFcs80YwngDJP">Mirdzošas zvaigznes</a></h1>
-              </div>
-              <div class="container">
-                <div class="face nowonderwhy"></div>
-                <h1><a class="ms" href="https://open.spotify.com/album/0pJLdKxy3EFcs80YwngDJP">No Wonder Why: Alpha (Original Soundtrack)</a></h1>
-              </div>
-              <div class="container">
-                <div class="face soilbout"></div>
-                <h1><a class="ms" href="https://open.spotify.com/album/4d9ddZjtrPQ60qOv9ZOpTF">Soil Bout: the Special Edition</a></h1>
-              </div>
-            </div>
-          </div>
-          <div class="onelist">
-            <h1 class="lang-h2ss"></h1>
-            <div class="listcont">
-              <div class="container asubh">
-                <h1><a href="https://ydkjarchive.com">ydkjarchive.com</a></h1>
-              </div>
-              <div class="container asubh">
-                <h1><a href="https://jackboxbalt.icu">jackboxbalt.icu</a></h1>
-              </div><!--
+<!--
               <div class="container asubh">
                 <h1><a class="asub" href="./game.html">Lobby <span id="beta">ALPHA</span></a></h1>
               </div>
@@ -55,14 +7,9 @@
               </div>
               <div class="container asubh">
                 <h1><a class="asub" href="./jackjson/index.html">JACKJSON <span id="beta">ALPHA</span></a></h1>
-              </div>-->
-              <div class="container asubh">
-                <h1><a class="asub" href="./ydkjs/index.html">YDKJ SCREENSAVER</a></h1>
               </div>
-            </div>
-          </div>
-        </div>
-      </section><!--
+-->
+<!--
       <section id="2">
         <div id="general">
           <div class="onelist">
@@ -134,10 +81,5 @@
             </div>
           </div>
         </div>
-      </section>-->
-    </main>
-    <footer>
-    </footer>
-    <script src="./assets/js/app.js"></script>
-  </body>
-</html>
+      </section>
+-->

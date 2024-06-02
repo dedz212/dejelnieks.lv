@@ -8,7 +8,7 @@
         <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         
         <meta name="og:url" content="http://dejelnieks.lv/">
-        <meta name="og:title" content=":D - Dejelnieks | Main Page">
+        <meta name="og:title" content="Main Page | Dejelnieks | :D">
         <meta name="og:type" content="website">
         <meta name="og:description" content=":D means Dejelnieks | a latvian boy">
         <meta name="og:image" content="images/icon.png">
@@ -20,40 +20,33 @@
         <meta name="application-name" content=":D">
         <meta name="mobile-web-app-capable" content="yes">
     
-        <link rel="stylesheet" type="text/css" href="./assets/css/new.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/future.css">
     </head>
     <body>
-        <div id="popup"></div>
-        <div id="body2">
-            <nav>
-                <div class="ltor">
-                    <p>:D</p>
-                    <a class="toggle toggle-theme" id="tct"></a>
-                </div>
-                <p class="slower">hover me</p>
-            </nav>
-            <div class="welcome">
-                <img src="./assets/img/dejelnieks.png">
-                <p>
-                I'm Dejelnieks just call me Dale, also known online as Tere-Zander.
-                I'm an 18 year old student living in Latvia.
-                I'm a music lover (melomaniac), I like all genres of songs!
-                I also study languages such as English, Latvian, Russian and Japanese.
-                I also watch anime. You can see my list <a id="la" href="https://shikimori.me/%E3%83%87%E3%82%A4%E3%83%AB">here</a>.
-                I'm not a gamer. But from games, I play Minecraft and Jackbox.
-                I'm doing a little bit of programming, I've already created a website <a id="la" href="https://ydkjarchive.com">YDKJ Archive</a>.
-                And... I also make  <a id="la" href="https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw">tracks</a>.
-                </p>
+        <header>
+            <div class="logo">:D</div>
+        </header>
+        <main>
+            <div class="ate" id="description">
+                <div key="desc"></div>
             </div>
-            <main>
-                <h1>MUSIC</h1>
-                <div class="cnc" id="music"></div>
-            </main>
-            <main>
-                <h1>WEBSITES</h1>
-                <div class="cnc" id="web"></div>
-            </main>
-        </div>
+            <div class="ate" id="music">
+                <div class="hh" key="h_music"></div>
+                <div class="cardlist" id="musiclist"></div>
+            </div>
+            <div class="ate" id="web">
+                <div class="hh" key="h_web"></div>
+                <div class="cardlist" id="weblist"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="o">:D means Dejelnieks</div>
+            <div class="t">
+                <div id="lang-en">English</div>
+                <div id="lang-lv">Latviešu</div>
+                <div id="lang-ru">Русский</div>
+            </div>
+        </footer>
+        <script src="./assets/js/future.js"></script>
     </body>
-    <script src="./assets/js/new.js"></script>
 </html>

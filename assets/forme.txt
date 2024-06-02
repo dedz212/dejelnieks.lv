@@ -1,6 +1,0 @@
-        {
-            "href": "",
-            "tt": "monitori.lv",
-            "ttt": "Aplūko visus monitorus Latvijā! Salīdzini cenas un atrodi savu kritēriju prasībām atbilstošu monitoru!",
-            "rednew": "IN DEVELOPMENT"
-        },

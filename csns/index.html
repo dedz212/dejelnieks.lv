@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mājaslapa</title>
+    <title>Ceļu Satiksmes Negadījumu Statistika | :D</title>
     <meta name="description" content="Vietne ir paredzēta statistikas datu par negadījumiem un ar tiem saistītiem starpgadījumiem attēlošanai un analīzei. Lietotāji var vizualizēt datus par negadījumiem, cietušajiem un bojāgājušajiem, kā arī par administratīvajiem un kriminālpārkāpumiem dažādos laika periodos.">
     <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta name="og:url" content="httpы://dejelnieks.lv/csns">
+    <meta name="og:url" content="https://dejelnieks.lv/csns">
     <meta name="og:title" content="Ceļu Satiksmes Negadījumu Statistika">
     <meta name="og:type" content="website">
     <meta name="og:description" content="Vietne ir paredzēta statistikas datu par negadījumiem un ar tiem saistītiem starpgadījumiem attēlošanai un analīzei. Lietotāji var vizualizēt datus par negadījumiem, cietušajiem un bojāgājušajiem, kā arī par administratīvajiem un kriminālpārkāpumiem dažādos laika periodos.">
     <meta name="og:image" content="favicon.png">
 
-    <meta name="application-name" content="CSNS" />
+    <meta name="application-name" content="CSNs" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -25,33 +25,45 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 <body>
-    <h1 class="title">Ceļu Satiksmes Negadījumu Statistika</h1>
-    <div id="filters">
-        <div id="time-filter">
-            <button id="all-time" class="active">Visi gadi</button>
-            <button id="year-24">2024</button>
-            <!--<button id="year-23">2023</button>-->
-        </div>
-        <div id="month-filter">
-            <button id="all-months" class="active">Visi mēneši</button>
-            <!--<button id="month-01">Janvāris</button>
-            <button id="month-02">Februāris</button>
-            <button id="month-03">Marts</button>
-            <button id="month-04">Aprīlis</button>-->
-            <button id="month-05">Maijs</button>
-            <button id="month-06">Jūnijs</button><!--
-            <button id="month-07">Jūlijs</button>
-            <button id="month-08">Augusts</button>
-            <button id="month-09">Septembris</button>
-            <button id="month-10">Oktobris</button>
-            <button id="month-11">Novembris</button>
-            <button id="month-12">Decembris</button>-->
+    <div class="onlyfixed">
+        <h1 class="title">Ceļu Satiksmes Negadījumu Statistika</h1>
+        <div id="filters">
+            <div id="time-filter">
+                <button id="all-time" class="active">Visi gadi</button>
+                <button id="year-24">2024</button>
+                <!--<button id="year-23">2023</button>-->
+            </div>
+            <div id="month-filter">
+                <button id="all-months" class="active">Visi mēneši</button>
+                <!--<button id="month-01">Janvāris</button>
+                <button id="month-02">Februāris</button>
+                <button id="month-03">Marts</button>
+                <button id="month-04">Aprīlis</button>-->
+                <button id="month-05">Maijs</button>
+                <button id="month-06">Jūnijs</button><!--
+                <button id="month-07">Jūlijs</button>
+                <button id="month-08">Augusts</button>
+                <button id="month-09">Septembris</button>
+                <button id="month-10">Oktobris</button>
+                <button id="month-11">Novembris</button>
+                <button id="month-12">Decembris</button>-->
+            </div>
+            <div id="mmfilter">
+                <button id="open">Atvērt</button>
+                <button id="max" class="active">Visvairāk</button>
+                <button id="min">Vismazāk</button>
+            </div>
         </div>
     </div>
+    <div id="top-metrics"></div>
     <div class="astondesmit">
-        <canvas id="myChart" width="500" height="150"></canvas>
+        <canvas id="myChart" width="500" height="200"></canvas>
     </div>
     <div id="content"></div>
+    <footer>
+        <a href="./about.html">Par projektu</a>
+        <div>Statistikas informācija tiek ņemta no <a href="https://x.com/Valsts_policija">Valsts policija</a> Twitter konta.</div>
+    </footer>
     <script src="./index.js" type="module"></script>
 </body>
 </html>
