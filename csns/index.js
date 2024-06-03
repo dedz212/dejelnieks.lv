@@ -403,6 +403,29 @@ function renderData(data) {
     })
 }
 
+let aspectRatioData = 2.5;
+let is22 = 22;
+let is18 = 18;
+let is16 = 16;
+
+if (window.innerWidth < 500) {
+    aspectRatioData = 0.75;
+    is22 = 14;
+    is18 = 14;
+    is16 = 12;
+} else if (window.innerWidth < 1000) {
+    aspectRatioData = 1;
+    is22 = 16;
+    is18 = 14;
+    is16 = 12;
+} else if (window.innerWidth < 1300) {
+    if (window.innerHeight < 815) {
+        aspectRatioData = 2;
+    } else {
+        aspectRatioData = 1.5;
+    }
+}
+
 function renderChart(data) {
     if (myChart) {
         myChart.destroy();
@@ -442,7 +465,6 @@ function renderChart(data) {
         })
 
         const ctx = document.getElementById('myChart').getContext('2d');
-        if (window.innerWidth < 500) {
             myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -514,7 +536,7 @@ function renderChart(data) {
                 },
                 options: {
                     maintainAspectRatio: true,
-                    aspectRatio: 0.75,
+                    aspectRatio: aspectRatioData,
                     plugins: {
                         legend: {
                             display: true,
@@ -531,7 +553,7 @@ function renderChart(data) {
                             },
                             labels: {
                                 font: {
-                                    size: 16
+                                    size: is22
                                 }
                             }
                         },
@@ -546,10 +568,10 @@ function renderChart(data) {
                                 }
                             },
                             titleFont: {
-                                size: 14
+                                size: is18
                             },
                             bodyFont: {
-                                size: 14
+                                size: is18
                             }
                         },
                     },
@@ -557,14 +579,14 @@ function renderChart(data) {
                         x: {
                             ticks: {
                                 font: {
-                                    size: 12
+                                    size: is16
                                 }
                             }
                         },
                         y: {
                             ticks: {
                                 font: {
-                                    size: 12
+                                    size: is16
                                 }
                             }
                         }
@@ -579,416 +601,6 @@ function renderChart(data) {
                     }
                 }
             });
-        } else if (window.innerWidth < 1000) {
-            myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: 'Gājuši bojā',
-                            data: gajusibojaData,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Ievainotie',
-                            data: ievainotiData,
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Negadījumi',
-                            data: negadijumiData,
-                            backgroundColor: 'rgba(23,177,105, 0.2)',
-                            borderColor: 'rgba(23,177,105, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvie pārkāpumi',
-                            data: citiKopaData,
-                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                            borderColor: 'rgba(255, 206, 86, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Ātruma pārsniegšana',
-                            data: citiApData,
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderColor: 'rgba(75, 192, 192, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Agresīva braukšana',
-                            data: citiAbData,
-                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvā pārkāpuma process',
-                            data: citiAppData,
-                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                            borderColor: 'rgba(255, 159, 64, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Kriminālprocess',
-                            data: citiKpTvarData,
-                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
-                            borderColor: 'rgba(255, 99, 71, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        }
-                    ]
-                },
-                options: {
-                    maintainAspectRatio: true,
-                    aspectRatio: 1,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            onClick: (e, legendItem, legend) => {
-                                const index = legendItem.datasetIndex;
-                                const ci = legend.chart;
-                                const meta = ci.getDatasetMeta(index);
-    
-                                // Toggle the visibility of the dataset
-                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
-    
-                                // Update the chart
-                                ci.update();
-                            },
-                            labels: {
-                                font: {
-                                    size: 16
-                                }
-                            }
-                        },
-                        tooltip: {
-                            // Custom cursor when hovering over tooltips
-                            position: 'nearest',
-                            callbacks: {
-                                beforeBody: (tooltipItems) => {
-                                    tooltipItems.forEach((tooltipItem) => {
-                                        tooltipItem.element.cursor = 'pointer';
-                                    });
-                                }
-                            },
-                            titleFont: {
-                                size: 14
-                            },
-                            bodyFont: {
-                                size: 14
-                            }
-                        },
-                    },
-                    scales: {
-                        x: {
-                            ticks: {
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        }
-                    },
-                    interaction: {
-                        mode: 'nearest',
-                        axis: 'x',
-                        intersect: false,
-                        onHover: (event, chartElement) => {
-                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
-                        }
-                    }
-                }
-            });
-        } else if (window.innerWidth < 1300) {
-            myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: 'Gājuši bojā',
-                            data: gajusibojaData,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Ievainotie',
-                            data: ievainotiData,
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Negadījumi',
-                            data: negadijumiData,
-                            backgroundColor: 'rgba(23,177,105, 0.2)',
-                            borderColor: 'rgba(23,177,105, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvie pārkāpumi',
-                            data: citiKopaData,
-                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                            borderColor: 'rgba(255, 206, 86, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Ātruma pārsniegšana',
-                            data: citiApData,
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderColor: 'rgba(75, 192, 192, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Agresīva braukšana',
-                            data: citiAbData,
-                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvā pārkāpuma process',
-                            data: citiAppData,
-                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                            borderColor: 'rgba(255, 159, 64, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Kriminālprocess',
-                            data: citiKpTvarData,
-                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
-                            borderColor: 'rgba(255, 99, 71, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        }
-                    ]
-                },
-                options: {
-                    maintainAspectRatio: true,
-                    aspectRatio: 1.5,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            onClick: (e, legendItem, legend) => {
-                                const index = legendItem.datasetIndex;
-                                const ci = legend.chart;
-                                const meta = ci.getDatasetMeta(index);
-    
-                                // Toggle the visibility of the dataset
-                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
-    
-                                // Update the chart
-                                ci.update();
-                            },
-                            labels: {
-                                font: {
-                                    size: 22
-                                }
-                            }
-                        },
-                        tooltip: {
-                            // Custom cursor when hovering over tooltips
-                            position: 'nearest',
-                            callbacks: {
-                                beforeBody: (tooltipItems) => {
-                                    tooltipItems.forEach((tooltipItem) => {
-                                        tooltipItem.element.cursor = 'pointer';
-                                    });
-                                }
-                            },
-                            titleFont: {
-                                size: 18
-                            },
-                            bodyFont: {
-                                size: 18
-                            }
-                        },
-                    },
-                    scales: {
-                        x: {
-                            ticks: {
-                                font: {
-                                    size: 16
-                                }
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                font: {
-                                    size: 16
-                                }
-                            }
-                        }
-                    },
-                    interaction: {
-                        mode: 'nearest',
-                        axis: 'x',
-                        intersect: false,
-                        onHover: (event, chartElement) => {
-                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
-                        }
-                    }
-                }
-            });
-        } else {
-            myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: 'Gājuši bojā',
-                            data: gajusibojaData,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Ievainotie',
-                            data: ievainotiData,
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 2
-                        },
-                        {
-                            label: 'Negadījumi',
-                            data: negadijumiData,
-                            backgroundColor: 'rgba(23,177,105, 0.2)',
-                            borderColor: 'rgba(23,177,105, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvie pārkāpumi',
-                            data: citiKopaData,
-                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                            borderColor: 'rgba(255, 206, 86, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Ātruma pārsniegšana',
-                            data: citiApData,
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderColor: 'rgba(75, 192, 192, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Agresīva braukšana',
-                            data: citiAbData,
-                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Administratīvā pārkāpuma process',
-                            data: citiAppData,
-                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                            borderColor: 'rgba(255, 159, 64, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        },
-                        {
-                            label: 'Kriminālprocess',
-                            data: citiKpTvarData,
-                            backgroundColor: 'rgba(255, 99, 71, 0.2)',
-                            borderColor: 'rgba(255, 99, 71, 1)',
-                            borderWidth: 2,
-                            hidden: true
-                        }
-                    ]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: true,
-                            onClick: (e, legendItem, legend) => {
-                                const index = legendItem.datasetIndex;
-                                const ci = legend.chart;
-                                const meta = ci.getDatasetMeta(index);
-    
-                                // Toggle the visibility of the dataset
-                                meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
-    
-                                // Update the chart
-                                ci.update();
-                            },
-                            labels: {
-                                font: {
-                                    size: 22
-                                }
-                            }
-                        },
-                        tooltip: {
-                            // Custom cursor when hovering over tooltips
-                            position: 'nearest',
-                            callbacks: {
-                                beforeBody: (tooltipItems) => {
-                                    tooltipItems.forEach((tooltipItem) => {
-                                        tooltipItem.element.cursor = 'pointer';
-                                    });
-                                }
-                            },
-                            titleFont: {
-                                size: 18
-                            },
-                            bodyFont: {
-                                size: 18
-                            }
-                        },
-                    },
-                    scales: {
-                        x: {
-                            ticks: {
-                                font: {
-                                    size: 16
-                                }
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                font: {
-                                    size: 16
-                                }
-                            }
-                        }
-                    },
-                    interaction: {
-                        mode: 'nearest',
-                        axis: 'x',
-                        intersect: false,
-                        onHover: (event, chartElement) => {
-                            event.native.target.style.cursor = chartElement.length ? 'pointer' : 'pointer';
-                        }
-                    }
-                }
-            });
-        }
 }
 
 const topMetricsDiv = document.getElementById('top-metrics');

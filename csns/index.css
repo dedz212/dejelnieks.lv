@@ -23,6 +23,11 @@
     --c5: #d90429;
 
     --sevenzero: 70dvh;
+
+    --f1p5: 1.5dvh;
+    --f1p75: 1.75dvh;
+    --f2: 2dvh;
+    --f2p5: 2.5dvh;
 }
 
 a,
@@ -69,10 +74,14 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     width: 80%;
-    font-size: 2dvh;
+    font-size: var(--f2);
 
     & a {
         font-weight: 700;
+    }
+
+    & div {
+        text-align: right;
     }
 }
 
@@ -108,26 +117,26 @@ footer {
     grid-column: 1;
     color: var(--c1);
     font-weight: 400;
-    font-size: 1.75dvh;
+    font-size: var(--f1p75);
 }
 #right {
     grid-column: 2;
 }
 
 #data {
-    font-size: 2.5dvh;
+    font-size: var(--f2p5);
     color: var(--c1);
     font-weight: 500;
 }
 
 #data3 {
     margin-top: 1dvh;
-    font-size: 2.5dvh;
+    font-size: var(--f2p5);
     color: var(--c1);
 }
 
 .nosaukums, #data2 {
-    font-size: 2dvh;
+    font-size: var(--f2);
     color: var(--c1);
 }
 
@@ -145,7 +154,7 @@ footer {
 }
 
 .aa {
-    font-size: 1.5dvh;
+    font-size: var(--f1p5);
 }
 
 .ac {
@@ -172,7 +181,7 @@ button {
     margin: 0;
     padding: 0.5dvh;
     font-weight: 400;
-    font-size: 1.5dvh;
+    font-size: var(--f1p5);
 
     &:hover {
         background-color: var(--c1);
@@ -205,33 +214,41 @@ h2 {
     font-size: 4dvh;
 }
 p, ol {
-    margin-bottom: 1.5dvh;
+    margin-bottom: var(--f1p5);
 }
 p, li {
-    font-size: 2dvh;
+    font-size: var(--f2);
 }
 pre {
     background-color: var(--c1);
     color: var(--c3);
     padding: 1dvh;
     border-radius: 0.5dvh;
-    font-size: 1.75dvh;
+    font-size: var(--f1p75);
 }
 
 #top-metrics {
     display: none;
+    margin: 1dvh;
     width: 80%;
     & div {
-        font-size: 2dvh;
+        font-size: 1.75dvh;
     }
 }
 #max, #min {
     display: none;
 }
 
+
 @media screen and (max-width: 849px) {
     :root {
         --sevenzero: 60dvh;
+    }
+}
+@media screen and (max-width: 849px), 
+       screen and (max-height: 1400px) {
+    :root {
+        --sevenzero: 50dvh;
     }
 }
 @media screen and (max-width: 749px) {
@@ -261,5 +278,51 @@ pre {
         align-items: center;
         text-align: center;
         flex-direction: column;
+
+        & div {
+            text-align: center;
+        }
     }
+}
+@media screen and (width: 499px) and
+(min-height: 720px) and (max-height: 920px) {
+    :root {
+        --sevenzero: 60dvh;
+    }
+}
+@media screen and (max-width: 420px) and 
+(min-height: 720px) and (max-height: 920px) {
+    :root {
+        --sevenzero: 30dvh;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1280px) and 
+(min-height: 600px) and (max-height: 800px) {
+        :root {
+            --sevenzero: 80dvh;
+            --f1p5: 2.5dvh;
+            --f1p75: 2.75dvh;
+            --f2: 3vh;
+            --f2p5: 3.5vh;
+        }
+        img {
+            height: 22dvh;
+        }
+}
+@media screen and (min-height: 700px) and (max-height: 729px) {
+    :root {
+        --sevenzero: 60dvh;
+    }
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 4vh;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+    color: #FF204E;
+    font-weight: 300;
 }
