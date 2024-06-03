@@ -100,6 +100,7 @@ footer {
     align-content: center;
     justify-content: flex-start;
     align-items: flex-start;
+    margin: 0.3dvw 0;
 }
 
 #content {
@@ -298,6 +299,9 @@ pre {
     #open {
         background-color: var(--c1);
     }
+    #time-filter, #month-filter, #mmfilter {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 849px) {
@@ -367,13 +371,37 @@ pre {
         img {
             height: 22dvh;
         }
+        button {
+            background-color: var(--c3);
+            width: 18dvh;
+            &:hover {
+                background-color: var(--c1);
+                color: var(--c3);
+                font-weight: 400;
+            }
+        }
+        .active {
+            background-color: var(--c5);
+            &:hover {
+                background-color: var(--c5);
+            }
+        }
+        #lyabg, #lyabg2, #lyabg3, #lyabgo {
+            opacity: 0;
+        }
+        #open {
+            background-color: var(--c1);
+        }
+        #time-filter, #month-filter, #mmfilter {
+            margin: 0;
+        }
 }
 @media screen and (min-height: 700px) and (max-height: 729px) {
     :root {
         --sevenzero: 60dvh;
     }
 }
-@media screen and (max-width: 399px) and
+@media screen and (max-width: 369px) and
 (min-height: 720px) and (max-height: 4000px) {
     :root {
         --sevenzero: 25dvh;
@@ -387,6 +415,40 @@ pre {
 (min-height: 720px) and (max-height: 4000px) {
     :root {
         --sevenzero: 20dvh;
+    }
+}
+@media screen and (max-width: 940px) and
+(min-height: 900px) and (max-height: 4000px) {
+    :root {
+        --sevenzero: 60dvh;
+    }
+}
+@media screen and (max-width: 810px) and
+(min-height: 900px) and (max-height: 4000px) {
+    :root {
+        --sevenzero: 50dvh;
+    }
+}
+@media screen and (max-width: 680px) and
+(min-height: 900px) and (max-height: 4000px) {
+    :root {
+        --sevenzero: 40dvh;
+    }
+}
+@media screen and (max-width: 550px) and
+(min-height: 1000px) and (max-height: 4000px) {
+    :root {
+        --sevenzero: 30dvh;
+        --f1p5: 1dvh;
+        --f1p75: 1.25dvh;
+        --f2: 1.5vh;
+        --f2p5: 2vh;
+    }
+}
+@media screen and (max-width: 430px) and
+(min-height: 1000px) and (max-height: 4000px) {
+    :root {
+        --sevenzero: 25dvh;
     }
 }
 
