@@ -1,4 +1,21 @@
 {
+	"030624": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "89",
+			"apl": {
+				"kopa": "467",
+				"ap": "265",
+				"ab": "8",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "02.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1797502513387905109"
+	},
 	"020624": {
 		"gajusiboja": "0",
 		"ievainoti": "11",
@@ -12,27 +29,9 @@
 				"kp_tvar": "9"
 			}
 		},
-		"situacijas": [
-			{
-				"nosaukums": "Traģiska avārija Saulkrastos: gājējs iet bojā pēc sadursmes ar automašīnu",
-				"soseja": "",
-				"vieta": "Saulkrasti",
-				"gajusiboja": "1",
-				"ievainoti": "0",
-				"avots": "https://www.tvnet.lv/8032227/aizvaditaja-diennakti-avarijas-latvija-boja-gajusi-tris-cilveki"
-			},
-			{
-				"nosaukums": "Frontāla sadursme Salaspils pagastā ar diviem bojāgājušiem",
-				"soseja": "<span class=\"ac pi\">P5</span>",
-				"vieta": "Salaspils pagasts",
-				"gajusiboja": "2",
-				"ievainoti": "0",
-				"attels": "https://i.jauns.lv/t/2024/06/01/3076528/1000x500_precise.webp?v=1717226147",
-				"avots": "https://jauns.lv/raksts/zinas/607684-video-salaspils-pagasta-frontala-sadursme-ar-kravas-auto-dzivibu-zaude-divi-cilveki"
-			}
-		],
-		"upd": "01.06.2024",
-		"avots": "https://x.com/Valsts_policija/status/1796784693188215270"
+		"situacijas": [],
+		"upd": "02.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1797143402808553951"
 	},
 	"010624": {
 		"gajusiboja": "3",
