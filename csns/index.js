@@ -146,6 +146,8 @@ function setActiveFilter(filterGroup, activeFilterId) {
     buttons.forEach(button => {
         if (button.id === activeFilterId) {
             button.classList.add('active');
+            console.log(activeFilterId)
+            LRdivActive(activeFilterId);
         } else {
             button.classList.remove('active');
         }
@@ -767,6 +769,7 @@ openb.addEventListener('click', () => {
         sumb.style.display = "none"
         avgb.style.display = "none"
         topMetricsDiv.style.display = "none"
+        lyabg3.style.display = "none"
     } else if (!openbc) {
         openbc = true;
         openb.textContent = "Aizvērt";
@@ -775,5 +778,37 @@ openb.addEventListener('click', () => {
         sumb.style.display = "block"
         avgb.style.display = "block"
         topMetricsDiv.style.display = "block"
+        lyabg3.style.display = "block"
     }
 });
+
+const lyabg = document.getElementById(`lyabg`);
+const lyabg2 = document.getElementById(`lyabg2`);
+const lyabg3 = document.getElementById(`lyabg3`);
+function LRdivActive(data) {
+  if (data === "all-time") {
+    lyabg.style.transform = `translateX(0vh) translateY(-0.25vh)`;
+  } else if (data === "year-24") {
+    lyabg.style.transform = `translateX(9vh) translateY(-0.25vh)`;
+  }
+
+  if (data === "all-months") {
+    lyabg2.style.transform = `translateX(0vh) translateY(-0.25vh)`;
+  } else if (data === "month-04") {
+    lyabg2.style.transform = `translateX(9vh) translateY(-0.25vh)`;
+  } else if (data === "month-05") {
+    lyabg2.style.transform = `translateX(18vh) translateY(-0.25vh)`;
+  } else if (data === "month-06") {
+    lyabg2.style.transform = `translateX(27vh) translateY(-0.25vh)`;
+  }
+
+  if (data === "max") {
+    lyabg3.style.transform = `translateX(9vh) translateY(-0.25vh)`;
+  } else if (data === "min") {
+    lyabg3.style.transform = `translateX(18vh) translateY(-0.25vh)`;
+  } else if (data === "sum") {
+    lyabg3.style.transform = `translateX(27vh) translateY(-0.25vh)`;
+  } else if (data === "avg") {
+    lyabg3.style.transform = `translateX(36vh) translateY(-0.25vh)`;
+  }
+}
