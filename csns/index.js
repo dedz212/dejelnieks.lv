@@ -15,7 +15,7 @@ const timeFilter = document.getElementById('time-filter');
 const monthFilter = document.getElementById('month-filter');
 const mmFilter = document.getElementById('mmfilter');
 var myChart = null
-var activeMax = true;
+var activeMm = 1;
 
 if (content && timeFilter && monthFilter && mmFilter) {
     let filteredData = null;
@@ -32,45 +32,38 @@ if (content && timeFilter && monthFilter && mmFilter) {
         })
         .catch(error => console.error('Error fetching JSON:', error));
 
+    function renderAll(data) {
+        renderData(data);
+        renderChart(data);
+        if (activeMm === 1) {
+            renderMetrics(data, 1);
+        } else if (activeMm === 2) {
+            renderMetrics(data, 2);
+        } else if (activeMm === 3) {
+            renderMetrics(data, 3);
+        } else if (activeMm === 4) {
+            renderMetrics(data, 4);
+        }
+    }
+
     timeFilter.addEventListener('click', event => {
         if (event.target.tagName === 'BUTTON') {
             const filter = event.target.id;
             if (filter === 'all-time') {
                 activeYear = null;
                 setActiveFilter(timeFilter, 'all-time');
-                renderData(filteredData);
-                renderChart(filteredData);
-                if (activeMax) {
-                    renderMetrics(filteredData, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredData, 2);
-                }
+                renderAll(filteredData);
             } else if (filter.startsWith('year-')) {
                 const selectedYear = parseInt(filter.split('-')[1]);
                 activeYear = selectedYear;
                 setActiveFilter(timeFilter, filter);
                 if (activeMonth){
                     const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
-                    console.log(filteredData)
-                    console.log(activeMonth)
                     const filteredByYearAndMonth = filterDataByYear(filteredByMonth, activeYear);
-                    console.log(filteredByMonth)
-                    renderData(filteredByYearAndMonth);
-                    renderChart(filteredByYearAndMonth);
-                    if (activeMax) {
-                        renderMetrics(filteredByYearAndMonth, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredByYearAndMonth, 2);
-                    }
+                    renderAll(filteredByYearAndMonth);
                 } else {
                     const filteredByYear = filterDataByYear(filteredData, selectedYear);
-                    renderData(filteredByYear);
-                    renderChart(filteredByYear);
-                    if (activeMax) {
-                        renderMetrics(filteredByYear, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredByYear, 2);
-                    }
+                    renderAll(filteredByYear);
                 }
             }
         }
@@ -84,52 +77,21 @@ if (content && timeFilter && monthFilter && mmFilter) {
                 setActiveFilter(monthFilter, 'all-months');
                 if (activeYear) {
                     const filteredByYear = filterDataByYear(filteredData, activeYear);
-                    renderData(filteredByYear);
-                    renderChart(filteredByYear);
-                    if (activeMax) {
-                        renderMetrics(filteredByYear, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredByYear, 2);
-                    }
+                    renderAll(filteredByYear);
                 } else {
-                    renderData(filteredData);
-                    renderChart(filteredData);
-                    if (activeMax) {
-                        renderMetrics(filteredData, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredData, 2);
-                    }
+                    renderAll(filteredData);
                 }
             } else if (filter.startsWith('month-')) {
                 const selectedMonth = filter.split('-')[1];
                 activeMonth = selectedMonth;
-                console.log(activeMonth);
                 setActiveFilter(monthFilter, filter);
                 if (activeYear) {
                     const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
-                    console.log(filteredData)
-                    console.log(activeMonth)
                     const filteredByYearAndMonth = filterDataByYear(filteredByMonth, activeYear);
-                    console.log(filteredByMonth)
-                    renderData(filteredByYearAndMonth);
-                    renderChart(filteredByYearAndMonth);
-                    if (activeMax) {
-                        renderMetrics(filteredByYearAndMonth, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredByYearAndMonth, 2);
-                    }
+                    renderAll(filteredByYearAndMonth);
                 } else {
-                    console.log(filteredData)
-                    console.log(activeMonth)
                     const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
-                    console.log(filteredByMonth)
-                    renderData(filteredByMonth);
-                    renderChart(filteredByMonth);
-                    if (activeMax) {
-                        renderMetrics(filteredByMonth, 1);
-                    } else if (!activeMax) {
-                        renderMetrics(filteredByMonth, 2);
-                    }
+                    renderAll(filteredByMonth);
                 }
             }
         }
@@ -138,67 +100,42 @@ if (content && timeFilter && monthFilter && mmFilter) {
     mmFilter.addEventListener('click', event => {
         if (event.target.tagName === 'BUTTON') {
             const filter = event.target.id;
-            if (filter === 'max') {
-                activeMax = true;
-                setActiveFilter(mmFilter, 'max');
-            } else if (filter === 'min') {
-                activeMax = false;
-                setActiveFilter(mmFilter, 'min');
-            }
+            const filterMapping = {
+                'max': 1,
+                'min': 2,
+                'sum': 3,
+                'avg': 4
+            };
+            if (filter in filterMapping) {
+                activeMm = filterMapping[filter];
+                setActiveFilter(mmFilter, filter);
+            }            
         }
         if (activeYear === null) {
-            if (activeMax) {
-                renderMetrics(filteredData, 1);
-            } else if (!activeMax) {
-                renderMetrics(filteredData, 2);
-            }
+            renderAll(filteredData);
         } else {
             if (activeMonth){
                 const filteredByYearAndMonth = filterDataByYear(filterDataByMonth(filteredData, activeMonth), activeYear);
-                if (activeMax) {
-                    renderMetrics(filteredByYearAndMonth, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredByYearAndMonth, 2);
-                }
+                renderAll(filteredByYearAndMonth);
             } else {
                 const filteredByYear = filterDataByYear(filteredData, selectedYear);
-                if (activeMax) {
-                    renderMetrics(filteredByYear, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredByYear, 2);
-                }
+                renderAll(filteredByYear);
             }
         }
         if (activeMonth == null) {
             if (activeYear) {
                 const filteredByYear = filterDataByYear(filteredData, activeYear);
-                if (activeMax) {
-                    renderMetrics(filteredByYear, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredByYear, 2);
-                }
+                renderAll(filteredByYear);
             } else {
-                if (activeMax) {
-                    renderMetrics(filteredData, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredData, 2);
-                }
+                renderAll(filteredData);
             }
         } else {
             if (activeYear) {
                 const filteredByYearAndMonth = filterDataByYear(filterDataByMonth(filteredData, activeMonth), activeYear);
-                if (activeMax) {
-                    renderMetrics(filteredByYearAndMonth, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredByYearAndMonth, 2);
-                }
+                renderAll(filteredByYearAndMonth);
             } else {
                 const filteredByMonth = filterDataByMonth(filteredData, activeMonth);
-                if (activeMax) {
-                    renderMetrics(filteredByMonth, 1);
-                } else if (!activeMax) {
-                    renderMetrics(filteredByMonth, 2);
-                }
+                renderAll(filteredByMonth);
             }
         }
     });
@@ -634,31 +571,97 @@ function renderMetrics(data, number) {
         Ab = findMinMetric(data, 'citi.apl.ab');
         App = findMinMetric(data, 'citi.apl.app');
         Kp = findMinMetric(data, 'citi.apl.kp_tvar');
+    } else if (number === 3) {
+        Gajusiboja = sumMetric(data, 'gajusiboja');
+        Ievainoti = sumMetric(data, 'ievainoti');
+        Negadijumi = sumMetric(data, 'citi.negadijumi');
+        Kopa = sumMetric(data, 'citi.apl.kopa');
+        Ap = sumMetric(data, 'citi.apl.ap');
+        Ab = sumMetric(data, 'citi.apl.ab');
+        App = sumMetric(data, 'citi.apl.app');
+        Kp = sumMetric(data, 'citi.apl.kp_tvar');
+    } else if (number === 4) {
+        Gajusiboja = averageMetric(data, 'gajusiboja');
+        Ievainoti = averageMetric(data, 'ievainoti');
+        Negadijumi = averageMetric(data, 'citi.negadijumi');
+        Kopa = averageMetric(data, 'citi.apl.kopa');
+        Ap = averageMetric(data, 'citi.apl.ap');
+        Ab = averageMetric(data, 'citi.apl.ab');
+        App = averageMetric(data, 'citi.apl.app');
+        Kp = averageMetric(data, 'citi.apl.kp_tvar');
     }
 
     const gajusibojaDiv = document.createElement('div');
-    gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.value} (${convertDate(Gajusiboja.date)})`;
+    if (number === 1 || number === 2) {
+        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.value} (${convertDate(Gajusiboja.date)})`;
+    } else if (number === 3) {
+        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.sum}`;
+    } else if (number === 4) {
+        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.average} dienā`;
+    }
 
     const ievainotiDiv = document.createElement('div');
-    ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.value} (${convertDate(Ievainoti.date)})`;
+    if (number === 1 || number === 2) {
+        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.value} (${convertDate(Ievainoti.date)})`;
+    } else if (number === 3) {
+        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.sum}`;
+    } else if (number === 4) {
+        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.average} dienā`;
+    }
 
     const negadijumiDiv = document.createElement('div');
-    negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.value} (${convertDate(Negadijumi.date)})`;
-
+    if (number === 1 || number === 2) {
+        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.value} (${convertDate(Negadijumi.date)})`;
+    } else if (number === 3) {
+        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.sum}`;
+    } else if (number === 4) {
+        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.average} dienā`;
+    }
+    
     const kopaDiv = document.createElement('div');
-    kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.value} (${convertDate(Kopa.date)})`;
+    if (number === 1 || number === 2) {
+        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.value} (${convertDate(Kopa.date)})`;
+    } else if (number === 3) {
+        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.sum}`;
+    } else if (number === 4) {
+        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.average} dienā`;
+    }
 
     const apDiv = document.createElement('div');
-    apDiv.textContent = `Ātruma pārsniegšana: ${Ap.value} (${convertDate(Ap.date)})`;
+    if (number === 1 || number === 2) {
+        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.value} (${convertDate(Ap.date)})`;
+    } else if (number === 3) {
+        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.sum}`;
+    } else if (number === 4) {
+        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.average} dienā`;
+    }
 
     const abDiv = document.createElement('div');
-    abDiv.textContent = `Agresīva braukšana: ${Ab.value} (${convertDate(Ab.date)})`;
+    if (number === 1 || number === 2) {
+        abDiv.textContent = `Agresīva braukšana: ${Ab.value} (${convertDate(Ab.date)})`;
+    } else if (number === 3) {
+        abDiv.textContent = `Agresīva braukšana: ${Ab.sum}`;
+    } else if (number === 4) {
+        abDiv.textContent = `Agresīva braukšana: ${Ab.average} dienā`;
+    }
 
     const appDiv = document.createElement('div');
-    appDiv.textContent = `Administratīvā pārkāpuma process: ${App.value} (${convertDate(App.date)})`;
+    if (number === 1 || number === 2) {
+        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.value} (${convertDate(App.date)})`;
+    } else if (number === 3) {
+        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.sum}`;
+    } else if (number === 4) {
+        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.average} dienā`;
+    }
 
     const kpDiv = document.createElement('div');
-    kpDiv.textContent = `Kriminālprocess: ${Kp.value} (${convertDate(Kp.date)})`;
+    if (number === 1 || number === 2) {
+        kpDiv.textContent = `Kriminālprocess: ${Kp.value} (${convertDate(Kp.date)})`;
+    } else if (number === 3) {
+        kpDiv.textContent = `Kriminālprocess: ${Kp.sum}`;
+    } else if (number === 4) {
+        kpDiv.textContent = `Kriminālprocess: ${Kp.average} dienā`;
+    }
 
     topMetricsDiv.appendChild(gajusibojaDiv);
     topMetricsDiv.appendChild(ievainotiDiv);
@@ -700,6 +703,42 @@ function findMinMetric(data, metricKey) {
     return { value: minValue, date: minDate };
 }
 
+function sumMetric(data, metricKey) {
+    let sum = 0;
+    for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+            const metricValue = parseInt(getNestedValue(data[key], metricKey));
+            if (isNaN(metricValue)) {
+                sum += 0;
+            } else {
+                sum += metricValue;
+            }
+        }
+    }
+    return { sum: sum };
+}
+
+function averageMetric(data, metricKey) {
+    let sum = 0;
+    let count = 0;
+    for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+            const metricValue = parseInt(getNestedValue(data[key], metricKey));
+            if (isNaN(metricValue)) {
+                sum += 0;
+            } else {
+                sum += metricValue;
+            }
+            count++;
+        }
+    }
+    const average = count > 0 ? sum / count : 0;
+    return {
+        average: average.toFixed(2),
+    };
+}
+
+
 function getNestedValue(obj, keyPath) {
     const keys = keyPath.split('.');
     let value = obj;
@@ -716,6 +755,8 @@ function getNestedValue(obj, keyPath) {
 const openb = document.getElementById("open");
 const maxb = document.getElementById("max");
 const minb = document.getElementById("min");
+const sumb = document.getElementById("sum");
+const avgb = document.getElementById("avg");
 let openbc = false;
 openb.addEventListener('click', () => {
     if (openbc) {
@@ -723,12 +764,16 @@ openb.addEventListener('click', () => {
         openb.textContent = "Atvērt";
         maxb.style.display = "none"
         minb.style.display = "none"
+        sumb.style.display = "none"
+        avgb.style.display = "none"
         topMetricsDiv.style.display = "none"
     } else if (!openbc) {
         openbc = true;
         openb.textContent = "Aizvērt";
         maxb.style.display = "block"
         minb.style.display = "block"
+        sumb.style.display = "block"
+        avgb.style.display = "block"
         topMetricsDiv.style.display = "block"
     }
 });

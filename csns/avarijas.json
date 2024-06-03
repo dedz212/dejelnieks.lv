@@ -667,5 +667,570 @@
 		"situacijas": [],
 		"upd": "01.06.2024",
 		"avots": "https://x.com/Valsts_policija/status/1785547664219640007"
+	},
+	"300424": {
+		"gajusiboja": "1",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "149",
+			"apl": {
+				"kopa": "515",
+				"ap": "228",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1785178129465516190"
+	},
+	"290424": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "81",
+			"apl": {
+				"kopa": "536",
+				"ap": "271",
+				"ab": "8",
+				"app": "5",
+				"kp_tvar": "13"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kurzemes prospektā tramvaja vadītāja uzbrauca gājējai",
+				"soseja": "",
+				"vieta": "Rīga",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1785178131575259316"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1784817484735885752"
+	},
+	"280424": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "85",
+			"apl": {
+				"kopa": "594",
+				"ap": "319",
+				"ab": "2",
+				"app": "3",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1784470019243417994"
+	},
+	"270424": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "132",
+			"apl": {
+				"kopa": "510",
+				"ap": "188",
+				"ab": "3",
+				"app": "4",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1784096885214511122"
+	},
+	"260424": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "103",
+			"apl": {
+				"kopa": "413",
+				"ap": "196",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1783728656126226688"
+	},
+	"250424": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "122",
+			"apl": {
+				"kopa": "689",
+				"ap": "275",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1783363397460840941"
+	},
+	"240424": {
+		"gajusiboja": "0",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "113",
+			"apl": {
+				"kopa": "515",
+				"ap": "240",
+				"ab": "3",
+				"app": "0",
+				"kp_tvar": "2"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1783007501916541208"
+	},
+	"230424": {
+		"gajusiboja": "0",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "130",
+			"apl": {
+				"kopa": "417",
+				"ap": "173",
+				"ab": "1",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1782638232577970451"
+	},
+	"220424": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "72",
+			"apl": {
+				"kopa": "478",
+				"ap": "248",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1782280052287180866"
+	},
+	"210424": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "90",
+			"apl": {
+				"kopa": "644",
+				"ap": "303",
+				"ab": "3",
+				"app": "3",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1781947028735410606"
+	},
+	"200424": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "116",
+			"apl": {
+				"kopa": "826",
+				"ap": "519",
+				"ab": "5",
+				"app": "4",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1781584344697495616"
+	},
+	"190424": {
+		"gajusiboja": "0",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "138",
+			"apl": {
+				"kopa": "548",
+				"ap": "261",
+				"ab": "1",
+				"app": "4",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1781193654008205722"
+	},
+	"180424": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "106",
+			"apl": {
+				"kopa": "459",
+				"ap": "261",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1780824868872679456"
+	},
+	"170424": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "610",
+			"apl": {
+				"kopa": "610",
+				"ap": "293",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1780468605294960795"
+	},
+	"160424": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "118",
+			"apl": {
+				"kopa": "490",
+				"ap": "226",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1780106027339317314"
+	},
+	"150424": {
+		"gajusiboja": "0",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "81",
+			"apl": {
+				"kopa": "450",
+				"ap": "239",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1779743652920615131"
+	},
+	"140424": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "96",
+			"apl": {
+				"kopa": "447",
+				"ap": "187",
+				"ab": "2",
+				"app": "3",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1779405129973711112"
+	},
+	"130424": {
+		"gajusiboja": "1",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "130",
+			"apl": {
+				"kopa": "607",
+				"ap": "271",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1779045394640433649"
+	},
+	"120424": {
+		"gajusiboja": "1",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "138",
+			"apl": {
+				"kopa": "576",
+				"ap": "279",
+				"ab": "4",
+				"app": "0",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kravas automašīnas vadītājs uzbrauca gājējai",
+				"soseja": "",
+				"vieta": "Alūksne, Pils iela",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1779045396586635330"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1778655666749452603"
+	},
+	"110424": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "124",
+			"apl": {
+				"kopa": "579",
+				"ap": "235",
+				"ab": "13",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Motocikla vadītājs uzbrauca stāvošai automašīnai Ford Mondeo",
+				"soseja": "",
+				"vieta": "Rīga, uz Akmens tilta virzienā uz Pārdaugavu",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1778655669291298836"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1778290890907300057"
+	},
+	"100424": {
+		"gajusiboja": "1",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "119",
+			"apl": {
+				"kopa": "546",
+				"ap": "222",
+				"ab": "12",
+				"app": "3",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1777935009078198535"
+	},
+	"090424": {
+		"gajusiboja": "2",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "114",
+			"apl": {
+				"kopa": "603",
+				"ap": "277",
+				"ab": "7",
+				"app": "1",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Citroen Berlingo vadītājs uzbrauca šķērslim – kokam, pēc kā auto aizdegās",
+				"soseja": "<span class=\"ac pi\">P3</span>",
+				"vieta": "Ropažu novads, Garkalnes pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1777935010944684344"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1777572526622724511"
+	},
+	"080424": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "66",
+			"apl": {
+				"kopa": "574",
+				"ap": "314",
+				"ab": "1",
+				"app": "0",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Vīrietis, veicot apdzīšanas manevru, netika galā ar auto Toyota vadību",
+				"soseja": "",
+				"vieta": "Daugavpils",
+				"gajusiboja": "2",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1777573327864754364"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1777212415928652004"
+	},
+	"070424": {
+		"gajusiboja": "1",
+		"citi": {
+			"apl": {
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kravas automašīnas avārijā uz Kokneses šosejas gājis bojā tās šoferis",
+				"soseja": "",
+				"vieta": "Rīga, starp Akmens tiltu un Dzelzceļa tiltu",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "https://img.1188.lv/v4/202404/876/143/4/c3f0567d175f318c244aa2e88e2dfdf2.jpg",
+				"avots": "https://www.1188.lv/zinas/riga-daugava-iebraukusi-automasina-no-tas-izcelts-viriesa-likis/29041"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1776721584301969420"
+	},
+	"060424": {
+		"citi": {
+			"apl": {
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": ""
+	},
+	"050424": {
+		"gajusiboja": "1",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "104",
+			"apl": {
+				"kopa": "514",
+				"ap": "199",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1776122909242675510"
+	},
+	"040424": {
+		"gajusiboja": "0",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "115",
+			"apl": {
+				"kopa": "490",
+				"ap": "190",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kravas automašīnas vadītājs nobrauca no ceļa braucamās daļas un uzbrauca šķērslim – kokam un elektrības stabam. ",
+				"soseja": "",
+				"vieta": "Rīga, Flotes iela",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1776122911595577405"
+			}
+		],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1775758708007416151"
+	},
+	"030424": {
+		"gajusiboja": "0",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "136",
+			"apl": {
+				"kopa": "434",
+				"ap": "197",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1775397718967366104"
+	},
+	"020424": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "59",
+			"apl": {
+				"kopa": "603",
+				"ap": "320",
+				"ab": "2",
+				"app": "5",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1775035283173425651"
+	},
+	"010424": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "71",
+			"apl": {
+				"kopa": "684",
+				"ap": "298",
+				"ab": "1",
+				"app": "5",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [],
+		"upd": "03.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1774714830621966363"
 	}
 }
