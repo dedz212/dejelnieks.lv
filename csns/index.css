@@ -430,9 +430,46 @@ pre {
     }
 }
 @media screen and (max-width: 680px) and
-(min-height: 900px) and (max-height: 4000px) {
+(min-height: 900px) and (max-height: 1500px) {
     :root {
         --sevenzero: 40dvh;
+    }
+}
+@media screen and (max-width: 680px) and
+(min-height: 1500px) and (max-height: 4000px) {
+    #left {
+        grid-column: 1;
+    }
+    #right {
+        grid-column: 1;
+    }
+    .situacija2 {
+        flex-direction: column;
+    }
+    footer {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        & div {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 680px) and
+(min-height: 1500px) and (max-height: 2000px) {
+    :root {
+        --sevenzero: 30dvh;
+    }
+}
+@media screen and (max-width: 680px) and
+(min-height: 2000px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 20dvh;
+        --f1p5: 1dvh;
+        --f1p75: 1.25dvh;
+        --f2: 1.5vh;
+        --f2p5: 2vh;
     }
 }
 @media screen and (max-width: 550px) and
@@ -449,6 +486,85 @@ pre {
 (min-height: 1000px) and (max-height: 4000px) {
     :root {
         --sevenzero: 25dvh;
+    }
+}
+@media screen and (max-width: 1720px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 60dvh;
+    }
+}
+@media screen and (max-width: 1500px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 50dvh;
+    }
+}
+@media screen and (max-width: 1220px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 40dvh;
+    }
+}
+@media screen and (max-width: 990px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 30dvh;
+    }
+    #left {
+        grid-column: 1;
+    }
+    #right {
+        grid-column: 1;
+    }
+    .situacija2 {
+        flex-direction: column;
+    }
+    footer {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        & div {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 780px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 25dvh;
+        --f1p5: 1dvh;
+        --f1p75: 1.25dvh;
+        --f2: 1.5vh;
+        --f2p5: 2vh;
+    }
+}
+@media screen and (max-width: 640px) and
+(min-height: 1650px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 20dvh;
+    }
+    img {
+        height: 11dvh;
+    }
+}
+@media screen and (max-width: 420px) and
+(min-height: 1470px) and (max-height: 1900px) {
+    :root {
+        --sevenzero: 20dvh;
+    }
+    img {
+        height: 11dvh;
+    }
+}
+@media screen and (max-width: 420px) and
+(min-height: 1900px) and (max-height: 3000px) {
+    :root {
+        --sevenzero: 15dvh;
+    }
+    img {
+        height: 11dvh;
     }
 }
 
