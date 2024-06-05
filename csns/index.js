@@ -259,7 +259,7 @@ function renderData(data) {
                     const aplapp = document.createElement('div');
                     aplapp.classList.add('aa');
                     if (apld.app) {
-                        aplapp.innerText = app + kols+ apld.app;
+                        aplapp.innerText = app + kols + apld.app;
                     }
 
                     const aplkp = document.createElement('div');
@@ -275,8 +275,12 @@ function renderData(data) {
                     
 
                     containerl.appendChild(h1);
-                    containerl.appendChild(gajusibojad);
-                    containerl.appendChild(ievainotid);
+                    if(data[key].gajusiboja) {
+                        containerl.appendChild(gajusibojad);
+                    }
+                    if(data[key].ievainoti) {
+                        containerl.appendChild(ievainotid);
+                    }
                     containerl.appendChild(negadijumi);
                     containerr.appendChild(h2);
                     containerr.appendChild(aplkopa);
@@ -285,7 +289,9 @@ function renderData(data) {
                     containerr.appendChild(aplapp);
                     containerr.appendChild(aplkp);
                     situacijalr.appendChild(containerl);
+                    if (data[key].avots) {
                     containerl.appendChild(avots);
+                    }
                     if(apld.ap) {
                         situacijalr.appendChild(containerr);
                     }
