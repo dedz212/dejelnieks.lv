@@ -1265,5 +1265,581 @@
 		"situacijas": [],
 		"upd": "03.06.2024",
 		"avots": "https://x.com/Valsts_policija/status/1774714830621966363"
+	},
+	"310324": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "94",
+			"apl": {
+				"kopa": "696",
+				"ap": "356",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1774320462710906920"
+	},
+	"300324": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "69",
+			"apl": {
+				"kopa": "769",
+				"ap": "370",
+				"ab": "8",
+				"app": "8",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1773963199395573988"
+	},
+	"290324": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "154",
+			"apl": {
+				"kopa": "568",
+				"ap": "255",
+				"ab": "4",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1773591445733065122"
+	},
+	"280324": {
+		"gajusiboja": "2",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "116",
+			"apl": {
+				"kopa": "491",
+				"ap": "166",
+				"ab": "4",
+				"app": "2",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1773244110431748494"
+	},
+	"270324": {
+		"gajusiboja": "0",
+		"ievainoti": "3",
+		"citi": {
+			"negadijumi": "103",
+			"apl": {
+				"kopa": "627",
+				"ap": "314",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1772873875132477860"
+	},
+	"260324": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "103",
+			"apl": {
+				"kopa": "522",
+				"ap": "240",
+				"ab": "7",
+				"app": "2",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1772512089505931275"
+	},
+	"250324": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "62",
+			"apl": {
+				"kopa": "498",
+				"ap": "263",
+				"ab": "2",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1772152444664885479"
+	},
+	"240324": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "84",
+			"apl": {
+				"kopa": "599",
+				"ap": "281",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1771783655645401189"
+	},
+	"230324": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "133",
+			"apl": {
+				"kopa": "548",
+				"ap": "234",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1771444073208992204"
+	},
+	"220324": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "118",
+			"apl": {
+				"kopa": "486",
+				"ap": "203",
+				"ab": "1",
+				"app": "1",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1771066145031774247"
+	},
+	"210324": {
+		"gajusiboja": "1",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "128",
+			"apl": {
+				"kopa": "555",
+				"ap": "217",
+				"ab": "9",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1770708231716831446"
+	},
+	"200324": {
+		"gajusiboja": "0",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "111",
+			"apl": {
+				"kopa": "489",
+				"ap": "208",
+				"ab": "5",
+				"app": "2",
+				"kp_tvar": "2"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Kravas automašīnas un vieglās automašīnas sadursme",
+				"soseja": "<span class=\"ac sh\">A5</span>",
+				"vieta": "Olaines novads",
+				"gajusiboja": "1",
+				"ievainoti": "1",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1770708234002632954"
+			}
+		],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1770338937757647093"
+	},
+	"190324": {
+		"gajusiboja": "0",
+		"ievainoti": "4",
+		"citi": {
+			"negadijumi": "95",
+			"apl": {
+				"kopa": "566",
+				"ap": "248",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1769971620246917579"
+	},
+	"180324": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "70",
+			"apl": {
+				"kopa": "517",
+				"ap": "252",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "13"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1769611325850697977"
+	},
+	"170324": {
+		"gajusiboja": "0",
+		"ievainoti": "6",
+		"citi": {
+			"negadijumi": "90",
+			"apl": {
+				"kopa": "519",
+				"ap": "234",
+				"ab": "1",
+				"app": "4",
+				"kp_tvar": "13"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1769274595339649326"
+	},
+	"160324": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "101",
+			"apl": {
+				"kopa": "585",
+				"ap": "252",
+				"ab": "3",
+				"app": "4",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1768898154349375583"
+	},
+	"150324": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "140",
+			"apl": {
+				"kopa": "608",
+				"ap": "251",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1768527268110905398"
+	},
+	"140324": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "140",
+			"apl": {
+				"kopa": "457",
+				"ap": "214",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1768164470981886061"
+	},
+	"130324": {
+		"gajusiboja": "0",
+		"ievainoti": "2",
+		"citi": {
+			"negadijumi": "118",
+			"apl": {
+				"kopa": "495",
+				"ap": "196",
+				"ab": "3",
+				"app": "4",
+				"kp_tvar": "2"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1767802030008017297"
+	},
+	"120324": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "135",
+			"apl": {
+				"kopa": "522",
+				"ap": "215",
+				"ab": "1",
+				"app": "1",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1767438797971558550"
+	},
+	"110324": {
+		"gajusiboja": "2",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "62",
+			"apl": {
+				"kopa": "568",
+				"ap": "322",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1767085004692054074"
+	},
+	"100324": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "87",
+			"apl": {
+				"kopa": "440",
+				"ap": "214",
+				"ab": "2",
+				"app": "3",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Vadakste vīrietis, vadot motociklu nobrauca no brauktuves un apgāzās",
+				"soseja": "",
+				"vieta": "Saldus novads, Rubas pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1767085006860464211"
+			},
+			{
+				"nosaukums": "Sieviete “Volkswagen” markas auto sadūrās ar gājēju",
+				"soseja": "",
+				"vieta": "Dobeles novads, Īles pagasts pa autoceļu Dobele",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1767086973611638791"
+			}
+		],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1766724720181821813"
+	},
+	"090324": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "154",
+			"apl": {
+				"kopa": "525",
+				"ap": "200",
+				"ab": "14",
+				"app": "5",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1766385411872415863"
+	},
+	"080324": {
+		"gajusiboja": "1",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "139",
+			"apl": {
+				"kopa": "587",
+				"ap": "244",
+				"ab": "5",
+				"app": "1",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1765991121354670511"
+	},
+	"070324": {
+		"gajusiboja": "0",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "112",
+			"apl": {
+				"kopa": "638",
+				"ap": "298",
+				"ab": "8",
+				"app": "1",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Audi vadītājs uzbrauca gājējām",
+				"soseja": "<span class=\"ac pi\">P10</span>",
+				"vieta": "Ogres novads, Tīnūžu pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1765991179055768011"
+			}
+		],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1765623492785930732"
+	},
+	"060324": {
+		"gajusiboja": "1",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "134",
+			"apl": {
+				"kopa": "502",
+				"ap": "220",
+				"ab": "12",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1765264051859320867"
+	},
+	"050324": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "107",
+			"apl": {
+				"kopa": "451",
+				"ap": "218",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Sadursme starp a/m “Škoda” un velosipēdistu",
+				"soseja": "",
+				"vieta": "Jēkabpils novads, Variešu pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"attels": "",
+				"avots": "https://x.com/Valsts_policija/status/1765265519496528233"
+			}
+		],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1764901808365871382"
+	},
+	"040324": {
+		"gajusiboja": "0",
+		"ievainoti": "7",
+		"citi": {
+			"negadijumi": "74",
+			"apl": {
+				"kopa": "540",
+				"ap": "246",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1764539720338432184"
+	},
+	"030324": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "84",
+			"apl": {
+				"kopa": "486",
+				"ap": "233",
+				"ab": "3",
+				"app": "6",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1764200599371804861"
+	},
+	"020324": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "142",
+			"apl": {
+				"kopa": "430",
+				"ap": "167",
+				"ab": "3",
+				"app": "3",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1763838759076843621"
+	},
+	"010324": {
+		"gajusiboja": "0",
+		"ievainoti": "4",
+		"citi": {
+			"negadijumi": "87",
+			"apl": {
+				"kopa": "508",
+				"ap": "245",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "05.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1763449678232707083"
 	}
 }

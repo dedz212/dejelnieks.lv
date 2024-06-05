@@ -180,6 +180,17 @@ function filterDataByMonth(data, month) {
     return filtered;
 }
 
+const gajusiboja = "Gājuši bojā"
+const ievainoti = "Ievainotie"
+const apl = "Administratīvie pārkāpumi"
+const csn = "Ceļu satiksmes negadījumi"
+const ng = "Negadījumi"
+const ap = "Ātruma pārsniegšana"
+const ab = "Agresīva braukšana"
+const app = "Administratīvā pārkāpuma process";
+const kp = "Kriminālprocess"
+const kols = ": "
+
 function renderData(data) {
     content.innerHTML = '';
     
@@ -201,17 +212,17 @@ function renderData(data) {
                     const situacijalr = document.createElement('div');
                     situacijalr.id = 'situacijalr';
 
-                    const gajusiboja = document.createElement('div');
-                    gajusiboja.innerText = "Gājuši bojā: " + data[key].gajusiboja;
+                    const gajusibojad = document.createElement('div');
+                    gajusibojad.innerText = gajusiboja + kols + data[key].gajusiboja;
 
-                    const ievainoti = document.createElement('div');
-                    ievainoti.innerText = "Ievainotie: " + data[key].ievainoti;
+                    const ievainotid = document.createElement('div');
+                    ievainotid.innerText = ievainoti + kols + data[key].ievainoti;
 
                     const cdata = data[key].citi;
 
                     const negadijumi = document.createElement('div');
                     if (cdata.negadijumi) {
-                        negadijumi.innerText = "Ceļu satiksmes negadījumi: " + cdata.negadijumi;
+                        negadijumi.innerText = csn + kols + cdata.negadijumi;
                     }
 
                     const containerl = document.createElement('div');
@@ -220,46 +231,52 @@ function renderData(data) {
                     containerr.classList.add('situacija');
                     containerr.id = 'right';
 
-                    const apl = cdata.apl
+                    const apld = cdata.apl
                     const h2 = document.createElement('div');
-                    if(apl.ap) {
+                    if(apld.ap) {
                         h2.id = 'data2';
-                        h2.innerText = `Administratīvie pārkāpumi`;
+                        h2.innerText = apl;
                     }
 
                     const aplkopa = document.createElement('div');
                     aplkopa.classList.add('aa');
-                    if (apl.kopa) {
-                        aplkopa.innerText = "Kopumā pieņemti: " + apl.kopa;
+                    if (apld.kopa) {
+                        aplkopa.innerText = "Kopumā pieņemti: " + apld.kopa;
                     }
 
                     const aplap = document.createElement('div');
                     aplap.classList.add('aa');
-                    if (apl.ap) {
-                        aplap.innerText = "Ātruma pārsniegšana: " + apl.ap;
+                    if (apld.ap) {
+                        aplap.innerText = ap + kols + apld.ap;
                     }
 
                     const aplab = document.createElement('div');
                     aplab.classList.add('aa');
-                    if (apl.ab) {
-                        aplab.innerText = "Agresīva braukšana: " + apl.ab;
+                    if (apld.ab) {
+                        aplab.innerText = ab + kols + apld.ab;
                     }
 
                     const aplapp = document.createElement('div');
                     aplapp.classList.add('aa');
-                    if (apl.app) {
-                        aplapp.innerText = "Administratīvā pārkāpuma process: " + apl.app;
+                    if (apld.app) {
+                        aplapp.innerText = app + kols+ apld.app;
                     }
 
                     const aplkp = document.createElement('div');
                     aplkp.classList.add('aa');
-                    if (apl.kp_tvar) {
-                        aplkp.innerText = "Kriminālprocess: " + apl.kp_tvar;
+                    if (apld.kp_tvar) {
+                        aplkp.innerText = kp + kols + apld.kp_tvar;
                     }
 
+                    const avots = document.createElement('a');
+                    avots.classList.add('avots');
+                    avots.href = data[key].avots;
+                    avots.innerText = "Avots";
+                    
+
                     containerl.appendChild(h1);
-                    containerl.appendChild(gajusiboja);
-                    containerl.appendChild(ievainoti);
+                    containerl.appendChild(gajusibojad);
+                    containerl.appendChild(ievainotid);
                     containerl.appendChild(negadijumi);
                     containerr.appendChild(h2);
                     containerr.appendChild(aplkopa);
@@ -268,7 +285,8 @@ function renderData(data) {
                     containerr.appendChild(aplapp);
                     containerr.appendChild(aplkp);
                     situacijalr.appendChild(containerl);
-                    if(apl.ap) {
+                    containerl.appendChild(avots);
+                    if(apld.ap) {
                         situacijalr.appendChild(containerr);
                     }
                     container.appendChild(situacijalr);
@@ -307,16 +325,16 @@ function renderData(data) {
                             vieta.innerText = "Vieta: " + situacija.vieta;
                         }
 
-                        const gajusiboja = document.createElement('div');
-                        gajusiboja.classList.add('aa');
+                        const gajusibojad = document.createElement('div');
+                        gajusibojad.classList.add('aa');
                         if (situacija.gajusiboja) {
-                            gajusiboja.innerText = "Gājuši bojā: " + situacija.gajusiboja;
+                            gajusibojad.innerText = gajusiboja + kols + situacija.gajusiboja;
                         }
 
-                        const ievainoti = document.createElement('div');
-                        ievainoti.classList.add('aa');
+                        const ievainotid = document.createElement('div');
+                        ievainotid.classList.add('aa');
                         if (situacija.ievainoti) {
-                            ievainoti.innerText = "Ievainotie: " + situacija.ievainoti;
+                            ievainotid.innerText = ievainoti + kols + situacija.ievainoti;
                         }
                         
                         const attels = document.createElement('img');
@@ -327,8 +345,8 @@ function renderData(data) {
                         situacijaLContainer.appendChild(nosaukums);
                         situacijaLContainer.appendChild(soseja);
                         situacijaLContainer.appendChild(vieta);
-                        situacijaLContainer.appendChild(gajusiboja);
-                        situacijaLContainer.appendChild(ievainoti);
+                        situacijaLContainer.appendChild(gajusibojad);
+                        situacijaLContainer.appendChild(ievainotid);
                         if (situacija.attels) {
                         situacijaRContainer.appendChild(attels);
                         }
@@ -410,21 +428,21 @@ function renderChart(data) {
                     labels: labels,
                     datasets: [
                         {
-                            label: 'Gājuši bojā',
+                            label: gajusiboja,
                             data: gajusibojaData,
                             backgroundColor: 'rgba(255, 99, 132, 0.2)',
                             borderColor: 'rgba(255, 99, 132, 1)',
                             borderWidth: 2
                         },
                         {
-                            label: 'Ievainotie',
+                            label: ievainoti,
                             data: ievainotiData,
                             backgroundColor: 'rgba(54, 162, 235, 0.2)',
                             borderColor: 'rgba(54, 162, 235, 1)',
                             borderWidth: 2
                         },
                         {
-                            label: 'Negadījumi',
+                            label: ng,
                             data: negadijumiData,
                             backgroundColor: 'rgba(23,177,105, 0.2)',
                             borderColor: 'rgba(23,177,105, 1)',
@@ -432,7 +450,7 @@ function renderChart(data) {
                             hidden: true
                         },
                         {
-                            label: 'Administratīvie pārkāpumi',
+                            label: apl,
                             data: citiKopaData,
                             backgroundColor: 'rgba(255, 206, 86, 0.2)',
                             borderColor: 'rgba(255, 206, 86, 1)',
@@ -440,7 +458,7 @@ function renderChart(data) {
                             hidden: true
                         },
                         {
-                            label: 'Ātruma pārsniegšana',
+                            label: ap,
                             data: citiApData,
                             backgroundColor: 'rgba(75, 192, 192, 0.2)',
                             borderColor: 'rgba(75, 192, 192, 1)',
@@ -448,7 +466,7 @@ function renderChart(data) {
                             hidden: true
                         },
                         {
-                            label: 'Agresīva braukšana',
+                            label: ab,
                             data: citiAbData,
                             backgroundColor: 'rgba(153, 102, 255, 0.2)',
                             borderColor: 'rgba(153, 102, 255, 1)',
@@ -456,7 +474,7 @@ function renderChart(data) {
                             hidden: true
                         },
                         {
-                            label: 'Administratīvā pārkāpuma process',
+                            label: app,
                             data: citiAppData,
                             backgroundColor: 'rgba(255, 159, 64, 0.2)',
                             borderColor: 'rgba(255, 159, 64, 1)',
@@ -464,7 +482,7 @@ function renderChart(data) {
                             hidden: true
                         },
                         {
-                            label: 'Kriminālprocess',
+                            label: kp,
                             data: citiKpTvarData,
                             backgroundColor: 'rgba(255, 99, 71, 0.2)',
                             borderColor: 'rgba(255, 99, 71, 1)',
@@ -595,74 +613,74 @@ function renderMetrics(data, number) {
 
     const gajusibojaDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.value} (${convertDate(Gajusiboja.date)})`;
+        gajusibojaDiv.textContent = `${gajusiboja + kols} ${Gajusiboja.value} (${convertDate(Gajusiboja.date)})`;
     } else if (number === 3) {
-        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.sum}`;
+        gajusibojaDiv.textContent = `${gajusiboja + kols}${Gajusiboja.sum}`;
     } else if (number === 4) {
-        gajusibojaDiv.textContent = `Gājuši bojā: ${Gajusiboja.average} dienā`;
+        gajusibojaDiv.textContent = `${gajusiboja + kols} ${Gajusiboja.average} dienā; ${Gajusiboja.average2} nedēļā`;
     }
 
     const ievainotiDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.value} (${convertDate(Ievainoti.date)})`;
+        ievainotiDiv.textContent = `${ievainoti + kols} ${Ievainoti.value} (${convertDate(Ievainoti.date)})`;
     } else if (number === 3) {
-        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.sum}`;
+        ievainotiDiv.textContent = `${ievainoti + kols} ${Ievainoti.sum}`;
     } else if (number === 4) {
-        ievainotiDiv.textContent = `Ievainotie: ${Ievainoti.average} dienā`;
+        ievainotiDiv.textContent = `${ievainoti + kols} ${Ievainoti.average} dienā; ${Ievainoti.average2} nedēļā`;
     }
 
     const negadijumiDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.value} (${convertDate(Negadijumi.date)})`;
+        negadijumiDiv.textContent = `${csn + kols} ${Negadijumi.value} (${convertDate(Negadijumi.date)})`;
     } else if (number === 3) {
-        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.sum}`;
+        negadijumiDiv.textContent = `${csn + kols} ${Negadijumi.sum}`;
     } else if (number === 4) {
-        negadijumiDiv.textContent = `Ceļu satiksmes negadījumi: ${Negadijumi.average} dienā`;
+        negadijumiDiv.textContent = `${csn + kols} ${Negadijumi.average} dienā; ${Negadijumi.average2} nedēļā`;
     }
     
     const kopaDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.value} (${convertDate(Kopa.date)})`;
+        kopaDiv.textContent = `${apl + kols} ${Kopa.value} (${convertDate(Kopa.date)})`;
     } else if (number === 3) {
-        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.sum}`;
+        kopaDiv.textContent = `${apl + kols} ${Kopa.sum}`;
     } else if (number === 4) {
-        kopaDiv.textContent = `Administratīvie pārkāpumi: ${Kopa.average} dienā`;
+        kopaDiv.textContent = `${apl + kols} ${Kopa.average} dienā; ${Kopa.average2} nedēļā`;
     }
 
     const apDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.value} (${convertDate(Ap.date)})`;
+        apDiv.textContent = `${ap + kols} ${Ap.value} (${convertDate(Ap.date)})`;
     } else if (number === 3) {
-        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.sum}`;
+        apDiv.textContent = `${ap + kols} ${Ap.sum}`;
     } else if (number === 4) {
-        apDiv.textContent = `Ātruma pārsniegšana: ${Ap.average} dienā`;
+        apDiv.textContent = `${ap + kols} ${Ap.average} dienā; ${Ap.average2} nedēļā`;
     }
 
     const abDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        abDiv.textContent = `Agresīva braukšana: ${Ab.value} (${convertDate(Ab.date)})`;
+        abDiv.textContent = `${ab + kols} ${Ab.value} (${convertDate(Ab.date)})`;
     } else if (number === 3) {
-        abDiv.textContent = `Agresīva braukšana: ${Ab.sum}`;
+        abDiv.textContent = `${ab + kols} ${Ab.sum}`;
     } else if (number === 4) {
-        abDiv.textContent = `Agresīva braukšana: ${Ab.average} dienā`;
+        abDiv.textContent = `${ab + kols} ${Ab.average} dienā; ${Ab.average2} nedēļā`;
     }
 
     const appDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.value} (${convertDate(App.date)})`;
+        appDiv.textContent = `${app + kols} ${App.value} (${convertDate(App.date)})`;
     } else if (number === 3) {
-        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.sum}`;
+        appDiv.textContent = `${app + kols} ${App.sum}`;
     } else if (number === 4) {
-        appDiv.textContent = `Administratīvā pārkāpuma process: ${App.average} dienā`;
+        appDiv.textContent = `${app + kols} ${App.average} dienā; ${App.average2} nedēļā`;
     }
 
     const kpDiv = document.createElement('div');
     if (number === 1 || number === 2) {
-        kpDiv.textContent = `Kriminālprocess: ${Kp.value} (${convertDate(Kp.date)})`;
+        kpDiv.textContent = `${kp + kols} ${Kp.value} (${convertDate(Kp.date)})`;
     } else if (number === 3) {
-        kpDiv.textContent = `Kriminālprocess: ${Kp.sum}`;
+        kpDiv.textContent = `${kp + kols} ${Kp.sum}`;
     } else if (number === 4) {
-        kpDiv.textContent = `Kriminālprocess: ${Kp.average} dienā`;
+        kpDiv.textContent = `${kp + kols} ${Kp.average} dienā; ${Kp.average2} nedēļā`;
     }
 
     topMetricsDiv.appendChild(gajusibojaDiv);
@@ -735,8 +753,10 @@ function averageMetric(data, metricKey) {
         }
     }
     const average = count > 0 ? sum / count : 0;
+    const average2 = average * 7;
     return {
         average: average.toFixed(2),
+        average2: average2.toFixed(2),
     };
 }
 
@@ -786,29 +806,27 @@ const lyabg = document.getElementById(`lyabg`);
 const lyabg2 = document.getElementById(`lyabg2`);
 const lyabg3 = document.getElementById(`lyabg3`);
 function LRdivActive(data) {
-  if (data === "all-time") {
-    lyabg.style.transform = `translateX(0vh) translateY(-0.25vh)`;
-  } else if (data === "year-24") {
-    lyabg.style.transform = `translateX(9vh) translateY(-0.25vh)`;
-  }
+    const baseTransformY = "-0.25vh";
+    const baseTransformX = 0;
+    const stepX = 9;
 
-  if (data === "all-months") {
-    lyabg2.style.transform = `translateX(0vh) translateY(-0.25vh)`;
-  } else if (data === "month-04") {
-    lyabg2.style.transform = `translateX(9vh) translateY(-0.25vh)`;
-  } else if (data === "month-05") {
-    lyabg2.style.transform = `translateX(18vh) translateY(-0.25vh)`;
-  } else if (data === "month-06") {
-    lyabg2.style.transform = `translateX(27vh) translateY(-0.25vh)`;
-  }
+    const dataMapping = {
+        "all-time": { element: lyabg, index: 0 },
+        "year-24": { element: lyabg, index: 1 },
+        "all-months": { element: lyabg2, index: 0 },
+        "month-03": { element: lyabg2, index: 1 },
+        "month-04": { element: lyabg2, index: 2 },
+        "month-05": { element: lyabg2, index: 3 },
+        "month-06": { element: lyabg2, index: 4 },
+        "max": { element: lyabg3, index: 1 },
+        "min": { element: lyabg3, index: 2 },
+        "sum": { element: lyabg3, index: 3 },
+        "avg": { element: lyabg3, index: 4 }
+    };
 
-  if (data === "max") {
-    lyabg3.style.transform = `translateX(9vh) translateY(-0.25vh)`;
-  } else if (data === "min") {
-    lyabg3.style.transform = `translateX(18vh) translateY(-0.25vh)`;
-  } else if (data === "sum") {
-    lyabg3.style.transform = `translateX(27vh) translateY(-0.25vh)`;
-  } else if (data === "avg") {
-    lyabg3.style.transform = `translateX(36vh) translateY(-0.25vh)`;
-  }
+    if (dataMapping[data]) {
+        const { element, index } = dataMapping[data];
+        const transformX = baseTransformX + stepX * index;
+        element.style.transform = `translateX(${transformX}vh) translateY(${baseTransformY})`;
+    }
 }

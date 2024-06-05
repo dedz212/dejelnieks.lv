@@ -30,6 +30,14 @@
     --f2p5: 2.5dvh;
 }
 
+.avots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--c4) !important;
+    font-weight: 400;
+}
+
 a,
 a:hover,
 a:visited {
@@ -131,6 +139,7 @@ footer {
     color: var(--c1);
     font-weight: 400;
     font-size: var(--f1p75);
+    position: relative;
 }
 #right {
     grid-column: 2;
@@ -150,7 +159,10 @@ footer {
 
 .nosaukums, #data2 {
     font-size: var(--f2);
-    color: var(--c1);
+
+    & a{
+        color: var(--c5);
+    }
 }
 
 .situacija {
@@ -171,7 +183,7 @@ footer {
 }
 
 .ac {
-    padding: 0.2dvh;
+    padding: 0.1dvh 0.4dvh;
     border-radius: 0.25dvh;
     color: var(--c3);
     font-weight: 500;
