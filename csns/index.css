@@ -135,6 +135,7 @@ footer {
 
 #left {
     margin-top: 1dvh;
+    margin-bottom: 1dvh;
     grid-column: 1;
     color: var(--c1);
     font-weight: 400;
@@ -167,6 +168,7 @@ footer {
 
 .situacija {
     margin-top: 1dvh;
+    margin-bottom: 1dvh;
     padding: 1dvh;
     background-color: var(--c3);
 }
