@@ -1,4 +1,39 @@
 {
+	
+	"090624": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "108",
+			"apl": {
+				"kopa": "582",
+				"ap": "329",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "13"
+			}
+		},
+		"situacijas": [],
+		"upd": "09.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1799702220335980920"
+	},
+	"080624": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "129",
+			"apl": {
+				"kopa": "610",
+				"ap": "257",
+				"ab": "3",
+				"app": "5",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "09.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1799315740480475354"
+	},
 	"070624": {
 		"citi": {
 			"apl": {
