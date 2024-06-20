@@ -1,0 +1,33 @@
+{
+	"0": {
+		"is": "Pole tänu väärt",
+		"translations": {
+			"word": {
+				"en": "Not worthy of thanks",
+				"lv": "Nav pateicības vērts",
+                "ru": "Не стоит благодарности"
+			},
+			"actual": {
+				"en": "You're welcome",
+				"lv": "Nav par ko"
+			}
+		},
+		"words": {
+			"Pole": {
+				"en": "Not",
+				"lv": "Nav",
+                "ru": "Не"
+			},
+			"tänu": {
+				"en": "thanks",
+				"lv": "pateicības",
+                "ru": "благодарности"
+			},
+			"väärt": {
+				"en": "worthy",
+				"lv": "vērts",
+                "ru": "стоит"
+			}
+		}
+	}
+}

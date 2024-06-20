@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>.PFT Editor</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <h1>Point FonT Editor</h1>
+    <div class="input-section">
+        <div>
+            <label for="width">Character Width:</label>
+            <input type="number" id="width" min="1" value="3">
+        </div>
+        <div>
+            <label for="height">Character Height:</label>
+            <input type="number" id="height" min="1" value="5">
+        </div>
+        <div>
+            <label for="individualDimensions">Each Character Has Own Dimensions</label>
+            <input type="checkbox" id="individualDimensions">
+        </div>
+        <div>
+            <button id="confirmDimensions">Confirm</button>
+            <p>OR</p>
+            <div id="import">
+                <button id="importData">Import Data</button>
+                <input type="file" id="fileInput" style="display:none;" accept=".pft">
+            </div>
+        </div>
+    </div>
+    <div id="blocks"></div>
+    <button id="addBlock">+</button>
+    <button id="exportData">Export Data</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

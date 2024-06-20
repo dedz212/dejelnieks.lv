@@ -1,5 +1,201 @@
 {
-	
+	"190624": {
+		"gajusiboja": "1",
+		"ievainoti": "30",
+		"citi": {
+			"negadijumi": "152",
+			"apl": {
+				"kopa": "508",
+				"ap": "193",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1803302252796428505"
+	},
+	"180624": {
+		"gajusiboja": "0",
+		"ievainoti": "10",
+		"citi": {
+			"negadijumi": "119",
+			"apl": {
+				"kopa": "422",
+				"ap": "181",
+				"ab": "1",
+				"app": "1",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Vadītājs vēlējās apdzīt lielāku autokolonnu, bet rezultātā notika frontāla sadursme",
+				"soseja": "<span class=\"ac pi\">P5</span>",
+				"vieta": "",
+				"gajusiboja": "1",
+				"ievainoti": "5",
+				"avots": "https://x.com/Valsts_policija/status/1803302254948057554"
+			}
+		],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1802937241162993859"
+	},
+	"170624": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "92",
+			"apl": {
+				"kopa": "462",
+				"ap": "236",
+				"ab": "4",
+				"app": "4",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1802578687583220043"
+	},
+	"160624": {
+		"gajusiboja": "0",
+		"ievainoti": "19",
+		"citi": {
+			"negadijumi": "101",
+			"apl": {
+				"kopa": "544",
+				"ap": "289",
+				"ab": "0",
+				"app": "6",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1802235824018178284"
+	},
+	"150624": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "124",
+			"apl": {
+				"kopa": "509",
+				"ap": "229",
+				"ab": "2",
+				"app": "1",
+				"kp_tvar": "15"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1801871570752663851"
+	},
+	"140624": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "116",
+			"apl": {
+				"kopa": "421",
+				"ap": "204",
+				"ab": "8",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1801491539677372498"
+	},
+	"130624": {
+		"gajusiboja": "1",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "120",
+			"apl": {
+				"kopa": "465",
+				"ap": "209",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1801128021186797667"
+	},
+	"120624": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "110",
+			"apl": {
+				"kopa": "452",
+				"ap": "195",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Vadītājs nobrauca no ceļa braucamās daļas un iebrauca ūdenstilpnē.",
+				"soseja": "",
+				"vieta": "Ogres novads, Ogresgala pagasts",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1801128023963410613"
+			}
+		],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1800762215752179914"
+	},
+	"110624": {
+		"gajusiboja": "1",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "103",
+			"apl": {
+				"kopa": "478",
+				"ap": "234",
+				"ab": "1",
+				"app": "3",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1800406620226330968"
+	},
+	"100624": {
+		"gajusiboja": "0",
+		"ievainoti": "8",
+		"citi": {
+			"negadijumi": "71",
+			"apl": {
+				"kopa": "425",
+				"ap": "226",
+				"ab": "2",
+				"app": "1",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "CSNg starp kravas auto Mercedes Benz un auto Audi A4 Avant.",
+				"soseja": "",
+				"vieta": "Augšdaugavas novads, Višķu pagasts, Lazovka",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1800406622046421405"
+			}
+		],
+		"upd": "20.06.2024",
+		"avots": "https://x.com/Valsts_policija/status/1800041469941817714"
+	},
 	"090624": {
 		"gajusiboja": "0",
 		"ievainoti": "11",

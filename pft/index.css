@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vh;
+    line-height: 1;
+
+    scroll-behavior: auto;
+}
+
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3vh;
+    padding: 1vh;
+}
+
+.input-section {
+    margin-bottom: 20px;
+
+    & div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & label {
+        margin-right: 10px;
+    }
+}
+
+input {
+    margin: 0.25vh;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 0.25vh;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0.25vh;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #007bff;
+    border-radius: 0.15em;
+    &:checked {
+		background-color: #007bff;
+	}
+}
+
+#blocks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.block label {
+    display: block;
+}
+
+#addBlock, #exportData {
+    display: none;
+}
+
+button {
+    margin: 10px 0 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.sbtn {
+    font-size: 1vh;
+}
+
+/* Добавляем стили для клеток таблицы */
+.data-table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table td {
+    width: 3vh;
+    height: 3vh;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.data-table .black {
+    background-color: #000;
+}
+
+.data-table .white {
+    background-color: #fff;
+}
+
+.btop {
+    display: flex;
+    flex-direction: column;
+
+    & div {
+        margin: 0.25vh;
+    }
+
+    & .wh {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.lr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    scroll-behavior: auto;
+}
+
+:root {
+    --c1: #FF204E;
+    --c1a: #7f214e;
+    --c2: #FFEB20;
+    --c3: #20FF3D;
+    --c4: #00224D;
+    --w: #fff;
+
+    --cnw: 30vh;
+    --cnf: 30vh;
+    --img: 20vh;
+
+    --f6: 6vh;
+    --f8: 8vh;
+    --hd: 80vh;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 4vh;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+    color: #FF204E;
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--c4);
+    color: var(--c1a);
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+}
+
+#content {
+    margin: 10vh 1vh 1vh 2vh;
+    font-size: 4.5vw;
+}
+
+#selection {
+    margin-bottom: 1vh;
+}
+
+.word-1 {
+    color: var(--c1);
+}
+.word-2 {
+    color: var(--c2);
+}
+.word-3 {
+    color: var(--c3);
+}
