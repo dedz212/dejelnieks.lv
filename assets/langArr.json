@@ -9,7 +9,7 @@
         "p_csns": "Website designed for displaying and analyzing statistical data on road traffic accidents and related incidents.",
         "p_timer": "Timer in javascript with pause and resume",
 
-		"desc": "Hello, I'm Dejelnieks, but you can call me Dale, also known online as Tere-Zander. I'm an 19-year-old student from Latvia, passionate about music of all genres, and a lover of languages—currently studying English, Latvian, Russian, and Japanese. I enjoy watching anime (<a class=\"la\" href=\"https://shikimori.me/%E3%83%87%E3%82%A4%E3%83%AB\">my list</a>), and though I'm not a gamer, I do play Minecraft and Jackbox occasionally. Additionally, I dabble in programming, having created the <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a> website, and I also make music <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">tracks</a>.",
+		"desc": "Hello, I'm Dejelnieks, but you can call me Dale, also known online as Tere-Zander. I'm an 19-year-old student from Latvia, passionate about music of all genres, and a lover of languages—currently studying English, Latvian, Russian, and Japanese. I enjoy watching anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">my list</a>), and though I'm not a gamer, I do play Minecraft and Jackbox occasionally. Additionally, I dabble in programming, having created the <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a> website, and I also make music <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">tracks</a>.",
         "album": "Album",
         "single": "Single"
     },
@@ -23,7 +23,7 @@
         "p_csns": "Vietne, kurā paredzēta statistikas datu par ceļu satiksmes negadījumiem ar tiem saistītiem starpgadījumiem attēlošanai un analīzei.",
         "p_timer": "Taimeris JavaScript valodā ar pauzes un atsākšanas funkciju",
 
-		"desc": "Sveiki, es esmu Dejelnieks, sauciet mani vienkārši Dejl. Esmu 19 gadus vecs students no Latvijas, melomāns par visu žanru mūziku, un pašlaik mācos angļu, latviešu, krievu un japāņu valodu. Man patīk skatīties anime (<a class=\"la\" href=\"https://shikimori.me/%E3%83%87%E3%82%A4%E3%83%AB\">mans saraksts</a>), un, lai gan es neesmu spēlētājs, dažreiz spēlēju Minecraft un Jackbox. Turklāt es nedaudz nodarbojos ar programmēšanu, esmu izveidojis vietni <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, un arī veidoju <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">skaņdarbus</a>.",
+		"desc": "Sveiki, es esmu Dejelnieks, sauciet mani vienkārši Dejl. Esmu 19 gadus vecs students no Latvijas, melomāns par visu žanru mūziku, un pašlaik mācos angļu, latviešu, krievu un japāņu valodu. Man patīk skatīties anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">mans saraksts</a>), un, lai gan es neesmu spēlētājs, dažreiz spēlēju Minecraft un Jackbox. Turklāt es nedaudz nodarbojos ar programmēšanu, esmu izveidojis vietni <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, un arī veidoju <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">skaņdarbus</a>.",
         "album": "Albums",
         "single": "Dziesma"
 	},
@@ -37,7 +37,7 @@
         "p_csns": "Сайт, предназначенный для отображения и анализа статистических данных о дорожно-транспортных происшествиях и связанных с ними инцидентах.",
         "p_timer": "Таймер на JavaScript с функцией паузы и возобновления",
     
-        "desc": "Привет, я Dejelnieks, но вы можете называть меня Дейл. Я 19-летний студент из Латвии, увлеченный музыкой всех жанров, и любитель языков — в настоящее время изучаю английский, латышский, русский и японский. Мне нравится смотреть аниме (<a class=\"la\" href=\"https://shikimori.me/%E3%83%87%E3%82%A4%E3%83%AB\">мой список</a>), и хотя я не геймер, иногда играю в Minecraft и Jackbox. Кроме того, я немного занимаюсь программированием, создав сайт <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, а также создаю музыкальные <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">треки</a>.",
+        "desc": "Привет, я Dejelnieks, но вы можете называть меня Дейл. Я 19-летний студент из Латвии, увлеченный музыкой всех жанров, и любитель языков — в настоящее время изучаю английский, латышский, русский и японский. Мне нравится смотреть аниме (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">мой список</a>), и хотя я не геймер, иногда играю в Minecraft и Jackbox. Кроме того, я немного занимаюсь программированием, создав сайт <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, а также создаю музыкальные <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">треки</a>.",
         "album": "Альбом",
         "single": "Трек"
 	}

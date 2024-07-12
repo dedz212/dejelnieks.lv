@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Version: " + version.version);
         console.log('URL: ' + window.location.pathname);
         checkURL();
+        setObserver();
     }
     
     initialize();
@@ -55,6 +56,33 @@ async function setLang(lang) {
     }
 }
 
+async function setObserver() {
+    const observer = new IntersectionObserver((entries, observer) => {
+        let delay = 0;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, delay);
+                delay += 200;
+            } else {
+                //entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    const cards = document.querySelectorAll('.cn');
+    const hh = document.querySelectorAll('.hh');
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+    hh.forEach(title => {
+        observer.observe(title);
+    });
+}
+
 const langAEL = ["en", "lv", "ru"];
 langAEL.forEach((lang) => {
   const langElements = document.querySelectorAll(`#lang-${lang}`);
@@ -75,7 +103,7 @@ fetch('./assets/content.json')
         if(musicSection) {
             data.music.forEach(item => {
                 const div = document.createElement('div');
-                div.className = `cn`;
+                div.className = `cn odno`;
     
                 const a = document.createElement('a');
                 a.className = 'tavslaiks';
@@ -126,7 +154,7 @@ fetch('./assets/content.json')
                 const aclass = document.createElement('p');
                 aclass.className = 'rednew';
                 aclass.textContent = item.rednew;
-    
+
                 if (item.rednew !== "") {
                     divTavslaiks2.appendChild(p);
                 }
@@ -145,7 +173,7 @@ fetch('./assets/content.json')
                     return
                 }
                 const div = document.createElement('div');
-                div.className = 'cn';
+                div.className = 'cn dvo';
     
                 const a = document.createElement('a');
                 a.href = item.href;

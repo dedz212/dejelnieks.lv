@@ -30,12 +30,41 @@
     --f2p5: 2.5dvh;
 }
 
+.aadiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aadiv2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.aalrpus {
+    width: 45%;
+    margin-right: 0.5vh;
+
+    &.aa2 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .avots {
     position: absolute;
     bottom: 0;
     left: 0;
+    background-color: var(--c3);
     color: var(--c4) !important;
-    font-weight: 400;
+    font-weight: 500;
+    padding: 0.5vh 1.5vh;
+    border-radius: 0.5vh;
+
+    &:hover {
+        background-color: var(--c4);
+        color: var(--c2) !important;
+    }
 }
 
 a,
@@ -113,19 +142,21 @@ footer {
 
 #content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    width: 90%;
 }
 
 #container {
     margin: 0.5dvh;
     padding: 1dvh;
-    background-color: var(--c2);
+    background-color: var(--c1);
     min-width: var(--sevenzero);
     max-width: var(--sevenzero);
+    border-radius: 1vh;
 }
 
 #situacijalr {
@@ -137,29 +168,32 @@ footer {
     margin-top: 1dvh;
     margin-bottom: 1dvh;
     grid-column: 1;
-    color: var(--c1);
+    color: var(--c3);
     font-weight: 400;
     font-size: var(--f1p75);
     position: relative;
+    border-radius: 0.5vh;
 }
 #right {
     grid-column: 2;
+    border-radius: 0.5vh;
 }
 
 #data {
     font-size: var(--f2p5);
-    color: var(--c1);
+    color: var(--c3);
     font-weight: 500;
 }
 
 #data3 {
     margin-top: 1dvh;
     font-size: var(--f2p5);
-    color: var(--c1);
+    color: var(--c3);
 }
 
 .nosaukums, #data2 {
     font-size: var(--f2);
+    width: 90%;
 
     & a{
         color: var(--c5);
@@ -178,10 +212,20 @@ footer {
     margin-top: 1dvh;
     padding: 1dvh;
     background-color: var(--c3);
+    border-radius: 0.5vh;
+}
+
+.unders2 {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .aa {
-    font-size: var(--f1p5);
+    font-size: var(--f1p75);
 }
 
 .ac {
@@ -199,7 +243,7 @@ footer {
 }
 
 img {
-    height: 13dvh;
+    height: 15dvh;
 }
 
 button {
@@ -630,6 +674,8 @@ pre {
     left: 0;
     color: #FF204E;
     font-weight: 300;
+    z-index: 2;
+
 }
 
 #lyabg, #lyabg2, #lyabg3 {

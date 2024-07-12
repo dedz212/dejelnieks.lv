@@ -180,6 +180,10 @@ function filterDataByMonth(data, month) {
     return filtered;
 }
 
+function setStrong(text) {
+    return "<strong>" + text + "</strong>"
+}
+
 const gajusiboja = "Gājuši bojā"
 const ievainoti = "Ievainotie"
 const apl = "Administratīvie pārkāpumi"
@@ -309,6 +313,7 @@ function renderData(data) {
                         situacijaContainer.classList.add('situacija2');
 
                         const situacijaLContainer = document.createElement('div');
+                        situacijaLContainer.classList.add('unders2')
                         const situacijaRContainer = document.createElement('div');
 
                         // Создаем элементы для информации о ситуации
@@ -319,28 +324,49 @@ function renderData(data) {
                             nosaukums.innerHTML = `<a href="${situacija.avots}">${situacija.nosaukums}</a>`;
                         }
 
+                        const aaContainer = document.createElement('div');
+                        if (situacija.attels) {
+                            aaContainer.classList.add('aadiv');
+                        } else {
+                            aaContainer.classList.add('aadiv2');
+                        }
+
+                        const aaLeft = document.createElement('div');
+                        const aaRight = document.createElement('div');
+                        if (!situacija.attels) {
+                            aaLeft.classList.add('aalrpus');
+                            aaRight.classList.add('aalrpus');
+                            aaRight.classList.add('aa2');
+                        }
+
                         const soseja = document.createElement('div');
                         soseja.classList.add('aa');
                         if (situacija.soseja) {
-                            soseja.innerHTML = "Šoseja: " + situacija.soseja;
+                            soseja.innerHTML = setStrong("Šoseja") + kols + situacija.soseja;
                         }
 
                         const vieta = document.createElement('div');
                         vieta.classList.add('aa');
                         if (situacija.vieta) {
-                            vieta.innerText = "Vieta: " + situacija.vieta;
+                            vieta.innerHTML = setStrong("Vieta") + kols + situacija.vieta;
+                        }
+
+                        const laiks = document.createElement('div');
+                        laiks.classList.add('aa');
+                        if (situacija.laiks) {
+                            laiks.innerHTML = setStrong("Laiks") + kols + situacija.laiks;
                         }
 
                         const gajusibojad = document.createElement('div');
                         gajusibojad.classList.add('aa');
                         if (situacija.gajusiboja) {
-                            gajusibojad.innerText = gajusiboja + kols + situacija.gajusiboja;
+                            gajusibojad.innerHTML = setStrong(gajusiboja) + kols + situacija.gajusiboja;
                         }
 
                         const ievainotid = document.createElement('div');
                         ievainotid.classList.add('aa');
                         if (situacija.ievainoti) {
-                            ievainotid.innerText = ievainoti + kols + situacija.ievainoti;
+                            ievainotid.innerHTML = setStrong(ievainoti) + kols + situacija.ievainoti;
                         }
                         
                         const attels = document.createElement('img');
@@ -349,15 +375,21 @@ function renderData(data) {
                         }
 
                         situacijaLContainer.appendChild(nosaukums);
-                        situacijaLContainer.appendChild(soseja);
-                        situacijaLContainer.appendChild(vieta);
-                        situacijaLContainer.appendChild(gajusibojad);
-                        situacijaLContainer.appendChild(ievainotid);
+                        situacijaLContainer.appendChild(aaContainer);
+                        aaContainer.appendChild(aaLeft);
+                        aaContainer.appendChild(aaRight);
+                        aaLeft.appendChild(soseja);
+                        aaLeft.appendChild(vieta);
+                        aaLeft.appendChild(laiks);
+                        aaRight.appendChild(gajusibojad);
+                        aaRight.appendChild(ievainotid);
                         if (situacija.attels) {
                         situacijaRContainer.appendChild(attels);
                         }
                         situacijaContainer.appendChild(situacijaLContainer);
+                        if (situacija.attels) {
                         situacijaContainer.appendChild(situacijaRContainer);
+                        }
                         container.appendChild(situacijaContainer);
                     }
 
@@ -824,6 +856,7 @@ function LRdivActive(data) {
         "month-04": { element: lyabg2, index: 2 },
         "month-05": { element: lyabg2, index: 3 },
         "month-06": { element: lyabg2, index: 4 },
+        "month-07": { element: lyabg2, index: 5 },
         "max": { element: lyabg3, index: 1 },
         "min": { element: lyabg3, index: 2 },
         "sum": { element: lyabg3, index: 3 },

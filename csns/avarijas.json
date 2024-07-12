@@ -1,4 +1,493 @@
 {
+	"120724": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "131",
+			"apl": {
+				"kopa": "393",
+				"ap": "151",
+				"ab": "5",
+				"app": "0",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1811630215241535564"
+	},
+	"110724": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "124",
+			"apl": {
+				"kopa": "479",
+				"ap": "212",
+				"ab": "1",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1811272378833358914"
+	},
+	"100724": {
+		"gajusiboja": "0",
+		"ievainoti": "17",
+		"citi": {
+			"negadijumi": "135",
+			"apl": {
+				"kopa": "520",
+				"ap": "219",
+				"ab": "2",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1810904154862240067"
+	},
+	"090724": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "126",
+			"apl": {
+				"kopa": "418",
+				"ap": "199",
+				"ab": "2",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1810547985043915124"
+	},
+	"080724": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "72",
+			"apl": {
+				"kopa": "360",
+				"ap": "161",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1810188617567887811"
+	},
+	"070724": {
+		"gajusiboja": "3",
+		"ievainoti": "20",
+		"citi": {
+			"negadijumi": "114",
+			"apl": {
+				"kopa": "432",
+				"ap": "220",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1809851543358755311"
+	},
+	"060724": {
+		"gajusiboja": "0",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "147",
+			"apl": {
+				"kopa": "504",
+				"ap": "237",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "BMW 730 markas vadītājs nobrauca no ceļa braucamās daļas un ietriecās kokā",
+				"soseja": "",
+				"vieta": "Tukuma novads",
+				"laiks": "16:36",
+				"gajusiboja": "3",
+				"ievainoti": "1",
+				"attels": "https://pbs.twimg.com/media/GR95LeOb0AAwOcO?format=jpg&name=large",
+				"avots": "https://x.com/Valsts_policija/status/1809853097893671073"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1809487990651019295"
+	},
+	"050724": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "120",
+			"apl": {
+				"kopa": "394",
+				"ap": "193",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1809093947517435922"
+	},
+	"040724": {
+		"gajusiboja": "0",
+		"ievainoti": "5",
+		"citi": {
+			"negadijumi": "125",
+			"apl": {
+				"kopa": "502",
+				"ap": "258",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "1"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "“VW Crafter” vadītājs uzbrauca velosipēdistei, kura šķērsoja brauktuvi, un negadījumā guva miesas bojājumus.",
+				"soseja": "",
+				"vieta": "Talsu šosejā 29",
+				"laiks": "",
+				"gajusiboja": "0",
+				"ievainoti": "1",
+				"avots": "https://x.com/Valsts_policija/status/1810298851841941926"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1808731328696713545"
+	},
+	"030724": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "120",
+			"apl": {
+				"kopa": "452",
+				"ap": "191",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1808368992404344844"
+	},
+	"020724": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "128",
+			"apl": {
+				"kopa": "431",
+				"ap": "193",
+				"ab": "0",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1808007391755010514"
+	},
+	"010724": {
+		"gajusiboja": "0",
+		"ievainoti": "17",
+		"citi": {
+			"negadijumi": "89",
+			"apl": {
+				"kopa": "404",
+				"ap": "209",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1807652026664235369"
+	},
+	"300624": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "93",
+			"apl": {
+				"kopa": "450",
+				"ap": "227",
+				"ab": "2",
+				"app": "1",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1807299116138991764"
+	},
+	"290624": {
+		"gajusiboja": "1",
+		"ievainoti": "27",
+		"citi": {
+			"negadijumi": "152",
+			"apl": {
+				"kopa": "475",
+				"ap": "230",
+				"ab": "1",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1806920668094603484"
+	},
+	"280624": {
+		"gajusiboja": "0",
+		"ievainoti": "15",
+		"citi": {
+			"negadijumi": "133",
+			"apl": {
+				"kopa": "530",
+				"ap": "243",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Negadījumā iesaistītas 3 kravas a/m, viena pēc sadursmes aizdegusies.",
+				"soseja": "<span class=\"ac sh\">A10</span>",
+				"vieta": "Tukuma novads, Tumes pagasts",
+				"laiks": "10:00",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1806588679244124409"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1806560244929015961"
+	},
+	"270624": {
+		"gajusiboja": "2",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "158",
+			"apl": {
+				"kopa": "502",
+				"ap": "245",
+				"ab": "0",
+				"app": "1",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1806207295627342029"
+	},
+	"260624": {
+		"gajusiboja": "4",
+		"ievainoti": "21",
+		"citi": {
+			"negadijumi": "130",
+			"apl": {
+				"kopa": "445",
+				"ap": "208",
+				"ab": "0",
+				"app": "3",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Jaunietis, vadot “Citroen”, netika galā ar transportlīdzekļa vadību, kā rezultātā iebrauca pretējā braukšanas virziena joslā, kur notika sadursme ar pretim braucošo smago transportlīdzekli “DAF”",
+				"soseja": "<span class=\"ac sh\">A9</span>",
+				"vieta": "Saldus novads, Blīdenes pagasts",
+				"laiks": "10:50",
+				"gajusiboja": "2",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1806212567779475809"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1805832816904532023"
+	},
+	"250624": {
+		"gajusiboja": "1",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "67",
+			"apl": {
+				"kopa": "414",
+				"ap": "187",
+				"ab": "1",
+				"app": "7",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "“Opel” vadītājs pie nenoskaidrotiem apstākļiem nobrauca no ceļa braucamās daļas",
+				"soseja": "Jelgava - Tukums",
+				"vieta": "Dobeles novads, Jaunbērzes pagasts",
+				"laiks": "",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1805492639489220678"
+			},
+			{
+				"nosaukums": "CSNg – sadursme starp a/m “Mercedes-Benz” un “Mazda”",
+				"soseja": "",
+				"vieta": "Saldus novads, Zirņu pagasts",
+				"laiks": "10:00",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1805860484471464266"
+			},
+			{
+				"nosaukums": "CSNg – sadursme starp vieglo a/m “Volvo” un smago t/l “Scania”",
+				"soseja": "<span class=\"ac sh\">A9</span>",
+				"vieta": "Saldus novads, Blīdenes pagasts",
+				"laiks": "14:30",
+				"gajusiboja": "3",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1805861714740572419"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1805481434917822850"
+	},
+	"240624": {
+		"gajusiboja": "1",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "80",
+			"apl": {
+				"kopa": "523",
+				"ap": "257",
+				"ab": "6",
+				"app": "7",
+				"kp_tvar": "14"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Automašīna nobrauca no ceļa braucamās daļas un apgāzās",
+				"soseja": "",
+				"vieta": "Tukuma novads, Tumes pagasts",
+				"laiks": "2:05",
+				"gajusiboja": "1",
+				"ievainoti": "2",
+				"avots": "https://x.com/Valsts_policija/status/1805146214121267301"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1805146111071469656"
+	},
+	"230624": {
+		"gajusiboja": "1",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "91",
+			"apl": {
+				"kopa": "584",
+				"ap": "254",
+				"ab": "3",
+				"app": "6",
+				"kp_tvar": "16"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1804763198924456048"
+	},
+	"220624": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "146",
+			"apl": {
+				"kopa": "477",
+				"ap": "212",
+				"ab": "1",
+				"app": "4",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1804404557084078087"
+	},
+	"210624": {
+		"gajusiboja": "1",
+		"ievainoti": "25",
+		"citi": {
+			"negadijumi": "148",
+			"apl": {
+				"kopa": "469",
+				"ap": "207",
+				"ab": "3",
+				"app": "5",
+				"kp_tvar": "2"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "“Volvo” vadītājs, nobrauca no ceļa braucamās daļas, iebraucot grāvī",
+				"soseja": "",
+				"vieta": "Jelgavas novads, Salgales pagasts",
+				"laiks": "4:20",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1804074237528863084"
+			},
+			{
+				"nosaukums": "Traktors iebrauca dīķī un apgāzās",
+				"soseja": "",
+				"vieta": "Augšdaugavas novads, Laucesas pagasts",
+				"laiks": "18:00",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1804763223477854277"
+			}
+		],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1804029891072958606"
+	},
+	"200624": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "111",
+			"apl": {
+				"kopa": "439",
+				"ap": "179",
+				"ab": "1",
+				"app": "4",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "12.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1803658614667919367"
+	},
 	"190624": {
 		"gajusiboja": "1",
 		"ievainoti": "30",
@@ -393,7 +882,7 @@
 			{
 				"nosaukums": "Traģiska avārija Iecavā: vieglā spēkrata un kravas auto sadursmē viens bojāgājušais",
 				"soseja": "<span class=\"ac sh\">A7</span>",
-				"vieta": "pie Iecavas stacijas",
+				"vieta": "Bauskas novads, Iecavas pagasts",
 				"gajusiboja": "1",
 				"ievainoti": "0",
 				"attels": "https://f7.pmo.ee/OcLR5ekIIUBpzZQiiPEnELUDuYg=/1442x0/filters:focal(114x104:515x467):format(webp)/nginx/o/2024/05/31/16111158t1hc5f2.png",
@@ -614,7 +1103,7 @@
 		"avots": "https://x.com/Valsts_policija/status/1792426240399290439"
 	},
 	"180524": {
-		"gajusiboja": "5",
+		"gajusiboja": "0",
 		"ievainoti": "19",
 		"citi": {
 			"negadijumi": "196",
