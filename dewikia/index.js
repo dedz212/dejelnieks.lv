@@ -2,7 +2,7 @@ var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem
 document.addEventListener("DOMContentLoaded", function () {
     async function initialize() {
         const version = await loadJSON('../data.json');
-        console.log("Version: " + version.version);
+        console.log("Version: " + version);
         console.log('URL: ' + window.location.pathname);
         checkURL();
     }
