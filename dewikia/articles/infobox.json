@@ -1,0 +1,28 @@
+{
+	"en": {
+        "t_developer": "Developer",
+        "t_publisher": "Publisher",
+        "t_designer": "Designer",
+        "t_artist": "Artist",
+        "t_composer": "Composer",
+        "t_engine": "Engine",
+        "t_platforms": "Platforms",
+        "t_release": "Release Date",
+        "t_version": "Version",
+        "t_genre": "Genre",
+        "t_mode": "Mode"
+    },
+    "ru": {
+        "t_developer": "Разработчик",
+        "t_publisher": "Издатель",
+        "t_designer": "Геймдизайнер",
+        "t_artist": "Художник",
+        "t_composer": "Композитор",
+        "t_engine": "Движок",
+        "t_platforms": "Платформы",
+        "t_release": "Релиз",
+        "t_version": "Версия",
+        "t_genre": "Жанр",
+        "t_mode": "Режим"
+    }
+}

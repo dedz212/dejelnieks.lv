@@ -1,4 +1,74 @@
 {
+	"150724": {
+		"gajusiboja": "0",
+		"ievainoti": "20",
+		"citi": {
+			"negadijumi": "74",
+			"apl": {
+				"kopa": "416",
+				"ap": "207",
+				"ab": "1",
+				"app": "6",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "15.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1812721474404294856"
+	},
+	"140724": {
+		"gajusiboja": "2",
+		"ievainoti": "29",
+		"citi": {
+			"negadijumi": "94",
+			"apl": {
+				"kopa": "504",
+				"ap": "264",
+				"ab": "4",
+				"app": "3",
+				"kp_tvar": "16"
+			}
+		},
+		"situacijas": [],
+		"upd": "15.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1812375426519462203"
+	},
+	"130724": {
+		"gajusiboja": "0",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "130",
+			"apl": {
+				"kopa": "576",
+				"ap": "306",
+				"ab": "54",
+				"app": "0",
+				"kp_tvar": "10"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "“VW Transporter” atdalījās piekabe uz kuras atradās sacīkšu a/m, kā rezultātā piekabe uzbrauca gājējai.",
+				"soseja": "",
+				"vieta": "Gulbenes novads, Stāmerienas pagasts",
+				"laiks": "8:55",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1812376023859667279"
+			},
+			{
+				"nosaukums": "Sadursme starp a/m “Citroen” un motociklu “Kawasaki”",
+				"soseja": "<span class=\"ac sh\">A10</span>",
+				"vieta": "Jūrmala",
+				"laiks": "9:58",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1812376269683577128"
+			}
+		],
+		"upd": "15.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1812006292711465062"
+	},
 	"120724": {
 		"gajusiboja": "0",
 		"ievainoti": "13",
@@ -122,7 +192,7 @@
 				"laiks": "16:36",
 				"gajusiboja": "3",
 				"ievainoti": "1",
-				"attels": "https://pbs.twimg.com/media/GR95LeOb0AAwOcO?format=jpg&name=large",
+				"attels": "",
 				"avots": "https://x.com/Valsts_policija/status/1809853097893671073"
 			}
 		],

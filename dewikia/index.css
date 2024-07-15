@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+
+    scroll-behavior: auto;
+}
+
+:root {
+    --c1: #EEEDEB;
+    --c2: #FFC470;
+    --c3: #4793AF;
+    --c4: #2F3645;
+
+    --fd5: .5vh;
+    --f1: 1vh;
+    --f1d5: 1.5vh;
+    --f2: 2vh;
+    --f3: 3vh;
+    --f10: 10vh;
+    --f20: 20vh;
+}
+
+body {
+    background-color: var(--c1);
+    color: var(--c4);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+    color: var(--c4);
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 4vh;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+    color: #FF204E;
+    font-weight: 300;
+    z-index: 2;
+}
+
+.ml {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+}
+
+.t {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin: var(--f10);
+
+    & h1 {
+        font-size: var(--f10);
+        line-height: 0.6;
+    }
+}
+
+.card {
+    background-color: var(--c4);
+    color: var(--c1);
+    margin: var(--f1);
+    padding: var(--f1d5);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--c3);
+    }
+    & img {
+        width:30vh;
+        margin-bottom: var(--fd5);
+    }
+    & h2 {
+        line-height: 1;
+        font-size: var(--f2);
+    }
+    & h3 {
+        line-height: 1;
+        font-size: var(--f1d5);
+    }
+}
+
+#language-selector {
+    margin: var(--f1);
+    padding: var(--f1);
+
+    & button {
+        background-color: var(--c4);
+        color: var(--c1);
+        font-size: var(--f1d5);
+        font-weight: 600;
+        border: none;
+        border-radius: var(--fd5);
+
+        margin: var(--fd5);
+        padding: var(--fd5) var(--f1);
+        cursor: pointer;
+
+        &:hover, &.active {
+            background-color: var(--c3);
+            color: var(--c1);
+        }
+
+        &.active {
+            cursor: default;
+        }
+    }
+}
+
+#articles-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

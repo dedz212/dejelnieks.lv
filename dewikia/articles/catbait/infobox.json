@@ -1,0 +1,26 @@
+{
+    "title": "Cat Bait",
+    "image": {
+        "logo": "",
+        "poster": "",
+        "video": "Main_Menu.mp4"
+    },
+    "developer": "Mayni prod.",
+    "publisher": "",
+    "designer": "Майни",
+    "artist": "Ника",
+    "composer": "",
+    "engine": "Godot Engine",
+    "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+    ],
+    "release": "",
+    "version": "0.2.4 ALPHA",
+    "genre": "",
+    "mode": "",
+    "link": {
+        "steam": "https://steamdb.info/app/2929730/"
+    }
+}

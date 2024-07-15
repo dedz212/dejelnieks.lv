@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+
+    scroll-behavior: auto;
+}
+
+:root {
+    --c1: #EEEDEB;
+    --c2: #FFC470;
+    --c3: #4793AF;
+    --c4: #2F3645;
+    --c5: #bbbab8;
+
+    --fd5: .5em;
+    --f1: 1em;
+    --f1d5: 1.5em;
+    --f1d25: 1.25em;
+    --f2: 2em;
+    --f2d5: 2.5em;
+    --f3: 3em;
+    --f4: 4em;
+    --f10: 10em;
+    --f15: 15em;
+    --f20: 20em;
+    --f30: 30em;
+}
+
+body {
+    background-color: var(--c1);
+    color: var(--c4);
+    margin-top: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+    color: var(--c4);
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 2.5vw;
+    position: fixed;
+    top: 0vw;
+    left: 0;
+    font-weight: 300;
+    z-index: 2;
+}
+#menu {
+    font-family: 'Noto Emoji';
+    margin: 1vw;
+    font-size: 5vw;
+    position: fixed;
+    top: 11vw;
+    left: 2.5vw;
+    font-weight: 300;
+    z-index: 2;
+    display: none;
+}
+#article-content {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1.25vw;
+    position: fixed;
+    top: 3vw;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+
+    & a {
+        font-weight: 600;
+    }
+
+    & .ish2 {
+        transform: translateX(1vh);
+        font-weight: 500;
+    }
+    & .ish3 {
+        transform: translateX(2vh);
+        font-weight: 400;
+    }
+}
+
+main {
+    display: table;
+    width: 70%;
+    margin-bottom: 5vw;
+}
+
+h1,h2,h3 {
+    list-style: 1;
+    font-weight: 700;
+}
+h1 {
+    font-size: var(--f4);
+}
+h2 {
+    font-size: var(--f3);
+}
+h3 {
+    font-size: var(--f2d5);
+}
+p {
+    font-size: var(--f2);
+}
+
+#infobox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+
+    background-color: var(--c1);
+    padding: var(--f1);
+    border: var(--c4) 0.15vh solid;
+    float: right;
+    margin: 0 0 var(--f2) var(--f2);
+
+    max-width: var(--f30);
+    & img, & video {
+        width: var(--f30);
+    }
+
+    & p, & a {
+        margin: 0.15em 0 0.15em 0;
+    }
+}
+ul {
+    list-style-position: inside;
+}
+li {
+    font-size: var(--f2);
+}
+.lvrcimg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.lvcimg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.rimg {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 var(--f2);
+    width: var(--f15);
+    & img {
+        width: var(--f10);
+    }
+    & div {
+        font-size: var(--f1d5);
+        text-align: center;
+    }
+}
+.a1to2div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin: var(--f1) 0 var(--f1) 0;
+
+    & img {
+        width: var(--f10);
+        margin-right: var(--f2);
+    }
+
+    & .niz {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
+.steam {
+    background: linear-gradient(180deg, rgba(22,27,47,1) 0%, rgba(32,121,167,1) 100%);
+    padding: var(--fd5) var(--f1) var(--fd5) var(--f1);
+    border-radius: var(--fd5);
+    color: var(--c1) !important;
+    font-size: var(--f1d5) !important;
+    border-radius: var(--fd5);
+}
+
+@media screen and (max-width: 1666px) {
+    :root {
+        --fd5: 0.5em;
+        --f1: 0.5em;
+        --f1d5: 1em;
+        --f2: 1.5em;
+        --f2d5: 2em;
+        --f3: 2.5em;
+        --f4: 3.5em;
+        --f10: 9em;
+        --f15: 14em;
+        --f20: 19em;
+        --f30: 29em;
+    }
+}
+@media screen and (max-width: 1111px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #infobox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        background-color: var(--c1);
+        padding: var(--f1);
+        border: var(--c4) 0.25vh solid;
+        margin:  0 0 var(--f2) 0;
+        max-width: 100%;
+        & img, & video {
+            width: 100%;
+        }
+    }
+    .logo a {
+        font-size: 7vw;
+    }
+    #article-content {
+        display: none;
+        background-color: var(--c1);
+        border: var(--c4) 0.25vh solid;
+        padding: var(--f1);
+        top: 10vw;
+        left: 14vw;
+        font-size: 4vw;
+    }
+    #menu {
+        display: block;
+    }
+}
+@media screen and (max-width: 888px) {
+    :root {
+        --f10: 7em;
+    }
+}
+@media screen and (max-width: 666px) {
+    :root {
+        --fd5: 0.5em;
+        --f1: 0.5em;
+        --f1d5: 1em;
+        --f2: 1.25em;
+        --f2d5: 1.75em;
+        --f3: 2.25em;
+        --f4: 3em;
+        --f10: 5em;
+        --f15: 10em;
+        --f20: 15em;
+        --f30: 25em;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    :root {
+        --fd5: 0.5em;
+        --f1: 0.5em;
+        --f1d5: 0.75em;
+        --f2: 1em;
+        --f2d5: 1.5em;
+        --f3: 1.75em;
+        --f4: 2.5em;
+        --f10: 4em;
+        --f15: 9em;
+        --f20: 14em;
+        --f30: 24em;
+    }
+}
+@media screen and (max-width: 444px) {
+    .a1to2div {
+        flex-direction: column;
+    }
+}

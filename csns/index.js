@@ -1,7 +1,7 @@
 import { convertDate } from './convertDate.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('../data.json')
+    fetch('https://dejelnieks.lv/data.json')
         .then(response => response.json())
         .then(data => {
             console.log("Version: " + data.version);
