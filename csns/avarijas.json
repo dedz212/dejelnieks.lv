@@ -1,4 +1,279 @@
 {
+	"300724": {
+		"gajusiboja": "0",
+		"ievainoti": "9",
+		"citi": {
+			"negadijumi": "170",
+			"apl": {
+				"kopa": "370",
+				"ap": "151",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1818154714552320060"
+	},
+	"290724": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "97",
+			"apl": {
+				"kopa": "375",
+				"ap": "213",
+				"ab": "3",
+				"app": "1",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1817793407860744644"
+	},
+	"280724": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "118",
+			"apl": {
+				"kopa": "420",
+				"ap": "240",
+				"ab": "4",
+				"app": "5",
+				"kp_tvar": "12"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1817457512313974932"
+	},
+	"270724": {
+		"gajusiboja": "0",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "134",
+			"apl": {
+				"kopa": "473",
+				"ap": "190",
+				"ab": "1",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1817087481780552190"
+	},
+	"260724": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "113",
+			"apl": {
+				"kopa": "492",
+				"ap": "217",
+				"ab": "4",
+				"app": "0",
+				"kp_tvar": "3"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1816705316534518136"
+	},
+	"250724": {
+		"gajusiboja": "1",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "126",
+			"apl": {
+				"kopa": "471",
+				"ap": "227",
+				"ab": "2",
+				"app": "0",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1816340656299655347"
+	},
+	"240724": {
+		"gajusiboja": "0",
+		"ievainoti": "18",
+		"citi": {
+			"negadijumi": "161",
+			"apl": {
+				"kopa": "446",
+				"ap": "222",
+				"ab": "1",
+				"app": "1",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Vīrietis, vadot motociklu “Yamaha”, nobrauca no ceļa braucamās daļas un apgāzās.",
+				"soseja": "Kandava-Saldus",
+				"vieta": "Saldus novads, Remtes pagasts",
+				"laiks": "11:40",
+				"gajusiboja": "1",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1816358777513205969"
+			}
+		],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1815981356028993694"
+	},
+	"230724": {
+		"gajusiboja": "0",
+		"ievainoti": "19",
+		"citi": {
+			"negadijumi": "153",
+			"apl": {
+				"kopa": "428",
+				"ap": "189",
+				"ab": "3",
+				"app": "2",
+				"kp_tvar": "5"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1815619973080920212"
+	},
+	"220724": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "77",
+			"apl": {
+				"kopa": "457",
+				"ap": "221",
+				"ab": "3",
+				"app": "6",
+				"kp_tvar": "8"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1815258120899141676"
+	},
+	"210724": {
+		"gajusiboja": "0",
+		"ievainoti": "11",
+		"citi": {
+			"negadijumi": "129",
+			"apl": {
+				"kopa": "450",
+				"ap": "245",
+				"ab": "0",
+				"app": "5",
+				"kp_tvar": "11"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1814911058361930045"
+	},
+	"200724": {
+		"gajusiboja": "1",
+		"ievainoti": "16",
+		"citi": {
+			"negadijumi": "177",
+			"apl": {
+				"kopa": "489",
+				"ap": "236",
+				"ab": "0",
+				"app": "4",
+				"kp_tvar": "9"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1814539661840191932"
+	},
+	"190724": {
+		"gajusiboja": "0",
+		"ievainoti": "12",
+		"citi": {
+			"negadijumi": "122",
+			"apl": {
+				"kopa": "465",
+				"ap": "218",
+				"ab": "2",
+				"app": "0",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [
+			{
+				"nosaukums": "Ceļa malā atrasts vīrieša līķis un blakus atradās velosipēds.",
+				"soseja": "",
+				"vieta": "Bauskas novads, Iecavas pagasts",
+				"laiks": "19:50",
+				"gajusiboja": "0",
+				"ievainoti": "0",
+				"avots": "https://x.com/Valsts_policija/status/1814539771051463120"
+			}
+		],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1814170583065624876"
+	},
+	"180724": {
+		"gajusiboja": "0",
+		"ievainoti": "14",
+		"citi": {
+			"negadijumi": "144",
+			"apl": {
+				"kopa": "548",
+				"ap": "247",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "4"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1813809089220420011"
+	},
+	"170724": {
+		"gajusiboja": "0",
+		"ievainoti": "21",
+		"citi": {
+			"negadijumi": "125",
+			"apl": {
+				"kopa": "452",
+				"ap": "205",
+				"ab": "0",
+				"app": "0",
+				"kp_tvar": "6"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1813448379180916873"
+	},
+	"160724": {
+		"gajusiboja": "0",
+		"ievainoti": "13",
+		"citi": {
+			"negadijumi": "149",
+			"apl": {
+				"kopa": "444",
+				"ap": "208",
+				"ab": "5",
+				"app": "2",
+				"kp_tvar": "7"
+			}
+		},
+		"situacijas": [],
+		"upd": "31.07.2024",
+		"avots": "https://x.com/Valsts_policija/status/1813081589083218412"
+	},
 	"150724": {
 		"gajusiboja": "0",
 		"ievainoti": "20",

@@ -1,0 +1,140 @@
+[
+    {
+        "title": "TradeGothic",
+        "width": [
+            {
+                "Bold Condensed": true
+            },
+            {
+                "Bold Condensed": true
+            }
+        ],
+        "game": [
+            "You Don't Know Jack 2015",
+            "Party Pack"
+        ]
+    },
+    {
+        "title": "JackCondensed",
+        "width": [
+            {
+                "Regular": true,
+                "Phat": true
+            },
+            {
+                "Regular": true
+            }
+        ],
+        "game": [
+            "You Don't Know Jack 2015",
+            "Lie Swatter"
+        ]
+    },
+    {
+        "title": "JackExtraCond",
+        "width": [
+            {
+                "Regular": true,
+                "Phat": true
+            }
+        ],
+        "game": [
+            "You Don't Know Jack 2015"
+        ]
+    },
+    {
+        "title": "JackRoman",
+        "width": [
+            {
+                "Regular": true,
+                "Phat": true
+            }
+        ],
+        "game": [
+            "You Don't Know Jack 2015"
+        ]
+    },
+    {
+        "title": "AmericanTypewriter",
+        "width": [
+            {
+                "Regular": true,
+                "Bold": true
+            }
+        ],
+        "game": [
+            "Drawful"
+        ]
+    },
+    {
+        "title": "Supria Sans",
+        "width": [
+            {
+                "Heavy": true
+            },
+            {
+                "Regular": true,
+                "Bold": true
+            }
+        ],
+        "game": [
+            "Drawful",
+            "Party Pack"
+        ]
+    },
+    {
+        "title": "Effra",
+        "width": [
+            {
+                "Regular": false,
+                "Bold": false,
+                "Light": true,
+                "Medium": true
+            }
+        ],
+        "game": [
+            "Word Spud"
+        ]
+    },
+    {
+        "title": "TVNordEFOP",
+        "width": [
+            {
+                "Heavy": true
+            }
+        ],
+        "game": [
+            "Word Spud"
+        ]
+    },
+    {
+        "title": "Lie Swatter Rounded",
+        "width": [
+            {
+                "Regular": true,
+                "Bold": true
+            }
+        ],
+        "game": [
+            "Lie Swatter"
+        ]
+    },
+    {
+        "title": "Proxima Nova",
+        "width": [
+            {
+                "Regular": true,
+                "Bold": true,
+                "Black": true
+            },
+            {
+                "Regular": true,
+                "Extrabold": true
+            }
+        ],
+        "game": [
+            "Fibbage XL",
+            "Party Pack"
+        ]
+    }
+]

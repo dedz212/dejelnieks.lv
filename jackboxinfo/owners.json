@@ -1,0 +1,273 @@
+[
+    {
+        "title": "Jackbox Games",
+        "description": "Jackbox Games is a Chicago-based studio best known for party-game hits like Quiplash, Fibbage, Drawful, Trivia Murder Party, and more!",
+        "url": {
+            "main": "https://www.jackboxgames.com/",
+            "ds": "https://discord.com/invite/jackboxgames"
+        },
+        "goal": "Community",
+        "langauge": "English",
+        "bg": "#3241ce",
+        "color": "#ffffff",
+        "inlist": true
+    },
+    {
+        "title": "JACKwiki",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/FsfSdVKcwq"
+        },
+        "goal": "for Fandom",
+        "langauge": "English",
+        "inlist": false
+    },
+    {
+        "title": "Jackbox International",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/bK4ufecsS3"
+        },
+        "goal": "Community + Translation",
+        "langauge": [
+            "English",
+            "Turkish",
+            "Portuguese",
+            "Polish",
+            "Finnish",
+            "Chinese"
+        ],
+        "inlist": false
+    },
+    {
+        "title": "CapyParty",
+        "description": "",
+        "url": {
+            "main": "https://www.capyparty.xyz/main/",
+            "ds": "https://discord.com/invite/eqrTgjszuq"
+        },
+        "goal": "Modification",
+        "langauge": "English",
+        "bg": "#795548",
+        "color": "#ffffff",
+        "inlist": false
+    },
+    {
+        "title": "What If?",
+        "description": "",
+        "url": {
+            "main": "https://jackboxgames.ru/",
+            "ds": "https://discord.gg/dshR6WN"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#ffcc33",
+        "color": "#040000",
+        "inlist": true
+    },
+    {
+        "title": "The Department of Translates",
+        "link": "TDoT",
+        "description": "",
+        "url": {
+            "main": "https://www.tdot.space/",
+            "ds": "https://discord.gg/pDGVAEbyGq"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#25242a",
+        "color": "#21898e",
+        "inlist": true
+    },
+    {
+        "title": "The Box",
+        "description": "",
+        "url": {
+            "main": "https://the.jackbox.su/",
+            "ds": "https://discord.com/invite/FbUHQTJdm8"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#00c4d0",
+        "color": "#ffffff",
+        "inlist": false
+    },
+    {
+        "title": "Translatium",
+        "description": "",
+        "url": {
+            "ds": "https://discord.com/invite/6eg5v3tpT8"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#1f2034",
+        "color": "#e6ded3",
+        "inlist": false
+    },
+    {
+        "title": "Translate Guardians",
+        "description": "",
+        "url": {
+            "main": "https://www.trgu.ru/",
+            "ds": "https://discord.gg/QnheDB42GF"
+        },
+        "goal": "Translation + Modification",
+        "langauge": "Russian",
+        "bg": "#d5bd7c",
+        "color": "#000000",
+        "inlist": false
+    },
+    {
+        "title": "Undertranslators",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/qXTPkK2ESS"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#ffffff",
+        "color": "#db5a70",
+        "inlist": false
+    },
+    {
+        "title": "True Translators Team",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/7pyDUMY9Rv"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#730606",
+        "color": "#eebe47",
+        "inlist": false
+    },
+    {
+        "title": "Translatium",
+        "description": "",
+        "url": {
+            "ds": "https://discord.com/invite/6eg5v3tpT8"
+        },
+        "goal": "Translation",
+        "langauge": "Russian",
+        "bg": "#1f2034",
+        "color": "#e6ded3",
+        "inlist": true
+    },
+    {
+        "title": "Tine Jack Mods",
+        "description": "",
+        "url": {
+            "main": "https://the.jackbox.su/",
+            "ds": "https://discord.com/invite/FbUHQTJdm8"
+        },
+        "goal": "Modification",
+        "langauge": "Russian",
+        "bg": "#0c0000",
+        "color": "#fff",
+        "inlist": false
+    },
+    {
+        "title": "Jackbox France",
+        "description": "",
+        "url": {
+            "main": "https://jbfr.fr/",
+            "ds": "https://discord.gg/XhwPfUrCEx"
+        },
+        "goal": "Translation",
+        "langauge": "France",
+        "inlist": true
+    },
+    {
+        "title": "Jackbox Translations DE",
+        "link": "Team Gamechanger",
+        "description": "",
+        "url": {
+            "main": "https://jackboxpatch.de/",
+            "ds": "https://discord.gg/ws9EmaZ8jw"
+        },
+        "goal": "Translation",
+        "langauge": "German",
+        "bg": "#9b01fd",
+        "color": "#fff",
+        "inlist": true
+    },
+    {
+        "title": "Jackbox en español",
+        "description": "",
+        "url": {
+            "main": "https://traducciones.jackbox.lol/",
+            "ds": "https://discord.gg/5DTcnMfuVp"
+        },
+        "goal": "Translation",
+        "langauge": "Spanish",
+        "inlist": true
+    },
+    {
+        "title": "Jackbox en Català",
+        "description": "",
+        "url": {
+            "main": "https://traduccions.jackbox.cat/",
+            "ds": "https://discord.gg/CzrusQKDfP"
+        },
+        "goal": "Translation",
+        "langauge": "Catalan",
+        "inlist": false
+    },
+    {
+        "title": "LUDUKO",
+        "link": "MojosaTapiro",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/aArnDCUGbu"
+        },
+        "goal": "Translation",
+        "langauge": "Esperanto",
+        "inlist": false
+    },
+    {
+        "title": "Jackbox Baltic",
+        "description": "",
+        "url": {
+            "main": "https://jackboxbalt.icu/",
+            "ds": "https://discord.gg/TNK3wsHHUW"
+        },
+        "goal": "Translation",
+        "langauge": "Latvian",
+        "bg": "#3241ce",
+        "color": "#ffffff",
+        "inlist": false
+    },
+    {
+        "title": "TUSA",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/3T6MVuZQQU"
+        },
+        "goal": "Translation",
+        "langauge": "Ukranian",
+        "bg": "#000000",
+        "color": "#9bff00",
+        "inlist": false
+    },
+    {
+        "title": "Jackbox Ukraine",
+        "description": "",
+        "url": {
+            "ds": "https://discord.gg/BDcPjPmSTz"
+        },
+        "goal": "Translation",
+        "langauge": "Ukranian",
+        "inlist": false
+    },
+    {
+        "title": "ジャックり(´･ω･`) 🌸 JACKBOX",
+        "link": "あーにゃ",
+        "description": "",
+        "url": {
+            "ds": "https://discord.com/invite/AKXs4fKgee"
+        },
+        "goal": "Translation",
+        "langauge": "Japanese",
+        "inlist": false
+    }
+]

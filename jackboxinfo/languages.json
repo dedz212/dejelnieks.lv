@@ -1,0 +1,121 @@
+[
+    {
+        "langauge": "English",
+        "bg": "#000066",
+        "color": "#fff",
+        "unicode": "🇬🇧",
+        "inlist": true
+    },
+    {
+        "langauge": "Russian",
+        "bg": "#2655b2",
+        "color": "#fff",
+        "unicode": "🇷🇺",
+        "inlist": true
+    },
+    {
+        "langauge": "Latvian",
+        "bg": "#992e37",
+        "color": "#fff",
+        "unicode": "🇱🇻",
+        "inlist": true
+    },
+    {
+        "langauge": "German",
+        "bg": "#f7c800",
+        "color": "#000",
+        "unicode": "🇩🇪",
+        "inlist": true
+    },
+    {
+        "langauge": "Spanish",
+        "bg": "#f7be00",
+        "color": "#c00b1d",
+        "unicode": "🇪🇸",
+        "inlist": true
+    },
+    {
+        "langauge": "Catalan",
+        "bg": "#f7d20d",
+        "color": "#d31119",
+        "unicode": "🏴󠁥󠁳󠁣󠁴󠁿",
+        "inlist": true
+    },
+    {
+        "langauge": "Belarusian",
+        "bg": "#c8161f",
+        "color": "#fff",
+        "unicode": "🇧🇾",
+        "inlist": true
+    },
+    {
+        "langauge": "Ukranian",
+        "bg": "#f6ea00",
+        "color": "#0078bc",
+        "unicode": "🇺🇦",
+        "inlist": true
+    },
+    {
+        "langauge": "France",
+        "bg": "#002551",
+        "color": "#f7f7f7",
+        "unicode": "🇫🇷",
+        "inlist": true
+    },
+    {
+        "langauge": "Turkish",
+        "bg": "#e10107",
+        "color": "#f7f7f7",
+        "unicode": "🇹🇷",
+        "inlist": true
+    },
+    {
+        "langauge": "Esperanto",
+        "bg": "#009400",
+        "color": "#f7f7f7",
+        "unicode": "💚",
+        "inlist": true
+    },
+    {
+        "langauge": "Chinese",
+        "bg": "#e71b24",
+        "color": "#f7f700",
+        "unicode": "🇨🇳",
+        "inlist": true
+    },
+    {
+        "langauge": "Vetnam",
+        "bg": "#d3241c",
+        "color": "#f7f700",
+        "unicode": "🇻🇳",
+        "inlist": true
+    },
+    {
+        "langauge": "Japanese",
+        "bg": "#f7f7f7",
+        "color": "#d31931",
+        "unicode": "🇯🇵",
+        "inlist": true
+    },
+    {
+        "langauge":"Portuguese",
+        "bg": "#de1d38",
+        "color": "#008043",
+        "unicode": "🇵🇹",
+        "inlist": false
+    },
+    {
+        "langauge":"Polish",
+        "bg": "#ffffff",
+        "color": "#dd1b42",
+        "unicode": "🇵🇱",
+        "inlist": false
+    },
+    {
+        "langauge":"Finnish",
+        "bg": "#ffffff",
+        "color": "#003580",
+        "unicode": "🇫🇮",
+        "inlist": false
+    }
+]

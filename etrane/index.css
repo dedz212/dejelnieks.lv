@@ -69,10 +69,19 @@ a:visited {
 
 .word-1 {
     color: var(--c1);
+    &:hover {
+        text-shadow: var(--c1) 0 0 1vh;
+    }
 }
 .word-2 {
     color: var(--c2);
+    &:hover {
+        text-shadow: var(--c2) 0 0 1vh;
+    }
 }
 .word-3 {
     color: var(--c3);
+    &:hover {
+        text-shadow: var(--c3) 0 0 1vh;
+    }
 }

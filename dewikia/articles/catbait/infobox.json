@@ -2,8 +2,8 @@
     "title": "Cat Bait",
     "image": {
         "logo": "",
-        "poster": "",
-        "video": "Main_Menu.mp4"
+        "poster": "img/library_600x900_2x.jpg",
+        "video": ""
     },
     "developer": "Mayni prod.",
     "publisher": "",
@@ -17,10 +17,12 @@
         "macOS"
     ],
     "release": "",
-    "version": "0.2.4 ALPHA",
+    "version": "0.4.7 (PRE DEMO)",
     "genre": "",
     "mode": "",
     "link": {
-        "steam": "https://steamdb.info/app/2929730/"
+        "steam": "https://store.steampowered.com/app/2929730/Cat_Bait",
+        "steamdb": "https://steamdb.info/app/2929730/",
+        "discord": "https://discord.gg/DYQnFx4aGZ"
     }
 }

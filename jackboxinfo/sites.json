@@ -1,0 +1,789 @@
+[
+    {
+        "title": "jackbox.tv",
+        "site": "https://jackbox.tv/",
+        "tag": [ "Asset" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English",
+        "old": {
+            "title": "togetherplay.tv",
+            "site": "http://togetherplay.tv/",
+            "source": "https://www.youtube.com/watch?v=2zLGrF_T8qY&t=405s"
+        }
+    },
+    {
+        "title": "qa.jackbox.tv",
+        "site": "https://qa.jackbox.tv/",
+        "tag": [ "Test" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "proto.jackbox.tv [test; dev]",
+        "site": {
+            "proto": "https://proto.jackbox.tv/",
+            "test": "https://test.jackbox.tv/",
+            "dev": "https://dev.jackbox.tv/"
+        },
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "tinyshirts",
+        "site": "https://tinyshirts.jackboxgames.com",
+        "tag": [ "Asset" ],
+        "version": {
+            "check": false,
+            "is": "Absent"
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "games.jackbox.tv [test]",
+        "site": {
+            "games": "https://games.jackbox.tv",
+            "test": "https://games-test.jackbox.tv"
+        },
+        "tag": [ "Asset", "Test" ],
+        "version": {
+            "check": false,
+            "is": "Absent"
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "ai.jackbox.live",
+        "site": "https://ai.jackbox.live",
+        "tag": [ "Event" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "Jackbox Games",
+        "language": "English",
+        "source": "https://www.jackboxgames.com/our-favorite-pax-west-2018-pics/"
+    },
+    {
+        "title": "bundles.jackbox.tv",
+        "site": "https://bundles.jackbox.tv",
+        "tag": [ "Asset" ],
+        "version": {
+            "check": false,
+            "is": "Absent"
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "stadium.jackbox.tv",
+        "site": "http://stadium.jackbox.tv/",
+        "tag": [ "Event" ],
+        "version": {
+            "check": false,
+            "is": "0.9.17"
+        },
+        "isonline": false,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "tonightshow.jackbox.tv",
+        "site": "http://tonightshow.jackbox.tv",
+        "tag": [ "Event" ],
+        "version": {
+            "check": false,
+            "is": "0.9.17"
+        },
+        "isonline": true,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "cdn.jackbox.tv",
+        "site": "http://cdn.jackbox.tv/",
+        "tag": [ "Unknown" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "tftest.jackbox.tv",
+        "site": "http://tftest.jackbox.tv/",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "Jackbox Games",
+        "language": "English"
+    },
+    {
+        "title": "sid3r.net/jackbox-tv",
+        "site": "https://sid3r.net/jackbox-tv/",
+        "tag": [ "Copypaste", "Translation" ],
+        "version": {
+            "check": false,
+            "is": "4.2.10"
+        },
+        "isonline": false,
+        "owner": "TheDarkSid3r",
+        "language": "English",
+        "github": "https://github.com/UnrulyJuli3/jackbox-tv"
+    },
+    {
+        "title": "sid3r.net/tv",
+        "site": "https://sid3r.net/tv",
+        "tag": [ "Copypaste", "Translation", "Modification" ],
+        "version": {
+            "check": false,
+            "is": "5.456.206"
+        },
+        "isonline": false,
+        "owner": "TheDarkSid3r",
+        "language": "English",
+        "github": "https://github.com/jackbox-int/tv"
+    },
+    {
+        "title": "capyparty.xyz",
+        "site": {
+            "main": "https://capyparty.xyz",
+            "other": "https://jb.zomka.dev"
+        },
+        "tag": [ "Modification" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "CapyParty",
+        "language": "English"
+    },
+    {
+        "title": "jackbox.joshheng.co.uk",
+        "site": "https://jackbox.joshheng.co.uk/",
+        "tag": [ "Unknown" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "CapyParty",
+        "language": "English"
+    },
+    {
+        "title": "yaburtests.github.io/jackbox-tv",
+        "site": "https://yaburtests.github.io/jackbox-tv/",
+        "tag": [ "Test" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "BurAndBY",
+        "language": "English"
+    },
+    {
+        "title": "en.jackbox.fun",
+        "site": "http://en.jackbox.fun/",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "0.9.6"
+        },
+        "isonline": false,
+        "owner": "What If?",
+        "language": "English"
+    },
+    {
+        "title": "jackbox.fun",
+        "site": "https://jackbox.fun/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "What If?",
+        "language": "Russian"
+    },
+    {
+        "title": "beta.jackbox.fun",
+        "site": "http://beta.jackbox.fun/",
+        "tag": [ "Test", "Translation" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "What If?",
+        "language": "Russian"
+    },
+    {
+        "title": "test.jackbox.fun",
+        "site": "https://test.jackbox.fun",
+        "tag": [ "Test", "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "What If?",
+        "language": "Russian"
+    },
+    {
+        "title": "rtotr.jackbox.fun",
+        "site": "http://rtotr.jackbox.fun",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "What If?",
+        "language": "Russian"
+    },
+    {
+        "title": "proxy.jackbox.fun",
+        "site": "http://proxy.jackbox.fun/",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "Absent"
+        },
+        "isonline": false,
+        "owner": "What If?",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.ru",
+        "site": "https://jackbox.ru",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "TDoT",
+        "former_owner": "Neep",
+        "language": "Russian"
+    },
+    {
+        "title": "beta.jackbox.ru",
+        "site": "https://beta.jackbox.ru",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.93.0"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "former_owner": "Neep",
+        "language": "Russian"
+    },
+    {
+        "title": "test.jackbox.ru",
+        "site": "https://test.jackbox.ru",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.55.0"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "former_owner": "Neep",
+        "language": "Russian"
+    },
+    {
+        "title": "black.jackbox.ru",
+        "site": "https://black.jackbox.ru",
+        "tag": [ "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.55.0"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "former_owner": "Neep",
+        "language": "Russian"
+    },
+    {
+        "title": "old.jackbox.ru",
+        "site": "https://old.jackbox.ru",
+        "tag": [ "Copypaste" ],
+        "version": {
+            "check": false,
+            "is": "3.1.16"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "former_owner": "Neep",
+        "language": "Russian"
+    },
+    {
+        "title": "jackmods.cf",
+        "site": "https://jackmods.cf/",
+        "tag": [ "Modification" ],
+        "version": {
+            "check": false,
+            "is": "4.2.9"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "language": "Russian"
+    },
+    {
+        "title": "jbgru.ga",
+        "site": "https://jbgru.ga",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.38.0"
+        },
+        "isonline": false,
+        "owner": "TDoT",
+        "language": "Russian"
+    },
+    {
+        "title": "tg.jackbox.ru",
+        "site": "https://tg.jackbox.ru",
+        "description": "Moved to jack.trgu.ru | Redirect to jackbox.ru",
+        "tag": [ "Translation", "Modification" ],
+        "version": {
+            "check": false,
+            "is": "3.1.16"
+        },
+        "isonline": false,
+        "owner": "TDoT (for Translate Guardians)",
+        "former_owner": "Neep (for Translate Guardians)",
+        "language": "Russian"
+    },
+    {
+        "title": "jack.trgu.ru",
+        "site": "https://jack.trgu.ru",
+        "tag": [ "Translation", "Modification" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Translate Guardians",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.space",
+        "site": "https://jackbox.space/",
+        "tag": [ "Copypaste" ],
+        "version": {
+            "check": false,
+            "is": "as in jackbox.fun"
+        },
+        "isonline": true,
+        "owner": "NightCat Studios",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.red",
+        "site": "https://jackbox.red/",
+        "tag": [ "Copypaste" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "Unknown",
+        "language": "Russian"
+    },
+    {
+        "title": "jsboxx.netlify.app",
+        "site": "https://jsboxx.netlify.app/",
+        "tag": [ "Translation", "Modification" ],
+        "version": {
+            "check": false,
+            "is": "5.93.0"
+        },
+        "isonline": false,
+        "owner": "JSmedia (@justsanter)",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.shop",
+        "site": "http://jackbox.shop/",
+        "tag": [ "Unknown", "Copypaste" ],
+        "version": {
+            "check": false,
+            "is": "5.93.0"
+        },
+        "isonline": false,
+        "owner": "KolbasniK",
+        "language": "Russian"
+    },
+    {
+        "title": "nineteen.gq",
+        "site": "https://nineteen.gq/",
+        "tag": [ "Unknown", "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.67.0"
+        },
+        "isonline": false,
+        "owner": "R1Mods",
+        "language": "Russian"
+    },
+    {
+        "title": "puskabox.ga",
+        "site": "https://puskabox.ga",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.38.0"
+        },
+        "isonline": false,
+        "owner": "Puskay",
+        "language": "Russian"
+    },
+    {
+        "title": "jaebox.ga",
+        "site": "https://jaebox.ga",
+        "tag": [ "Translation", "Modification" ],
+        "version": {
+            "check": false,
+            "is": "5.38.0"
+        },
+        "isonline": false,
+        "owner": "AE Studios",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox-rf.pages.dev",
+        "site": "https://jackbox-rf.pages.dev/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "The Box",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.su",
+        "site": "https://jackbox.su",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "The Box",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.site",
+        "site": "https://jackbox.site",
+        "description": "Previously owned by Rysik5318, the site was on version 1.8.3. Then, the site stopped working and switched to Translatium",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.55.0"
+        },
+        "isonline": true,
+        "owner": "Translatium",
+        "former_owner": "Rysik5318 (former TDoT admin)",
+        "language": "Russian"
+    },
+    {
+        "title": "jackbox.tech",
+        "site": "https://jackbox.tech",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "4.2.0"
+        },
+        "isonline": false,
+        "owner": "Translatium",
+        "language": "Russian"
+    },
+    {
+        "title": "disker-rus.github.io",
+        "site": "https://disker-rus.github.io/jackbox-test.github.io/",
+        "tag": [ "Translation", "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.55.0"
+        },
+        "isonline": false,
+        "owner": "Translatium",
+        "language": "Russian"
+    },
+    {
+        "title": "ru.burs.ml",
+        "site": "https://ru.burs.ml",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.55.0"
+        },
+        "isonline": false,
+        "owner": "BurAndBY",
+        "language": "Russian"
+    },
+    {
+        "title": "jackboxru.vercel.app",
+        "site": "https://jackboxru.vercel.app",
+        "tag": [ "Translation", "Copypaste" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "BurAndBY",
+        "language": "Russian"
+    },
+    {
+        "title": "jackboxby.vercel.app",
+        "site": "https://jackboxby.vercel.app/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "BurAndBY",
+        "language": "Belarusian"
+    },
+    {
+        "title": "jackbox.pro",
+        "site": "https://jackbox.pro/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "TUSA",
+        "former_owner": "Puskay",
+        "language": "Ukranian"
+    },
+    {
+        "title": "jackbox.in.ua",
+        "site": "https://jackbox.in.ua/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox Ukraine",
+        "language": "Ukranian"
+    },
+    {
+        "title": "juaebox.ga",
+        "site": "https://juaebox.ga",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.38.0"
+        },
+        "isonline": false,
+        "owner": "AE Studios",
+        "language": "Ukranian"
+    },
+    {
+        "title": "jackbox.lv",
+        "site": "https://jackbox.lv",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox Baltic",
+        "language": "Latvian"
+    },
+    {
+        "title": "jackbox.lol",
+        "site": "https://jackbox.lol",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox en español",
+        "language": "Spanish"
+    },
+    {
+        "title": "test.jackbox.lol",
+        "site": "https://test.jackbox.lol",
+        "tag": [ "Translation", "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.229.113"
+        },
+        "isonline": false,
+        "owner": "Jackbox en español",
+        "language": "Spanish"
+    },
+    {
+        "title": "jackbox.cat",
+        "site": "https://jackbox.cat",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox en Català",
+        "language": "Catalan"
+    },
+    {
+        "title": "jackbox.de",
+        "site": "https://jackbox.de",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Team Gamechanger",
+        "language": "German",
+        "old": {
+            "title": "jackbox.gg",
+            "site": "https://jackbox.gg/"
+        }
+    },
+    {
+        "title": "proto.jackbox.de",
+        "site": "https://proto.jackbox.de",
+        "tag": [ "Translation", "Test" ],
+        "version": {
+            "check": false,
+            "is": "5.84.0"
+        },
+        "isonline": false,
+        "owner": "Team Gamechanger",
+        "language": "German",
+        "old": {
+            "title": "proto.jackbox.gg",
+            "site": "https://proto.jackbox.gg/"
+        }
+    },
+    {
+        "title": "beta.jackbox.de",
+        "site": "http://beta.jackbox.de/",
+        "tag": [ "Translation", "Test" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Team Gamechanger",
+        "language": "German",
+        "old": {
+            "title": "beta.jackbox.gg",
+            "site": "https://beta.jackbox.gg/"
+        }
+    },
+    {
+        "title": "jb.alexisl.fr",
+        "site": "https://jb.alexisl.fr/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "4.2.9"
+        },
+        "isonline": false,
+        "owner": "Jackbox France",
+        "language": "France"
+    },
+    {
+        "title": "laboxdejack.fr",
+        "site": "https://laboxdejack.fr",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "Jackbox France",
+        "language": "France"
+    },
+    {
+        "title": "jackbox.tv.tr",
+        "site": "https://jackbox.tv.tr/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "YouTube_101",
+        "language": "Turkish"
+    },
+    {
+        "title": "beta.jackbox.tv.tr",
+        "site": "https://beta.jackbox.tv.tr/",
+        "tag": [ "Translation", "Test" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "YouTube_101",
+        "language": "Turkish",
+        "old": {
+            "title": "jb.ytube101.com/",
+            "site": "https://jb.ytube101.com/"
+        }
+    },
+    {
+        "title": "mojosatapiro.github.io",
+        "site": "https://mojosatapiro.github.io/jackbox-eo.github.io/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "MojosaTapiro",
+        "language": "Esperanto"
+    },
+    {
+        "title": "zesty.tpddns.cn",
+        "site": "http://zesty.tpddns.cn:8090/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "Unknown"
+        },
+        "isonline": false,
+        "owner": "Zesty",
+        "language": "Chinese"
+    },
+    {
+        "title": "jackbox.vercel.app",
+        "site": "https://jackbox.vercel.app/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": false,
+            "is": "5.91.0"
+        },
+        "isonline": false,
+        "owner": "Thooopp",
+        "language": "Vetnam"
+    },
+    {
+        "title": "hakodume.pages.dev",
+        "site": "https://hakodume.pages.dev/",
+        "tag": [ "Translation" ],
+        "version": {
+            "check": true
+        },
+        "isonline": true,
+        "owner": "あーにゃ",
+        "language": "Japanese"
+    }
+]
