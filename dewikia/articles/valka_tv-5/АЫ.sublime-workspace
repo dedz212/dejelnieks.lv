@@ -1,0 +1,394 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text-c",
+				"text-decoration-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"e",
+				"absolute"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"bac",
+				"background-blend-mode"
+			],
+			[
+				"background-",
+				"background-attachment"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"lef",
+				"left"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"text-",
+				"text-overflow"
+			],
+			[
+				"ma",
+				"margin-left"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Ista",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/igors/Documents/VS-projects/Sites/dejelnieks/dejelnieks.lv/dewikia/articles/valka_tv-5/Jauns Teksta dokuments.txt",
+		"/C/Users/igors/Videos/2024-08-28 09-53-07_2.srt",
+		"/C/Users/igors/Documents/FormatFiles/txt/800.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/aniromana/新しい上司はど天然.txt",
+		"/C/Users/igors/Documents/AegisubCC/m2-res_720p.mp4.lv-LV.srt",
+		"/C/Users/igors/Documents/FormatFiles/txt/tulkdziesma/Hacking to the Gate.txt",
+		"/C/Users/igors/Downloads/Arid/Steins/test.py",
+		"/C/Users/igors/Downloads/Arid/Steins/ep1_remuxed_subtitle_1.srt",
+		"/C/Users/igors/Documents/VS-projects/Sites/latvime/0/test.py",
+		"/C/Users/igors/Downloads/[Arid] Steins;Gate Complete Collection/[Arid] Steins;Gate [Dual-Audio][BDRip 1920x1080 HEVC FLAC]/CC/Steins;Gate - 01 ITBD Remux.lv.srt",
+		"/C/Users/igors/Documents/VS-projects/Sites/dejelnieks/dejelnieks.lv/hareluya/index.css",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Почему одинокость.txt",
+		"/C/Users/igors/Documents/VS-projects/Sites/dejelnieks/dejelnieks.lv/assets/css/future.css",
+		"/C/Users/igors/Documents/VS-projects/Sites/dejelnieks/dejelnieks.lv/assets/css/main.css",
+		"/C/Users/igors/Documents/VS-projects/Sites/dejelnieks/dejelnieks.lv/dewikia/index.css",
+		"/C/Users/igors/Downloads/[Arid] Steins;Gate Complete Collection/[Arid] Steins;Gate [Dual-Audio][BDRip 1920x1080 HEVC FLAC]/NC/test.py",
+		"/C/Users/igors/Documents/VS-projects/Sites/ydkarchive/index.css",
+		"/C/Users/igors/Downloads/[Arid] Steins;Gate Complete Collection/[Arid] Steins;Gate [Dual-Audio][BDRip 1920x1080 HEVC FLAC]/CC/Steins;Gate - 02 ITBD Remux.ja.srt",
+		"/C/Users/igors/Downloads/[Arid] Steins;Gate Complete Collection/[Arid] Steins;Gate [Dual-Audio][BDRip 1920x1080 HEVC FLAC]/STEINS;GATE.S01E01.LV.srt",
+		"/C/Users/igors/Downloads/[Arid] Steins;Gate Complete Collection/[Arid] Steins;Gate [Dual-Audio][BDRip 1920x1080 HEVC FLAC]/CC/STEINS;GATE.S01E01.LV.srt",
+		"/C/Users/igors/AppData/Local/Temp/7zO8F7BBAC2/Steins;Gate - 01 ITBD Remux.ja.srt",
+		"/C/Users/igors/AppData/Local/Temp/7zOCC29D4CF/STEINS;GATE.S01E01.JA.srt",
+		"/C/Users/igors/AppData/Local/Temp/7zOCEE6A48E/[WhyNot] Steins;Gate - 01 [BD 720p AAC][5CFFC1C7].srt",
+		"/C/Users/igors/AppData/Local/Temp/7zO02441ECE/Steins;Gate - 01 ITBD Remux.ja.srt",
+		"/C/Users/igors/AppData/Local/Temp/7zO0BC6C7EE/[Judas] Steins;Gate - S01E01.srt",
+		"/C/Users/igors/Documents/FormatFiles/txt/collection.txt",
+		"/C/Users/igors/Pictures/kra/8/web/ED.txt",
+		"/C/Users/igors/Pictures/kra/8/OP.txt",
+		"/C/Users/igors/Pictures/kra/8/json.json",
+		"/C/Users/igors/Downloads/8 миллионов евро_230714_223344.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 2/games/Picker/content.json",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Спустя века могу сказать тебе спасибо.txt",
+		"/C/Users/igors/Documents/VS-projects/izanya/database.json",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/kkzn.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Если бы не рановато в путь.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/[интро].txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/я иду в кровать.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Jauns Teksta dokuments.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Уф.. славу богу.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Если бы не рановато в путь",
+		"/C/Users/igors/Desktop/GLUEX/Output/LVA/LVA.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/YDKJ_VOL6/trace.log",
+		"/C/Users/igors/Desktop/GLUEX/BVA/BVA.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/YDKJ/outsmart/point.xml",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/YDKJ/outsmart/gameinfo.xml",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/YDKJ/my.xml",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/YDKJ/swf.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/YDKJ_VOL6/steam_appid.txt",
+		"/C/Users/igors/AppData/Local/Temp/7zOCF2A5C4C/instructions.txt",
+		"/C/Qt/Tools/QtDesignStudio/README.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Светозарный лучик света, вот-вот настигнет меня.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Уф.. славу богу",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/текст песни.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Спустя века могу сказать тебе спасибо",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Рука, тянуящая ко мне.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Ложь.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Lil Лил лилий лил.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/MC эм.. Si.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/Текст песни/Жалкий человек.txt",
+		"/C/Users/igors/Documents/FormatFiles/txt/tulkdziesma/Фанера.txt",
+		"/C/Users/igors/Desktop/vag.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/AwShirt/settings.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticALNew/games/AwShirt/settings.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/gameManifest.json",
+		"/C/Users/igors/Downloads/AwShirt_StarterPack_GameMain_Editable (2).txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/AwShirt/menu.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/AwShirt/pause_menu.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticALNew/games/AwShirt/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/AwShirt/Localization.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticAL/games/AwShirt/Localization.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticALNew/games/AwShirt/content/lv/AwShirtModeratedSlogans.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticALNew/settings.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/LocalizationManager.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticALNew/localization_manager.json",
+		"/C/Users/igors/Downloads/AwShirt_StarterPack_GameMain_Editable (1).txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/AwShirt/leaderboards.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/AwShirt/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/games/Picker/jbg.config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticAL/config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Starter/settings.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPSbalticAL/settings.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/AwShirt/menu.jet",
+		"/C/Users/igors/AppData/Local/Temp/7zO897DCDD1/Localization.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/jbg.config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/games/AwShirt/menu.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/AwShirt/settings.jet",
+		"/C/Users/igors/AppData/Local/Temp/7zO80071655/menu.jet",
+		"/C/Users/igors/AppData/Local/Temp/7zO80084A55/settings.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/games/AwShirt/settings.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/games/AwShirt/leaderboards.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/jbg.config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/Localization.json",
+		"/C/Users/igors/Downloads/AwShirt_Editable.txt",
+		"/C/Users/igors/Downloads/AwShirt_Editable (1).txt",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/PostGameActionPackage.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/AwShirtPostGame.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/CreateDrawings.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/CreateSlogans.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/GameEnding.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/RoundBattles.as",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/AwShirt/jbg.config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/actionpackages/delegates/RoundEnding.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/GameConstants.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/awshirt/GameState.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/widgets/PostGame.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/AwShirt/scripts/jackboxgames/widgets/Lobby.as",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/Localization.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Megapicker/resources/ex/package.json",
+		"/C/Users/igors/Desktop/.env",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/games/AwShirt/jbg.config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Tulkojums/JPP3lv/games/Picker/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/Picker/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/Fall Guys/steam_appid.txt",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Modification/TJPP3Multilang/Localization.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/Picker/settings.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Modification/TJPP3Multilang/games/PartyPack/Localization.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/Picker/Localization.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Modification/TJPP3Multilang/games/PartyPack/settings.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Modification/TJPP3Multilang/games/PartyPack/jbg.config.jet",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/Picker/content-pax.json",
+		"/C/Program Files (x86)/Steam/steamapps/common/The Jackbox Party Pack 3/games/Picker/content.json",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/scripts/jackboxgames/picker/PickerGameNew.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/scripts/jackboxgames/picker/PickerGame.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/Modification/TJPP3Multilang/config.jet",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/scripts/jackboxgames/nativeoverride/PlatformNew.as",
+		"/C/Users/igors/Documents/From JACKBOX GAMES/TJPPs/TJPP3/scripts/jackboxgames/settings/SettingsMenuNew.as"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 619.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "АЫ.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\igors\\Documents\\From JACKBOX GAMES\\TJPPsss\\TJPP8\\Weapons Drawn\\MurderDetectivesData"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('URL: ' + window.location.pathname);
         checkURL();
         setObserver();
+        updateCardListStyles();
     }
     
     initialize();
@@ -126,7 +127,8 @@ fetch('./assets/content.json')
                         amazon: "https://www.svgrepo.com/show/332216/amazon.svg",
                         yandex: "https://www.svgrepo.com/show/505111/yandex-music.svg",
                         zvuk: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Zvuk_%28compact_logo%29.svg/2048px-Zvuk_%28compact_logo%29.svg.png",
-                        tidal: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tidal-round-black-icon.png"
+                        tidal: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tidal-round-black-icon.png",
+                        bandcamp: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bandcamp-button-circle-black.svg/1024px-Bandcamp-button-circle-black.svg.png"
                     };
                     if (logos[key]) {
                         image.src = logos[key];
@@ -198,3 +200,19 @@ fetch('./assets/content.json')
         }
 	})
 	.catch(error => console.error('Error fetching JSON: ', error));
+
+
+// Функция для обновления стилей в зависимости от ширины экрана
+function updateCardListStyles() {
+    const cardLists = document.querySelectorAll('.cardlist');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    cardLists.forEach(cardList => {
+        cardList.classList.remove('active-styles');
+        if (width <= 1390) {
+            if (width >= 1024 && height >= 600 && width <= 1280 && height <= 800) return
+            cardList.classList.add('active-styles');
+        }
+    });
+}
+window.addEventListener('resize', updateCardListStyles);

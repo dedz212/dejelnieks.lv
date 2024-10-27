@@ -1,0 +1,123 @@
+{
+    "高校": {
+        "h": "こうこう",
+        "en": [ "high school" ],
+        "高": {
+            "h": "こう",
+            "en": [
+                {   
+                    "h": "こう",
+                    "t": [
+                        "high"
+                    ],
+                    "type": [ "prefix", "noun" ]
+                },
+                {   
+                    "h": "こう",
+                    "t": [
+                        "high school"
+                    ],
+                    "type": [ "suffix" ]
+                },
+                {   
+                    "h": "たか",
+                    "t": [
+                        "quantity",
+                        "amount",
+                        "volume",
+                        "number",
+                        "amount of money"
+                    ],
+                    "type": [ "noun", "noun (used as a suffix)" ]
+                },
+                {
+                    "kun": "たか.い",
+                    "on": "コウ", 
+                    "t": [
+                        "tall", 
+                        "high", 
+                        "expensive"
+                    ],
+                    "type": [ "kanji", "10 strokes", "JLPT N5" ]
+                }
+            ]
+        },
+        "校": {
+            "h": "こう",
+            "en": [
+                {   
+                    "h": "こう",
+                    "t": [
+                        "school"
+                    ],
+                    "type": [ "prefix", "counter" ]
+                },
+                {   
+                    "h": "こう",
+                    "t": [
+                        "proofreading",
+                        "proof"
+                    ],
+                    "type": [ "noun", "counter" ]
+                },
+                {   
+                    "on": "コウ",
+                    "t": [
+                        "exam",
+                        "school",
+                        "printing",
+                        "proof",
+                        "correction"
+                    ],
+                    "type": [ "kanji", "10 strokes", "JLPT N5" ]
+                }
+            ]
+        }
+    },
+    "専攻": {
+        "h": "せんこう",
+        "en": [ "major subject", "special study" ],
+        "専": {
+            "h": "せん",
+            "en": [
+                {   
+                    "h": "せん",
+                    "t": [
+                        "exclusively doing ...",
+                        "person who exclusively does ...",
+                        "fetish for ...",
+                        "someone with a fetish for ..."
+                    ],
+                    "type": [ "noun (used as a suffix)", "slang" ]
+                },
+                {   
+                    "kun": "もっぱ.ら",
+                    "on": "セン",
+                    "t": [
+                        "specialty",
+                        "exclusive",
+                        "mainly",
+                        "solely"
+                    ],
+                    "type": [ "kanji", "9 strokes", "JLPT N2" ]
+                }
+            ]
+        },
+        "攻": {
+            "h": "こう",
+            "en": [
+                {   
+                    "kun": "せ.める",
+                    "on": "コウ",
+                    "t": [
+                        "aggression",
+                        "attack",
+                        "criticize",
+                        "polish"
+                    ],
+                    "type": [ "kanji", "7 strokes", "JLPT N1" ]
+                }
+            ]
+        }
+    }
+}

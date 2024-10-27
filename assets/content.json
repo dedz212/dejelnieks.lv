@@ -42,6 +42,74 @@
                 "zvuk": "https://zvuk.com/release/29804536",
                 "tidal": "https://tidal.com/browse/album/295097689"
             }
+        },
+        {
+            "div": "mjtd",
+            "href": "",
+            "tt": "Music Jotting Things Down",
+            "rednew": "",
+            "type": "album",
+            "link": {
+                "bandcamp": "https://dejelnieks.bandcamp.com/"
+            }
+        },
+        {
+            "div": "izhp",
+            "href": "",
+            "tt": "И​с​п​ы​т​а​й ж​а​ж​д​ы п​о​з​н​а​н​и​я",
+            "rednew": "",
+            "type": "album",
+            "link": {
+                "bandcamp": "https://dejelnieks.bandcamp.com/album/public-alpha"
+            }
+        },
+        {
+            "div": "nic",
+            "href": "",
+            "tt": "nic​ミ​rick​ミ​d",
+            "rednew": "",
+            "type": "single",
+            "link": {
+                "bandcamp": "https://dejelnieks.bandcamp.com/track/nic-rick-d"
+            }
+        },
+        {
+            "div": "ppp",
+            "href": "",
+            "tt": "pine4pp1e",
+            "rednew": "",
+            "type": "single",
+            "link": {
+                "bandcamp": "https://dejelnieks.bandcamp.com/track/pine4pp1e"
+            }
+        },
+        {
+            "div": "ss",
+            "href": "",
+            "tt": "Strange Sense",
+            "rednew": "",
+            "type": "single",
+            "link": {
+                "spotify": "https://open.spotify.com/album/6TMS6d9TOj6z7B5IHYey3v",
+                "amazon": "https://music.amazon.com/albums/B0BSLQV3Y1",
+                "yandex": "",
+                "zvuk": "https://zvuk.com/release/28256725",
+                "tidal": "https://tidal.com/browse/album/272038762"
+            }
+        },
+        {
+            "div": "cof",
+            "href": "",
+            "tt": "Consequences of Failure",
+            "rednew": "",
+            "type": "single",
+            "link": {
+                "spotify": "https://open.spotify.com/album/5koSqImoi9h3NQZ2qw5MT8",
+                "amazon": "https://music.amazon.com/albums/B0BQT29XPM",
+                "yandex": "",
+                "zvuk": "https://zvuk.com/release/27972841",
+                "tidal": "https://tidal.com/browse/album/267989534"
+            }
         }
     ],
     "web": [

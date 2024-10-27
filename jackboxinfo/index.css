@@ -13,6 +13,11 @@
     scroll-behavior: auto;
     box-sizing: border-box;
 }
+*::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
     --c1: #242611;
@@ -33,20 +38,22 @@
     --f4: 50px;
     --f5: 60px;
     --f6: 70px;
+    --f7: 520px;
+}
+
+header {
+  margin-left: 1vh;
+  padding: 1vh;
+  position: fixed;
+  left: 0;
+  z-index: 6;
 }
 
 .logo a {
-    font-family: 'Montserrat', sans-serif;
-    margin: 1vh;
-    padding: 1vh;
-    font-size: 4vh;
-    position: fixed;
-    top: 1vh;
-    left: 0;
-    color: #FF204E;
-    font-weight: 300;
-    display: flex;
-    z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  color: #FF204E;
+  font-weight: 300;
 }
 
 #loading {
@@ -95,14 +102,50 @@ body {
     margin-top: var(--f2);
 }
 
-main {
+#up {
+  background-color: hsl(214, 100%, 15%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 1vh;
+  padding: 1vh;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content:  flex-start;
+  align-items: center;
+  /*
   margin-bottom: var(--f6);
+  margin-top: var(--f7);
+  */
+  margin-top: var(--f6);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 90dvh;
+}
+main::-webkit-scrollbar {
+  width: 0.8dvh;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #FF204E;
+  border-radius: 1dvh;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--c2);
 }
 
 a,
@@ -357,7 +400,7 @@ a.oldiv {
 }
 
 button {
-  &#sites, &#comun, &#games {
+  &#sites, &#comun, &#games, &#fonts {
     padding: var(--f1);
     margin: var(--fddd);
     font-size: var(--f1d5);
@@ -367,10 +410,23 @@ button {
     background-image: var(--c2);
     font-weight: 500;
     border-radius: var(--fddd);
+    cursor: pointer;
 
     &.active, &:hover {
       background-color:#FF204E;
       color: var(--c3);
+    }
+  }
+  &.emoji {
+    font-family: 'Noto Color Emoji', sans-serif;
+  }
+  &#fonts {
+    color: #444;
+    background-color: var(--c2);
+    &:hover {
+      background-color: var(--c2);
+      color: #444;
+      cursor: not-allowed;
     }
   }
 }

@@ -46,7 +46,7 @@ async function setSites() {
     checking();
     async function checking() {
         if (yesStopCreation2 || yesStopCreation3) {
-            await loadFilters();
+            // await loadFilters();
             await loadSites();
         } else {
             setTimeout(() => {
@@ -135,7 +135,8 @@ async function loadSites() {
         processedSites++;
         updateLoadingIndicator(processedSites, totalSites);
     }
-    filterDiv.style.display = 'flex';
+    //filterDiv.style.display = 'flex';
+    filterDiv.style.display = 'none';
     hideLoadingIndicator();
 }
 
@@ -269,9 +270,10 @@ async function loadFilters() {
     languageData.forEach(language => {
         if (language.inlist) {
             const button = document.createElement('button');
-            button.textContent = language.langauge;
-            button.style.backgroundColor = language.bg;
-            button.style.color = language.color;
+            button.classList.add('emoji')
+            button.textContent = language.unicode/*langauge*/;
+            //button.style.backgroundColor = language.bg;
+            //button.style.color = language.color;
             button.addEventListener('click', () => {
                 filterByLanguage(language.langauge);
                 setActiveButton(button, languagesContainer);
@@ -898,17 +900,17 @@ async function creatGamesCard(packs) {
     const listspan = document.createElement('div');
     listspan.classList.add('listspan');
     listspan.classList.add('k');
-    var packinfo = await fetchPack(packs.id);
+    //var packinfo = await fetchPack(packs.id);
 
     const prnid = document.createElement('div');
     prnid.classList.add('prnid');
     const num_prn = document.createElement('p');
     num_prn.classList.add('num_prn');
-    num_prn.innerHTML = packinfo.online.prn.value;
+    //num_prn.innerHTML = packinfo.online.prn.value;
 
     const t_prn = document.createElement('p');
     t_prn.classList.add('t_prn');
-    t_prn.innerHTML = packinfo.online.prn.desc;
+    //t_prn.innerHTML = packinfo.online.prn.desc;
 
     prnid.appendChild(num_prn);
     prnid.appendChild(t_prn);
@@ -917,11 +919,11 @@ async function creatGamesCard(packs) {
     hpid.classList.add('prnid');
     const num_hp = document.createElement('p');
     num_hp.classList.add('num_prn');
-    num_hp.innerHTML = packinfo.online.hp.value;
+    //num_hp.innerHTML = packinfo.online.hp.value;
 
     const t_hp = document.createElement('p');
     t_hp.classList.add('t_prn');
-    t_hp.innerHTML = packinfo.online.hp.desc;
+    //t_hp.innerHTML = packinfo.online.hp.desc;
 
     hpid.appendChild(num_hp);
     hpid.appendChild(t_hp);
@@ -930,11 +932,11 @@ async function creatGamesCard(packs) {
     atpid.classList.add('prnid');
     const num_atp = document.createElement('p');
     num_atp.classList.add('num_prn');
-    num_atp.innerHTML = packinfo.online.atp.value;
+    //num_atp.innerHTML = packinfo.online.atp.value;
 
     const t_atp = document.createElement('p');
     t_atp.classList.add('t_prn');
-    t_atp.innerHTML = packinfo.online.atp.desc;
+    //t_atp.innerHTML = packinfo.online.atp.desc;
 
     atpid.appendChild(num_atp);
     atpid.appendChild(t_atp);

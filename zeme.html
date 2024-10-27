@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Zeme</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/future.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/music.css">
+</head>
+<body>
+    <div class="logo"><a href="https://dejelnieks.lv/">:D</a></div>
+    <div id="first">
+        <div id="art">
+            <img id="cover">
+            <div id="utd">
+                <div>
+                    <h1 id="album-name"></h1>
+                    <h2 id="author-name"></h2>
+                    <div id="link"></div>
+                </div>
+                <div id="alt">
+                    <div>
+                        <div id="ltr">
+                            <label for="volume">Volume:</label>
+                            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                            <span id="current-volume">100%</span>
+                        </div>
+                        <div id="ltr">
+                            <label for="seek-bar">Rewind:</label>
+                            <input type="range" id="seek-bar" value="100" step="1">
+                            <span id="current-time">0:00</span>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button id="play">▶️</button>
+                        <button id="pause" disabled>⏸️</button>
+                        <button id="prev">⏮️</button>
+                        <button id="next">⏭️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="music-player">
+            <div id="track-list"></div>
+            
+            <audio id="audio">
+                <source id="audio-source" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио.
+            </audio>
+        </div>
+    </div>
+    <div id="desc"></div>
+    <script src="./assets/js/music.js"></script>
+</body>
+</html>
