@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    scroll-behavior: auto;
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --c0: #111;
+    --c1: #fff;
+    --c2: #222;
+}
+
+body {
+    background-color: var(--c0);
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+}
+
+main {
+    position: relative;
+    padding: 10vh;
+    z-index: 2;
+}
+
+
+
+/* ID */
+
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#date {
+    color: var(--c0);
+    font-weight: 200;
+    font-size: 5vh;
+    margin-left: 2vh;
+}
+
+#time {
+    color: var(--c0);
+    font-weight: 100;
+    font-size: 20vh;
+    line-height: 1;
+}
+
+#weather {
+    margin-top: 1vh;
+    padding: 3vh;
+    border-radius: 1vh;
+    background-color: #22222266;
+    color: var(--c1);
+    font-weight: 300;
+    backdrop-filter: blur(1vh);
+    width: fit-content;
+    font-size: 3vh;
+}
+
+#ch {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    width: fit-content;
+    color: var(--c1);
+}
+
+#t {
+    font-size: 10vh;
+}
+
+#tt {
+    font-size: 10vh;
+    color: var(--c0);
+    font-weight: 300;
+}
+
+#divr {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10vh;
+}
+
+/* CSS */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4vh;
+    height: 2vh;
+    margin: 0 1.5vh;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--c2);
+    transition: .4s;
+    border-radius: 0.5vh;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2vh;
+    width: 2vh;
+    left: -1vh;
+    bottom: 0;
+    background-color: var(--c1);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--c2);
+}
+
+input:checked + .slider:before {
+    transform: translateX(4vh);
+}
+
+@media screen and (max-width: 1280px) and (max-height: 1280px) {
+    #divr {
+        margin: 5vh;
+    }
+    main {
+        padding: 5vh;
+    }
+}
+@media screen and (max-width: 1120px) and (max-height: 1280px) {
+    #date {
+        font-size: 4vh;
+    }
+    #time {
+        font-size: 15vh;
+    }
+    #t {
+        font-size: 6vh;
+    }
+    #weather {
+        padding: 2vh;
+        font-size: 2vh;
+    }
+}
+@media screen and (max-width: 880px) and (max-height: 1280px) {
+    #date {
+        font-size: 3vh;
+    }
+    #time {
+        font-size: 10vh;
+    }
+    #t {
+        color: var(--c1);
+    }
+}
