@@ -47,16 +47,22 @@ main {
     z-index: 2;
 }
 
+#settings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 5vh;
+    z-index: 2;
+}
+
 
 
 /* ID */
 
 #bg-wrap {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 1;
     overflow: hidden;
 }
@@ -65,7 +71,7 @@ main {
     color: var(--c0);
     font-weight: 200;
     font-size: 5vh;
-    margin-left: 2vh;
+    margin-left: 0.5vh;
 }
 
 #time {
@@ -79,19 +85,16 @@ main {
     margin-top: 1vh;
     padding: 3vh;
     border-radius: 1vh;
-    background-color: #22222266;
+    background-color: #11111144;
     color: var(--c1);
+    text-shadow: var(--c0) 0vh 0 0.3vh;
     font-weight: 300;
-    backdrop-filter: blur(1vh);
+    backdrop-filter: blur(2vh);
     width: fit-content;
     font-size: 3vh;
 }
 
 #ch {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin: 5vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -101,15 +104,53 @@ main {
 
     width: fit-content;
     color: var(--c1);
+    margin: 0.5vh 0;
+}
+
+#si {
+    cursor: pointer;
+}
+
+#dropbox {
+    position: absolute;
+    background-color: #11111144;
+    backdrop-filter: blur(2vh);
+    padding: 1.5vh;
+    border-radius: 1vh;
+    bottom: 8vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 #t {
     font-size: 10vh;
+    color: var(--c1);
+    /*text-shadow: var(--c0) 0vh 0 0.3vh;*/
+    font-weight: 200;
 }
 
 #tt {
     font-size: 10vh;
     color: var(--c0);
+    font-weight: 300;
+    line-height: 1;
+}
+
+#st {
+    font-size: 2vh;
+    color: var(--c0);
+    font-weight: 300;
+    text-align: right; 
+}
+
+#status {
+    font-size: 2vh;
+    color: var(--c1);
     font-weight: 300;
 }
 
@@ -170,10 +211,39 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 1280px) and (max-height: 1280px) {
     #divr {
-        margin: 5vh;
+        margin: 5vh;/*
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;*/
     }
     main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
         padding: 5vh;
+    }
+    #bg-wrap {
+        width: 200dvw;
+    }
+    /*#t {
+        margin: 5vh;
+    }*/
+    #weather {
+        padding: 2vh;
+        font-size: 2vh;
+    }
+    #date {
+        text-align: center;
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 1120px) and (max-height: 1280px) {
@@ -188,10 +258,9 @@ input:checked + .slider:before {
     }
     #weather {
         padding: 2vh;
-        font-size: 2vh;
     }
 }
-@media screen and (max-width: 880px) and (max-height: 1280px) {
+@media screen and (max-width: 750px) and (max-height: 1280px) {
     #date {
         font-size: 3vh;
     }
@@ -199,6 +268,14 @@ input:checked + .slider:before {
         font-size: 10vh;
     }
     #t {
-        color: var(--c1);
+        margin: 0;
+    }
+    #divr {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5vh;
+    }
+    #bg-wrap {
+        width: 250dvw;
     }
 }

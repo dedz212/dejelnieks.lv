@@ -1,5 +1,7 @@
 const app = document.getElementById('app');
 
+const bgw = document.getElementById("bg-wrap");
+
 async function loadJSON(url) {
     try {
       const response = await fetch(url);
@@ -14,32 +16,32 @@ async function loadJSON(url) {
 let vv;
 function getWindDirection(veja_virziens) {
     switch (true) {
-      case (veja_virziens === 0):
-        vv = "D";
-        break;
-      case (veja_virziens > 0 && veja_virziens < 90):
-        vv = "ZD";
-        break;
-      case (veja_virziens === 90):
+      case (veja_virziens >= 0 && veja_virziens <= 22.5):
         vv = "Z";
         break;
-      case (veja_virziens > 90 && veja_virziens < 180):
-        vv = "ZR";
+      case (veja_virziens >= 22.5 && veja_virziens <= 67.5):
+        vv = "ZA";
         break;
-      case (veja_virziens === 180):
-        vv = "R";
+      case (veja_virziens >= 67.5 && veja_virziens <= 112.5):
+        vv = "A";
         break;
-      case (veja_virziens > 180 && veja_virziens < 270):
+      case (veja_virziens >= 112.5 && veja_virziens <= 157.5):
+        vv = "DA";
+        break;
+      case (veja_virziens >= 157.5 && veja_virziens <= 202.5):
+        vv = "D";
+        break;
+      case (veja_virziens >= 202.5 && veja_virziens <= 247.5):
         vv = "DR";
         break;
-      case (veja_virziens === 270):
-        vv = "D";
+      case (veja_virziens >= 247.5 && veja_virziens <= 292.5):
+        vv = "R";
         break;
-      case (veja_virziens > 270 && veja_virziens < 360):
-        vv = "JD";
+      case (veja_virziens >= 292.5 && veja_virziens <= 337.5):
+        vv = "ZR";
         break;
-      case (veja_virziens === 360):
-        vv = "D";
+      case (veja_virziens >= 337.5 && veja_virziens <= 360.1):
+        vv = "Z";
         break;
       default:
         vv = "?";
@@ -50,23 +52,75 @@ function getWindDirection(veja_virziens) {
 
 function updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD) {
     let vtof = parseFloat(veja_atrums);
-    let vis = Math.round(vtof);
     let vt;
     if (localStorage.getItem("kmh") === 'true') {
-        vt = `${vis*3.6} km/h`
+        vt = `${Math.round(vtof*3.6)} km/h`
     } else {
-        vt = `${vis} m/s`
+        vt = `${Math.round(vtof)} m/s`
     }
     vaD.innerHTML = `Vējš: ${vt} ${vv}`;
     let btof = parseFloat(brazmas);
-    let bis = Math.round(btof);
     let bt;
     if (localStorage.getItem("kmh") === 'true') {
-        bt = `${bis*3.6} km/h`
+        bt = `${Math.round(btof*3.6)} km/h`
     } else {
-        bt = `${bis} m/s`
+        bt = `${Math.round(btof)} m/s`
     }
-    vbD.innerHTML = `Vējš brāzmās: ${bt} ${vv}`;
+    vbD.innerHTML = `Vējš brāzmās: ${bt}`;
+}
+
+function updateBGDisplay() {
+  if (localStorage.getItem("bg") === 'true') {
+    bgw.style.display = "block";
+    document.getElementById("date").style.color = "var(--c0)";
+    document.getElementById("time").style.color = "var(--c0)";
+    document.getElementById("t").style.color = "var(--c0)";
+    document.getElementById("st").style.color = "var(--c0)";
+    document.getElementById("status").style.color = "var(--c0)";
+  } else {
+    bgw.style.display = "none";
+    document.getElementById("date").style.color = "var(--c1)";
+    document.getElementById("time").style.color = "var(--c1)";
+    document.getElementById("t").style.color = "var(--c1)";
+    document.getElementById("st").style.color = "var(--c1)";
+    document.getElementById("status").style.color = "var(--c1)";
+  }
+}
+
+function backgroundShow() {
+  updateBGDisplay();
+  const div = document.createElement('div');
+  div.id = "ch"
+
+  const left = document.createElement('div');
+  left.textContent = "ies."
+  const center = document.createElement('div');
+  center.style.display = "flex"
+  const right = document.createElement('div');
+  right.textContent = "izs."
+
+  const label = document.createElement('label');
+  label.className = 'switch';
+
+  const input = document.createElement('input');
+  input.type = 'checkbox';
+  input.checked = localStorage.getItem("bg") === 'true';
+  input.addEventListener('change', () => {
+    localStorage.setItem('bg', input.checked);
+    updateBGDisplay();
+  });
+
+  const span = document.createElement('span');
+  span.className = 'slider';
+
+  label.appendChild(input);
+  label.appendChild(span);
+
+  div.appendChild(left);
+  center.appendChild(label);
+  div.appendChild(center);
+  div.appendChild(right);
+  document.getElementById("dropbox").appendChild(div);
 }
 
 function createSlider(veja_atrums, brazmas, vaD, vbD) {
@@ -101,12 +155,17 @@ function createSlider(veja_atrums, brazmas, vaD, vbD) {
     center.appendChild(label);
     div.appendChild(center);
     div.appendChild(right);
-    app.appendChild(div);
+    document.getElementById("dropbox").appendChild(div);
 }
 
-async function updateWeather(div, div2) {
+async function updateWeather(div) {
     div.innerHTML = "";
+
+    const div2 = document.createElement('div');
+    div2.id = "tt";
     div2.innerHTML = "";
+    document.getElementById("divr").appendChild(div2);
+
     const dH = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_hourly?punkts=P52');
     const dD = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_daily?punkts=P52');
     if (!dH && !dD) return;
@@ -115,19 +174,15 @@ async function updateWeather(div, div2) {
     const currentHour = now.getHours();
     const currentDateString = now.toISOString().slice(0, 10).replace(/-/g, '');
     
-    // Поиск ближайшего прогноза для текущего часа или самого ближайшего
     let closestWeather = dH[0];
     for (const entry of dH) {
         const forecastDate = entry.laiks.slice(0, 8);
         const forecastHour = parseInt(entry.laiks.slice(8, 10), 10);
-
-        // Сравниваем текущую дату и час с прогнозом
         if (forecastDate === currentDateString && forecastHour <= currentHour) {
-        closestWeather = entry;
+          closestWeather = entry;
         }
     }
 
-    // Извлекаем нужные данные для отображения
     const {
         temperatura, sajutu_temperatura, veja_atrums, nokrisni_1h,
         relativais_mitrums, veja_virziens, brazmas
@@ -141,10 +196,11 @@ async function updateWeather(div, div2) {
     div2.appendChild(tD);
 
     const stD = document.createElement('div');
-    stD.innerHTML = `Pēc sajūtas: ${Math.round(sajutu_temperatura)}°C`;
+    stD.innerHTML = `${Math.round(sajutu_temperatura)}°C`;
     stD.id = "st";
-    div.appendChild(stD);
-
+    div2.appendChild(stD);
+    backgroundShow();
+/*
     const vaD = document.createElement('div');
     div.appendChild(vaD);
     const vbD = document.createElement('div');
@@ -163,9 +219,10 @@ async function updateWeather(div, div2) {
     rmD.innerHTML = `Mitrums: ${Math.round(relativais_mitrums)}%`;
     rmD.id = "rm";
     div.appendChild(rmD);
+*/
 }
 
-function createDate(div, weatherD, div2) {
+function createDate(div, weatherD) {
     const dateD = document.createElement('div');
     dateD.id = "date";
     div.appendChild(dateD);
@@ -174,18 +231,18 @@ function createDate(div, weatherD, div2) {
     timeD.id = "time";
     div.appendChild(timeD);
 
-    setInterval(() => updateTime(timeD, weatherD, dateD, div2), 1000);
-    updateTime(timeD, weatherD, dateD, div2);
+    setInterval(() => updateTime(timeD, weatherD, dateD), 1000);
+    updateTime(timeD, weatherD, dateD);
 }
 
-function updateTime(timeD, weatherD, dateD, div2) {
+function updateTime(timeD, weatherD, dateD) {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
     timeD.textContent = `${hours}:${minutes}:${seconds}`;
     if (minutes === '00' && seconds === '00') {
-        updateWeather(weatherD, div2);
+        updateWeather(weatherD);
     }
 
     const dayOfWeek = now.toLocaleString('lv-LV', { weekday: 'long' });
@@ -194,26 +251,50 @@ function updateTime(timeD, weatherD, dateD, div2) {
     dateD.textContent = `${dayOfWeek}, ${day}. ${month}`
 }
 
+let menudrop;
+function settings() {
+  const dropbox = document.getElementById('dropbox');
+  const menuclick = document.getElementById('si');
+  if (dropbox) {
+    dropbox.style.display = 'none';
+    menuclick.style.display = 'flex'
+    if(menuclick) {
+        menuclick.addEventListener('click', function() {
+        if (!menudrop) {
+          dropbox.style.display = 'flex';
+          menudrop = true;
+        } else {
+          dropbox.style.display = 'none';
+          menudrop = false;
+        }
+        });
+    }
+  }
+}
+
 function start() {
-    const divr = document.createElement('div');
-    divr.id = "divr";
+  const divr = document.createElement('div');
+  divr.id = "divr";
 
-    const div = document.createElement('div');
-    div.id = "dis";
-    app.appendChild(div);
+  const div = document.createElement('div');
+  div.id = "dis";
+  app.appendChild(div);
 
-    const div2 = document.createElement('div');
-    div2.id = "tt";
-    divr.appendChild(div2);
+  app.appendChild(divr);
 
-    app.appendChild(divr);
+  const weatherD = document.createElement('div');
+  weatherD.id = "weather";
+  weatherD.style.display = "none";
+  divr.appendChild(weatherD);
 
-    const weatherD = document.createElement('div');
-    weatherD.id = "weather";
-    divr.appendChild(weatherD);
+  const statusIS = document.createElement('div');
+  statusIS.id = "status";
+  statusIS.innerHTML = "šobrīd"
+  divr.appendChild(statusIS);
 
-    createDate(div, weatherD, div2);
-    updateWeather(weatherD, div2);
+  createDate(div, weatherD);
+  updateWeather(weatherD);
+  settings();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
