@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    scroll-behavior: auto;
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --c0: hsl(0, 0%, 7%);
+    --c1: #fff;
+    --c2: hsl(0, 0%, 13%);
+    --c3: hsl(0, 0%, 10%);
+    --c4: hsl(0, 0%, 16%);
+}
+
+body {
+    background-color: var(--c0);
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-weight: 500;
+}
+
+#title {
+    width: 100%;
+    display: flex;
+    padding: 5dvh 5dvh;
+    font-size: 4dvw;
+    color: var(--c1);
+}
+
+#maska, #apakstikls, #hosts {
+    margin: 0 5dvh 5dvh 5dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+
+    background-color: var(--c3);
+    padding: 1dvw;
+    border-radius: 1dvw;
+    width: max-content;
+}
+
+#group1div,
+#mask2div, #biti2div, #group2div, #ir2div,
+#mask3div, #biti3div, #group3div, #ir3div {
+    display: none;
+}
+
+.indiv {
+    width: 100%;
+    padding: 0 1dvw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#t {
+    margin-right: 1dvw;
+    font-size: 1.8dvw;
+    font-weight: 700;
+    color: var(--c1);
+}
+
+input {
+    background-color: var(--c4);
+    color: var(--c1);
+    min-width: 35dvw;
+    border: none;
+    text-align: left;
+    font-size: 1.5dvw;
+    font-weight: 700;
+    margin: 0.5dvw 1dvw;
+    padding: 1dvw;
+    &:focus, &:after {
+        outline: none;
+    }
+}
+
+::placeholder {
+    color: var(--c1);
+    opacity: 1;
+}
+::-ms-input-placeholder { 
+    color: var(--c1);
+}
+
+.ir {
+    overflow-y: scroll;
+    height: 10dvh;
+    background-color: var(--c2);
+    color: var(--c1);
+    padding: 1dvw;
+    min-width: 35dvw;
+    font-size: 1.5dvw;
+}
+
+input:read-only {
+    background-color: var(--c2);
+    cursor: not-allowed;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@media screen and (max-width: 1700px) {
+    #title {
+        font-size: 6dvh;
+    }
+    input {
+        min-width: 43dvw;
+        font-size: 2dvw;
+    }
+    #t {
+        font-size: 2dvw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #title {
+        padding: 3dvh;
+    }
+    input {
+        min-width: 53dvw;
+        font-size: 5dvw;
+        margin: 1dvw 1dvw;
+        padding: 3dvw;
+    }
+    #t {
+        font-size: 5dvw;
+    }
+    .indiv {
+        padding: 2dvw 1dvw;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #maska, #apakstikls, #hosts {
+        padding: 5dvw;
+        margin: 0;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
