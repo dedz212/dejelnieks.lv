@@ -454,3 +454,17 @@ button {
   color: red; /* Пример стиля, можно заменить на любой другой */
   font-weight: bold;
 }
+
+#warn {
+  position: absolute;
+  margin: 1dvh;
+  padding: 0.5dvh;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  width: 20dvw;
+  font-size: 1dvw;
+  border: #FF204E solid 0.1vh;
+  color: #fe0000;
+  border-radius: 0.5dvh;
+}

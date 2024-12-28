@@ -81,7 +81,7 @@ main {
     line-height: 1;
 }
 
-#weather {
+#weather, #wind {
     margin-top: 1vh;
     padding: 3vh;
     border-radius: 1vh;

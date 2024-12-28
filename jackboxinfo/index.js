@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     async function initialize() {
         showLoadingIndicator();
         setListeningButton();
-        const version = await loadJSON('https://dejelnieks.lv/data.json');
-        console.log("Version: " + version.version);
+        const version = await loadJSON('https://test.dejelnieks.lv/v');
+        console.log("Version: " + version.jackinfo);
         console.log('URL: ' + window.location.pathname);
         setActiveButton(document.getElementById(activediv), document.getElementById("hesh"));
         if (activediv === "sites") {

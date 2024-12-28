@@ -50,7 +50,7 @@ function getWindDirection(veja_virziens) {
     return vv;
 }
 
-function updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD) {
+function updateSpeedDisplay(veja_atrums, brazmas, vaD) {
     let vtof = parseFloat(veja_atrums);
     let vt;
     if (localStorage.getItem("kmh") === 'true') {
@@ -58,7 +58,7 @@ function updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD) {
     } else {
         vt = `${Math.round(vtof)} m/s`
     }
-    vaD.innerHTML = `Vējš: ${vt} ${vv}`;
+    
     let btof = parseFloat(brazmas);
     let bt;
     if (localStorage.getItem("kmh") === 'true') {
@@ -66,7 +66,8 @@ function updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD) {
     } else {
         bt = `${Math.round(btof)} m/s`
     }
-    vbD.innerHTML = `Vējš brāzmās: ${bt}`;
+    vaD.innerHTML = `${vt} ${vv} [${bt}]`;
+    
 }
 
 function updateBGDisplay() {
@@ -185,7 +186,7 @@ function setBigClock() {
   localStorage.setItem('bc_c', true);
 }
 
-function createSlider(veja_atrums, brazmas, vaD, vbD) {
+function createSlider(veja_atrums, brazmas, vaD) {
     const div = document.createElement('div');
     div.id = "ch"
 
@@ -204,7 +205,7 @@ function createSlider(veja_atrums, brazmas, vaD, vbD) {
     input.checked = localStorage.getItem("kmh") === 'true';
     input.addEventListener('change', () => {
         localStorage.setItem('kmh', input.checked);
-        updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD);
+        updateSpeedDisplay(veja_atrums, brazmas, vaD);
     });
 
     const span = document.createElement('span');
@@ -220,7 +221,7 @@ function createSlider(veja_atrums, brazmas, vaD, vbD) {
     document.getElementById("dropbox").appendChild(div);
 }
 
-async function updateWeather(div , test = null) {
+async function updateWeather(div, test = null) {
     div.innerHTML = "";
 
     const statusIS = document.createElement('div');
@@ -274,13 +275,6 @@ async function updateWeather(div , test = null) {
     if (test === 1) {
       console.log('Check')
     }
-/*
-    const vaD = document.createElement('div');
-    div.appendChild(vaD);
-    const vbD = document.createElement('div');
-    div.appendChild(vbD);
-    updateSpeedDisplay(veja_atrums, brazmas, vaD, vbD);
-    createSlider(veja_atrums, brazmas, vaD, vbD);
     
     const nD = document.createElement('div');
     let ntof = parseFloat(nokrisni_1h);
@@ -293,7 +287,42 @@ async function updateWeather(div , test = null) {
     rmD.innerHTML = `Mitrums: ${Math.round(relativais_mitrums)}%`;
     rmD.id = "rm";
     div.appendChild(rmD);
-*/
+
+}
+
+async function updateWind(div) {
+  div.innerHTML = "";
+
+  const statusIS = document.createElement('div');
+  statusIS.id = "status";
+  statusIS.innerHTML = "vējš"
+  div.appendChild(statusIS);
+
+  const dH = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_hourly?punkts=P52');
+  const dD = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_daily?punkts=P52');
+  if (!dH && !dD) return;
+
+  const now = new Date();
+  const currentHour = now.getHours();
+  const currentDateString = now.toISOString().slice(0, 10).replace(/-/g, '');
+  
+  let closestWeather = dH[0];
+  for (const entry of dH) {
+      const forecastDate = entry.laiks.slice(0, 8);
+      const forecastHour = parseInt(entry.laiks.slice(8, 10), 10);
+      if (forecastDate === currentDateString && forecastHour <= currentHour) {
+        closestWeather = entry;
+      }
+  }
+
+  const {
+      veja_atrums, brazmas
+  } = closestWeather;
+
+  const vaD = document.createElement('div');
+  div.appendChild(vaD);
+  updateSpeedDisplay(veja_atrums, brazmas, vaD);
+  createSlider(veja_atrums, brazmas, vaD);
 }
 
 function createDate(div, weatherD) {
@@ -333,7 +362,7 @@ function settings() {
     dropbox.style.display = 'none';
     menuclick.style.display = 'flex'
     if(menuclick) {
-        menuclick.addEventListener('click', function() {
+      menuclick.addEventListener('click', function() {
         if (!menudrop) {
           dropbox.style.display = 'flex';
           menudrop = true;
@@ -341,7 +370,7 @@ function settings() {
           dropbox.style.display = 'none';
           menudrop = false;
         }
-        });
+      });
     }
   }
 }
@@ -361,13 +390,18 @@ function start() {
   //weatherD.style.display = "none";
   divr.appendChild(weatherD);
 
+  const windD = document.createElement('div');
+  windD.id = "wind";
+  divr.appendChild(windD);
+
   createDate(div, weatherD);
   updateWeather(weatherD);
+  updateWind(windD);
   settings();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    start();
+  start();
 });
 
 function publicUpdate(set = document.getElementById("weather"), test = 1) {
