@@ -85,16 +85,17 @@ main {
     margin-top: 1vh;
     padding: 3vh;
     border-radius: 1vh;
-    background-color: #11111144;
+    /*background-color: #11111144;*/
     color: var(--c1);
-    text-shadow: var(--c0) 0vh 0 0.3vh;
+    /*text-shadow: var(--c0) 0vh 0 0.3vh;*/
     font-weight: 300;
-    backdrop-filter: blur(2vh);
-    width: fit-content;
+    /*backdrop-filter: blur(2vh);*/
+    /*width: fit-content;*/
     font-size: 3vh;
+    border: var(--c1) solid 0.1vh;
 }
 
-#ch {
+#ch, #bc {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

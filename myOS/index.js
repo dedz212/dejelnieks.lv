@@ -87,40 +87,102 @@ function updateBGDisplay() {
   }
 }
 
+function updateClockSize() {
+  if (localStorage.getItem("bc") === 'true') {
+    if (window.matchMedia("(max-width: 750px) and (max-height: 1280px)").matches) {
+      document.getElementById("time").style.fontSize = "15vh";
+    } else if (window.matchMedia("(max-width: 1120px) and (max-height: 1280px)").matches){
+      document.getElementById("time").style.fontSize = "20vh";
+    } else {
+      document.getElementById("time").style.fontSize = "30vh";
+    }
+  } else {
+    if (window.matchMedia("(max-width: 750px) and (max-height: 1280px)").matches) {
+      document.getElementById("time").style.fontSize = "10vh";
+    } else if (window.matchMedia("(max-width: 1120px) and (max-height: 1280px)").matches){
+      document.getElementById("time").style.fontSize = "15vh";
+    } else {
+      document.getElementById("time").style.fontSize = "20vh";
+    }
+  }
+}
+window.addEventListener("resize", updateClockSize);
 function backgroundShow() {
   updateBGDisplay();
-  const div = document.createElement('div');
-  div.id = "ch"
+  if (!localStorage.getItem("bg_c")) {
+    const div = document.createElement('div');
+    div.id = "ch"
 
-  const left = document.createElement('div');
-  left.textContent = "ies."
-  const center = document.createElement('div');
-  center.style.display = "flex"
-  const right = document.createElement('div');
-  right.textContent = "izs."
+    const left = document.createElement('div');
+    left.textContent = "ies."
+    const center = document.createElement('div');
+    center.style.display = "flex"
+    const right = document.createElement('div');
+    right.textContent = "izs."
 
-  const label = document.createElement('label');
-  label.className = 'switch';
+    const label = document.createElement('label');
+    label.className = 'switch';
 
-  const input = document.createElement('input');
-  input.type = 'checkbox';
-  input.checked = localStorage.getItem("bg") === 'true';
-  input.addEventListener('change', () => {
-    localStorage.setItem('bg', input.checked);
-    updateBGDisplay();
-  });
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.checked = localStorage.getItem("bg") === 'true';
+    input.addEventListener('change', () => {
+      localStorage.setItem('bg', input.checked);
+      updateBGDisplay();
+    });
 
-  const span = document.createElement('span');
-  span.className = 'slider';
+    const span = document.createElement('span');
+    span.className = 'slider';
 
-  label.appendChild(input);
-  label.appendChild(span);
+    label.appendChild(input);
+    label.appendChild(span);
 
-  div.appendChild(left);
-  center.appendChild(label);
-  div.appendChild(center);
-  div.appendChild(right);
-  document.getElementById("dropbox").appendChild(div);
+    div.appendChild(left);
+    center.appendChild(label);
+    div.appendChild(center);
+    div.appendChild(right);
+    document.getElementById("dropbox").appendChild(div);
+  }
+  localStorage.setItem('bg_c', true);
+}
+
+function setBigClock() {
+  updateClockSize();
+  if (!localStorage.getItem("bc_c")) {
+    const div = document.createElement('div');
+    div.id = "bc"
+
+    const left = document.createElement('div');
+    left.textContent = "ies."
+    const center = document.createElement('div');
+    center.style.display = "flex"
+    const right = document.createElement('div');
+    right.textContent = "izs."
+
+    const label = document.createElement('label');
+    label.className = 'switch';
+
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.checked = localStorage.getItem("bc") === 'true';
+    input.addEventListener('change', () => {
+      localStorage.setItem('bc', input.checked);
+      updateClockSize();
+    });
+
+    const span = document.createElement('span');
+    span.className = 'slider';
+
+    label.appendChild(input);
+    label.appendChild(span);
+
+    div.appendChild(left);
+    center.appendChild(label);
+    div.appendChild(center);
+    div.appendChild(right);
+    document.getElementById("dropbox").appendChild(div);
+  }
+  localStorage.setItem('bc_c', true);
 }
 
 function createSlider(veja_atrums, brazmas, vaD, vbD) {
@@ -158,13 +220,19 @@ function createSlider(veja_atrums, brazmas, vaD, vbD) {
     document.getElementById("dropbox").appendChild(div);
 }
 
-async function updateWeather(div) {
+async function updateWeather(div , test = null) {
     div.innerHTML = "";
+
+    const statusIS = document.createElement('div');
+    statusIS.id = "status";
+    statusIS.innerHTML = "šobrīd"
+    div.appendChild(statusIS);
 
     const div2 = document.createElement('div');
     div2.id = "tt";
     div2.innerHTML = "";
-    document.getElementById("divr").appendChild(div2);
+    div.appendChild(div2);
+    document.getElementById("divr").appendChild(div)
 
     const dH = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_hourly?punkts=P52');
     const dD = await loadJSON('https://videscentrs.lvgmc.lv/data/weather_forecast_for_location_daily?punkts=P52');
@@ -191,7 +259,7 @@ async function updateWeather(div) {
     vv = getWindDirection(veja_virziens);
 
     const tD = document.createElement('div');
-    tD.innerHTML = `${Math.round(temperatura)}°C`;
+    tD.textContent = `${Math.round(temperatura)}°C`;
     tD.id = "t";
     div2.appendChild(tD);
 
@@ -199,7 +267,13 @@ async function updateWeather(div) {
     stD.innerHTML = `${Math.round(sajutu_temperatura)}°C`;
     stD.id = "st";
     div2.appendChild(stD);
+
     backgroundShow();
+    setBigClock();
+
+    if (test === 1) {
+      console.log('Check')
+    }
 /*
     const vaD = document.createElement('div');
     div.appendChild(vaD);
@@ -242,7 +316,7 @@ function updateTime(timeD, weatherD, dateD) {
     const seconds = String(now.getSeconds()).padStart(2, '0');
     timeD.textContent = `${hours}:${minutes}:${seconds}`;
     if (minutes === '00' && seconds === '00') {
-        updateWeather(weatherD);
+      updateWeather(weatherD);
     }
 
     const dayOfWeek = now.toLocaleString('lv-LV', { weekday: 'long' });
@@ -284,13 +358,8 @@ function start() {
 
   const weatherD = document.createElement('div');
   weatherD.id = "weather";
-  weatherD.style.display = "none";
+  //weatherD.style.display = "none";
   divr.appendChild(weatherD);
-
-  const statusIS = document.createElement('div');
-  statusIS.id = "status";
-  statusIS.innerHTML = "šobrīd"
-  divr.appendChild(statusIS);
 
   createDate(div, weatherD);
   updateWeather(weatherD);
@@ -299,4 +368,13 @@ function start() {
 
 document.addEventListener("DOMContentLoaded", () => {
     start();
+});
+
+function publicUpdate(set = document.getElementById("weather"), test = 1) {
+  updateWeather(set, test)
+}
+
+window.addEventListener("beforeunload", (event) => {
+  localStorage.removeItem("bg_c");
+  localStorage.removeItem("bc_c");
 });
