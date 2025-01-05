@@ -1,12 +1,13 @@
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async () => {
     async function initialize() {
         const version = await loadJSON('https://test.dejelnieks.lv/v');
         console.log("Version: " + version.dejelnieks);
         console.log('URL: ' + window.location.pathname);
         checkURL();
-        setObserver();
+        await setObserver();
         updateCardListStyles();
+        setCheckButtons();
     }
     
     initialize();
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function checkURL() {
     const url = window.location.href;
-    const langAEL = ["en", "lv", "ru"];
+    const langAEL = ["en", "lv", "ru", "ja"];
     if (url.includes(`#`)) {
         for (let lang of langAEL) {
             if (url.includes(`#${lang}`)) {
@@ -71,7 +72,7 @@ async function setObserver() {
             }
         });
     }, {
-        threshold: 0.4
+        threshold: 0.8
     });
 
     const cards = document.querySelectorAll('.cn');
@@ -81,6 +82,10 @@ async function setObserver() {
     });
     hh.forEach(title => {
         observer.observe(title);
+    });
+    const tl = document.querySelectorAll('.tavslaiks');
+    tl.forEach(t => {
+        observer.observe(t);
     });
 }
 
@@ -216,3 +221,24 @@ function updateCardListStyles() {
     });
 }
 window.addEventListener('resize', updateCardListStyles);
+
+function setCheckButtons() {
+    const upButton = document.getElementById('up');
+    const downButton = document.getElementById('down');
+
+    if (upButton) {
+        upButton.addEventListener('click', () => {
+            document.querySelector('main').scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+        });
+    } else {
+        console.error('Up button not found');
+    }
+
+    if (downButton) {
+        downButton.addEventListener('click', () => {
+            document.querySelector('main').scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+        });
+    } else {
+        console.error('Down button not found');
+    }
+}

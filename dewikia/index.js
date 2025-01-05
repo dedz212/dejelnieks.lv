@@ -1,8 +1,8 @@
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "ru";
 document.addEventListener("DOMContentLoaded", function () {
     async function initialize() {
-        const version = await loadJSON('https://dejelnieks.lv/data.json');
-        console.log("Version: " + version);
+        const version = await loadJSON('https://test.dejelnieks.lv/v');
+        console.log("Version: " + version.dewikia);
         console.log('URL: ' + window.location.pathname);
         checkURL();
     }
