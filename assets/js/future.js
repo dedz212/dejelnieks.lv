@@ -1,13 +1,23 @@
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 document.addEventListener("DOMContentLoaded", async () => {
     async function initialize() {
-        const version = await loadJSON('https://test.dejelnieks.lv/v');
-        console.log("Version: " + version.dejelnieks);
-        console.log('URL: ' + window.location.pathname);
-        checkURL();
-        await setObserver();
-        updateCardListStyles();
-        setCheckButtons();
+        try {
+            const version = await loadJSON('https://test.dejelnieks.lv/v');
+            if (version === null) {
+                window.location.href = "/error.html";
+                return;
+            }
+            console.log("Version: " + version.dejelnieks);
+            console.log('URL: ' + window.location.pathname);
+            checkURL();
+            await setObserver();
+            updateCardListStyles();
+            setCheckButtons();
+        } catch (error) {
+            console.error("Error:", error);
+            alert(error);
+            window.location.href = "/error.html";
+        }
     }
     
     initialize();
@@ -30,12 +40,12 @@ async function checkURL() {
 
 async function loadJSON(url) {
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
     } catch (error) {
-      console.error('Error loading JSON:', error);
-      return null;
+        console.error('Error loading JSON:', error);
+        return null;
     }
 }
 

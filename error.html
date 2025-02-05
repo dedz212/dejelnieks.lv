@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка 521 — Мы потеряли сервер!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        :root {
+            --c1: #FF204E;
+            --c4: #00224D;
+            --c5: #2080ff;
+
+            --t: 1dvh;
+            --mt: -1dvh;
+        }
+        header {
+            margin: 1vh;
+            padding: 1vh;
+            font-size: 4vh;
+            position: fixed;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--c4);
+            color: var(--c1);
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        #container {
+            padding: 2dvh;
+            border-radius: 10px;
+            max-width: 50dvw;
+        }
+        p {
+            font-size: 2.5dvh;
+            font-weight: 300;
+            line-height: 0.8;
+        }
+        .glitch {
+            color: transparent;
+            font-weight: 300;
+            font-size: 4dvh;
+            animation: glitch 1s infinite ease-in-out;
+            /*filter: blur(0.1dvh);*/
+        }
+        .glitch:hover {
+            animation: glitch 0.25s infinite ease-in-out;
+        }
+        @keyframes glitch {
+            0% {
+                text-shadow: var(--t) var(--t) 0.25dvh var(--c5),
+                            var(--mt) var(--mt) 0.25dvh var(--c1);
+            }
+            25% {
+                text-shadow: var(--t) var(--mt) 0.25dvh var(--c5),
+                            var(--mt) var(--t) 0.25dvh var(--c1);
+            }
+            50% {
+                text-shadow: var(--mt) var(--mt) 0.25dvh var(--c5),
+                            var(--t) var(--t) 0.25dvh var(--c1);
+            }
+            75% {
+                text-shadow: var(--mt) var(--t) 0.25dvh var(--c5),
+                            var(--t) var(--mt) 0.25dvh var(--c1);
+            }
+            100% {
+                text-shadow: var(--t) var(--t) 0.25dvh var(--c5),
+                            var(--mt) var(--mt) 0.25dvh var(--c1);
+            }
+        }
+        a,
+        a:hover,
+        a:visited {
+            color: var(--c1);
+            cursor: pointer;
+            text-decoration: none;
+            text-decoration-color: none;
+            font-weight: 500;
+        }
+        .logo a {
+            font-family: 'Montserrat', sans-serif;
+            margin: 1vh;
+            padding: 1vh;
+            font-size: 4vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: var(--c1);
+            font-weight: 300;
+        }
+        a.b {
+            color: var(--c1);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1dvh;
+            border: 0.2dvh solid var(--c1);
+            padding: 0.5dvh 1.5dvh;
+            border-radius: 0.5dvh;
+            line-height: 1.5;
+            transition: 0.3s;
+            font-size: 2dvh;
+            font-weight: 400;
+        }
+        a.b:hover {
+            background: var(--c1);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="https://dejelnieks.lv/">:C</a></div>
+    </header>
+    <div id="container"></div>
+    <script>
+        const messages = {
+            ru: {
+                title: "Ошибка 521",
+                message1: "Сервер исчез. Возможно, он ушел в астрал, сбежал на Гавайи или просто решил отдохнуть.",
+                message2: "Мы уже отправили экспедицию на его поиски. А пока попробуйте заглянуть сюда чуть позже!",
+                button: "Вернуться на главную"
+            },
+            lv: {
+                title: "Kļūda 521",
+                message1: "Serveris ir pazudis. Varbūt tas aizlidoja uz Mēnesi, aizbrauca uz Havaju salām vai vienkārši paņēma atvaļinājumu.",
+                message2: "Mēs jau esam izsūtījuši ekspedīciju, lai to atrastu. Tikmēr pamēģiniet vēlāk!",
+                button: "Atgriezties sākumlapā"
+            },
+            en: {
+                title: "Error 521",
+                message1: "The server has vanished. Maybe it went to another dimension, escaped to Hawaii, or just decided to take a break.",
+                message2: "We've already sent an expedition to find it. Meanwhile, try again later!",
+                button: "Return to homepage"
+            },
+            ja: {
+                title: "エラー 521",
+                message1: "サーバーが消えました。異次元へ飛んだのか、ハワイへ逃げたのか、それともただ休暇を取ったのかもしれません。",
+                message2: "すでに探査隊を派遣しました。それまで、しばらくしてからもう一度試してください！",
+                button: "ホームページへ戻る"
+            }
+        };
+
+        function loadErrorPage() {
+            const lang = localStorage.getItem("lang") || "en";
+            const text = messages[lang] || messages["en"];
+
+            const container = document.getElementById("container");
+            container.innerHTML = `
+                <h1 class="glitch">${text.title}</h1>
+                <p>${text.message1}</p>
+                <p>${text.message2}</p>
+                <a class="b" href="/">${text.button}</a>
+            `;
+        }
+
+        loadErrorPage();
+    </script>
+</body>
+</html>
