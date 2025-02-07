@@ -143,7 +143,10 @@ fetch('./assets/content.json')
                         yandex: "https://www.svgrepo.com/show/505111/yandex-music.svg",
                         zvuk: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Zvuk_%28compact_logo%29.svg/2048px-Zvuk_%28compact_logo%29.svg.png",
                         tidal: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tidal-round-black-icon.png",
-                        bandcamp: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bandcamp-button-circle-black.svg/1024px-Bandcamp-button-circle-black.svg.png"
+                        bandcamp: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bandcamp-button-circle-black.svg/1024px-Bandcamp-button-circle-black.svg.png",
+                        youtube: "https://static-00.iconduck.com/assets.00/youtube-music-icon-512x512-tzy5jsl3.png",
+                        apple: "https://img.icons8.com/?size=1024&id=xLOU1OLuaHC4&format=png",
+                        deezer: "https://cdn-icons-png.flaticon.com/512/5968/5968860.png"
                     };
                     if (logos[key]) {
                         image.src = logos[key];
@@ -164,16 +167,16 @@ fetch('./assets/content.json')
                 h2.className = 't';
                 h2.setAttribute('key', item.type);
                 
-                const p = document.createElement('p');
+                const p = document.createElement('div');
                 p.className = 'rednew';
-                p.textContent = item.rednew;
+                p.setAttribute('key', item.rednew);
     
                 const aclass = document.createElement('p');
                 aclass.className = 'rednew';
                 aclass.textContent = item.rednew;
 
                 if (item.rednew !== "") {
-                    divTavslaiks2.appendChild(p);
+                    div.appendChild(p);
                 }
                 a.appendChild(divMS);
                 a.appendChild(divFace);

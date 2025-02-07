@@ -1,6 +1,21 @@
 {
     "music": [
         {
+            "div": "psy",
+            "href": "",
+            "id": "",
+            "tt": "Psychedeliosis",
+            "type": "single",
+            "rednew": "new",
+            "link": {
+                "spotify": "https://open.spotify.com/album/3LgflDDV6xmX2yuO6UbFHi",
+                "amazon": "https://music.amazon.com/albums/B0DTJ8WMLY",
+                "tidal": "https://listen.tidal.com/album/412729791",
+                "apple": "https://geo.music.apple.com/album/psychedeliosis-single/1791618139",
+                "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mTVH2Peh-VwxtIjsT2N0JkB8tZj6nMRBI"
+            }
+        },
+        {
             "div": "mz",
             "href": "zeme.html",
             "id": "mza",
@@ -12,7 +27,7 @@
                 "amazon": "https://music.amazon.com/albums/B0CVVRSZ12",
                 "yandex": "https://music.yandex.ru/album/29797276",
                 "zvuk": "https://zvuk.com/release/32906057",
-                "tidal": "https://tidal.com/browse/album/346146340"
+                "tidal": "https://listen.tidal.com/album/413221278"
             }
         },
         {
@@ -26,7 +41,7 @@
                 "amazon": "https://music.amazon.com/albums/B0C2VZTBBG",
                 "yandex": "https://music.yandex.ru/album/25574927",
                 "zvuk": "https://zvuk.com/release/29472095",
-                "tidal": "https://tidal.com/browse/album/290130379"
+                "tidal": "https://listen.tidal.com/album/414091758"
             }
         },
         {
@@ -40,7 +55,7 @@
                 "amazon": "https://music.amazon.com/albums/B0C5DDY81S",
                 "yandex": "https://music.yandex.ru/album/25858586",
                 "zvuk": "https://zvuk.com/release/29804536",
-                "tidal": "https://tidal.com/browse/album/295097689"
+                "tidal": "https://listen.tidal.com/album/412779911"
             }
         },
         {
@@ -94,7 +109,7 @@
                 "amazon": "https://music.amazon.com/albums/B0BSLQV3Y1",
                 "yandex": "",
                 "zvuk": "https://zvuk.com/release/28256725",
-                "tidal": "https://tidal.com/browse/album/272038762"
+                "tidal": "https://listen.tidal.com/album/412779381"
             }
         },
         {
@@ -108,7 +123,7 @@
                 "amazon": "https://music.amazon.com/albums/B0BQT29XPM",
                 "yandex": "",
                 "zvuk": "https://zvuk.com/release/27972841",
-                "tidal": "https://tidal.com/browse/album/267989534"
+                "tidal": "https://listen.tidal.com/album/411866853"
             }
         }
     ],

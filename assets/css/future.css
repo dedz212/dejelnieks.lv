@@ -295,6 +295,12 @@ main {
     min-height: var(--cnf);
     margin-bottom: 0.5dvh;
 
+    &.psy {
+        background-image: url('../img/psy.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
     &.mz {
         background-image: url('../img/mz.png');
         background-size: 100%;
@@ -394,6 +400,20 @@ main {
 
 #musiclist::-webkit-scrollbar-thumb:hover {
     background-color: var(--c2);
+}
+
+.rednew {
+    padding: 0.5dvh 0dvh;
+    background-color: var(--c1);
+    line-height: 0.7;
+    color: var(--c5);
+    font-weight: 900;
+    position: fixed;
+    font-size: 3.5dvh;
+    top: 0.4dvh;
+    left: 0.9vh;
+    z-index: 90;
+    /*letter-spacing: 1px;*/
 }
 
 #bbe {
