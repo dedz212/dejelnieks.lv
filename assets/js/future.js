@@ -66,6 +66,7 @@ async function setLang(lang) {
     if (lang == "ja") {
         console.log(`?`);
     }
+    await checkAndDisplayMessage(lang)
 }
 
 async function setObserver() {
@@ -253,5 +254,45 @@ function setCheckButtons() {
         });
     } else {
         console.error('Down button not found');
+    }
+}
+
+async function checkAndDisplayMessage(lang) {
+    try {
+        const n = await loadJSON('https://test.dejelnieks.lv/n');
+        if (n[lang]) {
+            const messageContainer = document.getElementById('n');
+            messageContainer.innerText =""
+            messageContainer.style.position = 'fixed';
+            messageContainer.style.top = '1dvh';
+            messageContainer.style.right = '1dvh';
+            messageContainer.style.padding = '1dvh';
+            messageContainer.style.width = '25dvw';
+            messageContainer.style.backgroundColor = 'rgba(255, 32, 78, 0.8)';
+            messageContainer.style.color = 'white';
+            messageContainer.style.borderRadius = '0.5dvh';
+            messageContainer.style.fontSize = '2dvh';
+            messageContainer.style.zIndex = '1000';
+            messageContainer.innerText = n[lang];
+            
+            const closeButton = document.createElement('button');
+            closeButton.innerText = '✖';
+            closeButton.style.bottom = '1dvh';
+            closeButton.style.right = '1dvh';
+            closeButton.style.position = 'absolute';
+            closeButton.style.background = 'none';
+            closeButton.style.border = 'none';
+            closeButton.style.color = 'white';
+            closeButton.style.fontSize = '1dvh';
+            closeButton.style.cursor = 'pointer';
+            closeButton.addEventListener('click', () => {
+                document.body.removeChild(messageContainer);
+            });
+            
+            messageContainer.appendChild(closeButton);
+            document.body.appendChild(messageContainer);
+        }
+    } catch (error) {
+        console.error('Error fetching message:', error);
     }
 }
