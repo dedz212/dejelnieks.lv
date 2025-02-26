@@ -1,0 +1,146 @@
+[
+    {
+        "id": "1",
+        "lang": {
+            "lv": {
+                "term": "Autosaglabāšana",
+                "bruh": [
+                    {
+                        "term": "Automātiskā saglabāšana"
+                    }
+                ]
+            },
+            "en": {
+                "term": "Autosave"
+            },
+            "ru": {
+                "term": "Автосохранение"
+            }
+        },
+        "wiki": {
+            "text": [
+                "Funkcija videospēlēs, kas automātiski saglabā spēlētāja progresu noteiktos brīžos bez nepieciešamības to darīt manuāli. Šī funkcija palīdz novērst datu zudumu gadījumos, kad spēle avarē vai rodas lietotāja kļūda. Autosaglabāšana parasti notiek pēc noteikta laika intervāla, pēc konkrētu notikumu norises vai pie noteiktiem kontrolpunktiem spēlē. Piemēram, piedzīvojumu spēlēs tā var saglabāt progresu pēc līmeņa vai misijas pabeigšanas, bet cīņas spēlēs – pēc uzvarētas cīņas. Dažās spēlēs autosaglabāšana ir vienīgā datu saglabāšanas metode, un spēlētājam ir jāizpilda noteikta spēles daļa pirms saglabāšanas notiekšanas. Tomēr autosaglabāšana var radīt arī problēmas, piemēram, ja saglabāšana notiek brīdī, kad spēlētājs pieļauj kļūdu vai sastopas ar spēles kļūdu, kas padara spēli neizpildāmu."
+            ],
+            "sources": [
+                {
+                    "title": "Does Bloodborne autosave?",
+                    "href": "https://www.gameslearningsociety.org/does-bloodborne-autosave/"
+                },
+                {
+                    "title": "How does game saves work?",
+                    "href": "https://www.gameslearningsociety.org/how-does-game-saves-work/"
+                }
+            ]
+        },
+        "category": "Funkcija",
+        "relatedTerms": ["Save", "Quick save"]
+    },
+    {
+        "id": "2",
+        "lang": {
+            "lv": {
+                "term": "Daudzspēlētāju tiešsaistes kaujas arēna",
+                "i": ["MOBA"]
+            },
+            "en": {
+                "term": "Multiplayer online battle arena",
+                "i": ["MOBA"]
+            }
+        },
+        "wiki": {
+            "text": [
+                "Tiešsaistes reāllaika stratēģijas videospēļu žanrs, kurā divas komandas sacenšas savā starpā ar mērķi aizsargāt savu mājas bāzi un iznīcināt pretinieku komandas torņus vai citas struktūras."
+            ],
+            "sources": [
+                {
+                    "title": "Dictionary.com | MOBA",
+                    "href": "https://www.dictionary.com/browse/moba"
+                }
+            ]
+        },
+        "category": "Žanrs",
+        "relatedTerms": ["Battle arena", "Online", "Reāllaika stratēģija", "Daudzspēlētāju videospēle"]
+    },
+    {
+        "id": "3",
+        "lang": {
+            "lv": {
+                "term": "Daudzspēlētāju tiešsaistes spēle",
+                "i": [ "MMO" ]
+            },
+            "en": {
+                "term": "Massively multiplayer online game",
+                "i": [ "MMO",  "MMOG" ]
+            }
+        },
+        "wiki": {
+            "text": [
+                "Jebkura tiešsaistes videospēle, kurā spēlētājs mijiedarbojas ar daudziem spēlētājiem."
+            ],
+            "sources": [
+                {
+                    "title": "Dictionary.com | MMO",
+                    "href": "https://www.dictionary.com/browse/mmo"
+                }
+            ]
+        },
+        "category": "Žanrs",
+        "relatedTerms": ["Battle arena", "Online", "Reāllaika stratēģija", "Daudzspēlētāju videospēle"]
+    },
+    {
+        "id": "4",
+        "lang": {
+            "lv": {
+                "term": "Rīcības spēle"
+            },
+            "en": {
+                "term": "Action game"
+            }
+        },
+        "wiki": {
+            "text": [
+                "Videospēļu žanrs, kas koncentrējas uz fiziskām izaicinājumiem, piemēram, roku un acu koordināciju, reakcijas ātrumu, ātrām kustībām, cīņām un problēmu risināšanu. Šī žanra spēlēs bieži tiek novērtēta spēlētāju spēja ātri reaģēt un precīzi rīkoties, un tās ietver tādus apakšžanrus kā kaujas spēles, šūteri utt."
+            ],
+            "sources": [
+                {
+                    "title": "Computer Hope | Action game",
+                    "href": "https://www.computerhope.com/jargon/a/action-game.htm"
+                },
+                {
+                    "title": "European Studios | Action Video Game",
+                    "href": "https://www.europeanstudios.com/encyclopedia/action-video-game-genre"
+                }
+            ]
+        },
+        "category": "Žanrs",
+        "relatedTerms": ["Kaujas spēle", "Šaujamspēle", "Reāllaika stratēģija"]
+    },
+    {
+        "id": "5",
+        "lang": {
+            "lv": {
+                "term": "Griezaina"
+            },
+            "en": {
+                "term": "Cutscene"
+            }
+        },
+        "wiki": {
+            "text": [
+                "Neinteraktīvas ainas videospēlēs, kas pārtrauc spēles gaitu, lai attēlotu stāsta daļu vai sniegtu informāciju par spēles fonu vai sižetu. Šīs ainas var būt iepriekš ierakstītas vai skriptētas, un tās parasti izmanto, lai virzītu stāstu uz priekšu, iepazīstinātu ar jauniem varoņiem vai sniegtu svarīgu informāciju. Spēlētāji šādu ainu laikā parasti nevar kontrolēt darbību, jo tās tiek rādītas kinematogrāfiskā stilā ar dialogiem un vizuāliem efektiem."
+            ],
+            "sources": [
+                {
+                    "title": "Merriam-Webster | Cutscene",
+                    "href": "https://www.merriam-webster.com/dictionary/cutscene"
+                },
+                {
+                    "title": "Langeek Dictionary | Cutscene",
+                    "href": "https://dictionary.langeek.co/en/word/211420?entry=cutscene"
+                }
+            ]
+        },
+        "category": "Funkcija",
+        "relatedTerms": []
+    }
+]

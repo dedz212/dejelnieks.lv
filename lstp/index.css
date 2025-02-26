@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    scroll-behavior: auto;
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --cw0: #f5f7fa;
+    --cw1: #dcdee1;
+    --cb0: #5d9cec;
+    --cb1: #548cd4;
+    --cz0: #3c3b3d;
+    --cz1: #363537;
+    --cg0: #ccd1d9;
+    --cg1: #b7bcc3;
+    --l: rgb(240, 242, 245);
+    --l2: rgb(235, 237, 240);
+}
+
+body {
+    background-color: var(--cw0);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100dvh;
+}
+
+a,
+a:hover,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-color: none;
+
+    font-weight: 300;
+    color: var(--cw0);
+    font-size: 2dvh;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+button {
+    background-color: var(--cz0);
+    border: 0.3dvh solid var(--cz1);
+    color: var(--cw1);
+    margin: 0.5dvh;
+    padding: 1dvh 2dvh;
+    font-size: 2dvh;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1;
+}
+
+select {
+    background-color: var(--c0);
+    border: 0.3dvh solid var(--c1);
+    color: var(--c0);
+    border-radius: 0.5dvh;
+    margin: 0.5dvh;
+    padding: 0.5dvh 4dvh 0.5dvh 2dvh;
+    font-size: 5dvh;
+    font-weight: 600;
+    cursor: pointer;
+    appearance:none;
+
+    background: transparent;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5dvh top 50%;
+    background-size: 1.5dvh auto;
+    background-color: var(--c1);
+}
+
+input {
+    background-color: var(--cw1);
+    color: var(--cz0);
+    width: 50dvh;
+    border: none;
+    text-align: left;
+    font-size: 2dvh;
+    font-weight: 700;
+    margin: 1dvh 0;
+    padding: 1dvh;
+    &:focus, &:after {
+        outline: none;
+    }
+}
+
+::placeholder {
+    color: var(--cz0);
+    opacity: 1;
+}
+::-ms-input-placeholder { 
+    color: var(--cz0);
+}
+
+#blue {
+    width: 100%;
+    background-color: var(--cb1);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 60dvw;
+    height: 30dvh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+#top {
+    width: 60dvw;
+    height: 5dvh;
+    position: relative;
+    padding: 1dvh 2dvh;
+    display: flex;
+    flex-direction: row-reverse
+}
+
+#middle {
+    color: var(--cw0);
+    font-weight: 700;
+    font-size: 5dvh;
+    line-height: 1;
+    padding: 1dvh 0;
+}
+
+main {
+    width: 80%;
+}
+
+#results {
+    padding: 4dvh;
+}
+
+.result-box {
+    width: 60dvw;
+    padding: 1dvh 2dvh 3dvh 2dvh;
+    background-color: var(--l);
+    border-radius: 1dvh;
+    margin: 1dvh 0;
+
+    & .h1 {
+        font-size: 4dvh;
+        line-height: 1;
+        padding: 2dvh 0;
+    }
+    &:hover {
+        background-color: var(--l2);
+    }
+}
+
+.oPara {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Para {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    font-size: 2dvh;
+}
+
+.Para1 {
+    width: 16dvh;
+    font-weight: 700;
+}
+
+.wt {
+    padding-bottom: 2dvh;
+    font-size: 2dvh;
+    width: 80%;
+}
+
+hr {
+    margin: 1dvh 0;
+    color: var(--cz0);
+}
+
+div.span {
+    background-color: var(--cz0);
+    padding: 0.5dvh 1dvh;
+    border-radius: 0.5vh;
+    line-height: 1;
+    margin: 0.1dvh;
+
+    &:hover {
+        background-color: var(--cb1);
+    }
+}
