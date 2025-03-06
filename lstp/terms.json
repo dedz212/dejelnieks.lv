@@ -32,7 +32,7 @@
                 }
             ]
         },
-        "category": "Funkcija",
+        "category": ["Funkcija", "Termins"],
         "relatedTerms": ["Save", "Quick save"]
     },
     {
@@ -58,7 +58,7 @@
                 }
             ]
         },
-        "category": "Žanrs",
+        "category": ["Žanrs"],
         "relatedTerms": ["Battle arena", "Online", "Reāllaika stratēģija", "Daudzspēlētāju videospēle"]
     },
     {
@@ -84,14 +84,16 @@
                 }
             ]
         },
-        "category": "Žanrs",
+        "category": ["Funkcija", "Termins"],
         "relatedTerms": ["Battle arena", "Online", "Reāllaika stratēģija", "Daudzspēlētāju videospēle"]
     },
     {
         "id": "4",
         "lang": {
             "lv": {
-                "term": "Rīcības spēle"
+                "term": "Rīcības spēle",
+                "ps": "Pārsvarā nominatīvā daudzskaitlī",
+                "incorrect": ["Darbības spēle"]
             },
             "en": {
                 "term": "Action game"
@@ -112,7 +114,7 @@
                 }
             ]
         },
-        "category": "Žanrs",
+        "category": ["Žanrs"],
         "relatedTerms": ["Kaujas spēle", "Šaujamspēle", "Reāllaika stratēģija"]
     },
     {
@@ -140,7 +142,63 @@
                 }
             ]
         },
-        "category": "Funkcija",
+        "category": ["Termins"],
+        "relatedTerms": []
+    },
+    {
+        "id": "6",
+        "status": [
+            "NEVĒLAMS",
+            "NOVECOJIS"
+        ],
+        "lang": {
+            "lv": {
+                "term": "Cirst un šķaidīt",
+                "please_use": [ "Rīcības RPG", "Rīcības piedzīvojums" ]
+            },
+            "en": {
+                "term": "Hack and slash"
+            },
+            "ru": {
+                "term": "Руби и меси"
+            }
+        },
+        "wiki": {
+            "text": [
+                "Videospēļu žanrs, kas akcentē ātru un intensīvu tuvcīņu ar ierociem, piemēram, zobeniem vai cirvjiem, lai tiktu galā ar lielu pretinieku skaitu, izmantojot dažādu sitienu kombināciju sistēmas, kā arī iespējas uzlabot cīņas prasmes un personāžu spējas spēles gaitā. Šādu spēlēšanas stilu var redzēt tādās spēlēs kā Diablo, Devil May Cry un God of War."
+            ],
+            "sources": [
+                {
+                    "title": "What Are Hack and Slash Video Games?",
+                    "href": "https://www.makeuseof.com/what-are-hack-and-slash-video-games/"
+                }
+            ]
+        },
+        "category": ["Žanrs"],
+        "relatedTerms": []
+    },
+    {
+        "id": "7",
+        "image": "https://m.media-amazon.com/images/M/MV5BNjE2MTNiYTItOWY1NS00ZWFiLThhMTMtMmFlNWFjNjRmZTQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "lang": {
+            "lv": {
+                "term": "Velns var raudāt"
+            },
+            "en": {
+                "term": "Devil May Cry",
+                "i": ["DmC"]
+            },
+            "ja": {
+                "term": "デビルメイクライ",
+                "i": ["デビクラ", "DMC", "デビル"]
+            }
+        },
+        "wiki": {
+            "text": [
+                "Rīcības-piedzīvojumu videospēļu sērija, ko izveidojis uzņēmums Capcom. Tā tika pirmo reizi izdota 2001. gadā un kopš tā laika ir kļuvusi par vienu no uzņēmuma nozīmīgākajām franšīzēm. Franšīzē seko Dante, velna mednieks, kurš pats ir pusasiņu velns, cīnoties pret dažādiem ienaidniekiem."
+            ]
+        },
+        "category": ["Spēle"],
         "relatedTerms": []
     }
 ]

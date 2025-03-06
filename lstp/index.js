@@ -30,6 +30,27 @@ async function initialize() {
         const results = searchTerms(query);
         displayResults(results, query);
     });
+
+    document.getElementById('showAllButton').addEventListener('click', function() {
+        displayResults(termsData, '');
+    });
+
+    if (window.location.hash) {
+        const termId = window.location.hash.substring(1);
+        const term = termsData.find(item => item.id === termId);
+        if (term) {
+            displayResults([term], termId);
+        }
+    }
+
+    // Отслеживание изменений хеша в URL
+    window.addEventListener('hashchange', () => {
+        const termId = window.location.hash.substring(1);
+        const term = termsData.find(item => item.id === termId);
+        if (term) {
+            displayResults([term], termId);
+        }
+    });
 }
 
 // Функция поиска по JSON данным с приоритетом: lv -> en -> ru
@@ -37,14 +58,15 @@ function searchTerms(query) {
     query = query.toLowerCase();
     const results = [];
     termsData.forEach(item => {
-        // Проверяем в порядке приоритета
         if (["lv", "en", "ru"].some(lang => 
             ["term", "i"].some(key => {
                 const value = item.lang[lang]?.[key];
+
                 if (key === "i" && Array.isArray(value)) {
-                    return value.some(i => i.toLowerCase().includes(query));
+                    return value.some(i => i.toLowerCase().split(/\s+/).includes(query));
                 }
-                return value?.toLowerCase().includes(query);
+
+                return value?.toLowerCase().split(/\s+/).includes(query);
             })
         )) {
             results.push(item);
@@ -72,17 +94,29 @@ function displayResults(results, query) {
         const box = document.createElement('div');
         box.classList.add('result-box');
 
+        const boxleft = document.createElement('div');
+        boxleft.classList.add('box-left');
+
         // Заголовок с выбранным термином
         const title = document.createElement('h2');
         title.classList.add('h1');
         title.textContent =  item.lang.lv.term;
-        box.appendChild(title);
+        boxleft.appendChild(title);
+
+        if (item.lang.lv.ps) {
+            title.classList.add('ps');
+
+            const ps = document.createElement('div');
+            ps.classList.add('ps');
+            ps.innerHTML = item.lang.lv.ps;
+            boxleft.appendChild(ps);
+        }
 
         if (item.wiki.text) {
             const w = document.createElement('div');
             w.classList.add('wt');
             w.innerHTML = item.wiki.text;
-            box.appendChild(w);
+            boxleft.appendChild(w);
         }
 
         const nPara = document.createElement('div');
@@ -95,6 +129,33 @@ function displayResults(results, query) {
             ot1Para.innerHTML = "SAISINĀJUMS"
             const ot2Para = document.createElement('div');
             ot2Para.innerHTML = item.lang.lv.i.join('</br>');
+
+            otPara.appendChild(ot1Para);
+            otPara.appendChild(ot2Para);
+            nPara.appendChild(otPara);
+        }
+        if (item.lang.lv.incorrect) {
+            const otPara = document.createElement('div');
+            otPara.classList.add('Para');
+            const ot1Para = document.createElement('div');
+            ot1Para.className = "Para1 red";
+            ot1Para.innerHTML = "NEPAREIZS"
+            const ot2Para = document.createElement('div');
+            ot2Para.style.textDecoration = "line-through";
+            ot2Para.innerHTML = item.lang.lv.incorrect.join(', ');
+
+            otPara.appendChild(ot1Para);
+            otPara.appendChild(ot2Para);
+            nPara.appendChild(otPara);
+        }
+        if (item.lang.lv.please_use) {
+            const otPara = document.createElement('div');
+            otPara.classList.add('Para');
+            const ot1Para = document.createElement('div');
+            ot1Para.classList.add('Para1');
+            ot1Para.innerHTML = "VĒLAMS"
+            const ot2Para = document.createElement('div');
+            ot2Para.innerHTML = item.lang.lv.please_use.join('</br>');
 
             otPara.appendChild(ot1Para);
             otPara.appendChild(ot2Para);
@@ -137,10 +198,10 @@ function displayResults(results, query) {
             otPara.appendChild(ot2Para);
             nPara.appendChild(otPara);
         }
-        box.appendChild(nPara);
+        boxleft.appendChild(nPara);
 
         const hr = document.createElement('hr');
-        box.appendChild(hr);
+        boxleft.appendChild(hr);
 
         const oPara = document.createElement('div');
         oPara.classList.add('oPara');
@@ -174,7 +235,87 @@ function displayResults(results, query) {
             ruPara.appendChild(ru2Para);
             oPara.appendChild(ruPara);
         }
-        box.appendChild(oPara);
+        if (item.lang.ja) {
+            const jaPara = document.createElement('div');
+            jaPara.classList.add('Para');
+            const ja1Para = document.createElement('div');
+            ja1Para.classList.add('Para1');
+            ja1Para.innerHTML = "JAPĀNISKI"
+            const ja2Para = document.createElement('div');
+            ja2Para.innerHTML = item.lang.ja.term;
+
+            if (item.lang.ja.i) {
+                ja2Para.innerHTML = item.lang.ja.term + "</br>" + item.lang.ja.i.join('</br>');
+            }
+
+            jaPara.appendChild(ja1Para);
+            jaPara.appendChild(ja2Para);
+            oPara.appendChild(jaPara);
+        }
+        boxleft.appendChild(oPara);
+
+        const hr2 = document.createElement('hr');
+        boxleft.appendChild(hr2);
+
+        const oPara2 = document.createElement('div');
+        oPara2.classList.add('oPara');
+        if (item.category) {
+            const otPara = document.createElement('div');
+            otPara.classList.add('Para');
+            const ot1Para = document.createElement('div');
+            ot1Para.classList.add('Para1');
+            ot1Para.innerHTML = "KATEGORIJA"
+            const ot2Para = document.createElement('div');
+            ot2Para.innerHTML = item.category.join(', ');
+
+            otPara.appendChild(ot1Para);
+            otPara.appendChild(ot2Para);
+            oPara2.appendChild(otPara);
+        }
+        if (item.relatedTerms && item.relatedTerms.length > 0) {
+            const otPara = document.createElement('div');
+            otPara.classList.add('Para');
+            const ot1Para = document.createElement('div');
+            ot1Para.classList.add('Para1');
+            ot1Para.innerHTML = "SKATIES ARĪ"
+            const ot2Para = document.createElement('div');
+            ot2Para.innerHTML = item.relatedTerms.join(', ');
+
+            otPara.appendChild(ot1Para);
+            otPara.appendChild(ot2Para);
+            oPara2.appendChild(otPara);
+        }
+        boxleft.appendChild(oPara2);
+
+
+        const boxright = document.createElement('div');
+        boxright.classList.add('box-right');
+
+        if (item.status) {
+            const otPara = document.createElement('div');
+            otPara.classList.add('uprightbox');
+
+            item.status.forEach(word => {
+                const ot1Para = document.createElement('div');
+                ot1Para.classList.add('spantos');
+                ot1Para.textContent = word;
+        
+                otPara.appendChild(ot1Para);
+            });
+
+            boxright.appendChild(otPara);
+        }
+
+        if (item.image) {
+            const img = document.createElement('img');
+            img.classList.add('poster');
+            img.src = item.image;
+
+            boxright.appendChild(img);
+        }
+
+        box.appendChild(boxleft);
+        box.appendChild(boxright);
 
         resultsContainer.appendChild(box);
     });
@@ -182,3 +323,27 @@ function displayResults(results, query) {
 
 // Запуск инициализации после загрузки страницы
 document.addEventListener("DOMContentLoaded", initialize);
+
+function isElementPartiallyVisible(el, visibilityThreshold) {
+    var rect = el.getBoundingClientRect();
+    var elementHeight = rect.bottom - rect.top;
+    var visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+    var visibilityRatio = visibleHeight / elementHeight;
+    
+    return visibilityRatio > visibilityThreshold;
+}
+
+function handleScrollAnimation() {
+    var triggerElement = document.querySelector('header');
+    var animatedElement = document.querySelector('#fixed');
+    
+    if (isElementPartiallyVisible(triggerElement, 0.2)) {
+        animatedElement.style.display = "none";
+        triggerElement.style.display = "flex";
+    } else {
+        animatedElement.style.display = "flex";
+    }
+}
+
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('resize', handleScrollAnimation);

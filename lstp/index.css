@@ -18,14 +18,16 @@
 :root {
     --cw0: #f5f7fa;
     --cw1: #dcdee1;
-    --cb0: #5d9cec;
-    --cb1: #548cd4;
+    --cb0: rgb(0, 113, 227);
+    --cb1: rgb(0, 93, 197);
     --cz0: #3c3b3d;
     --cz1: #363537;
     --cg0: #ccd1d9;
     --cg1: #b7bcc3;
-    --l: rgb(240, 242, 245);
-    --l2: rgb(235, 237, 240);
+    --l0: rgb(240, 242, 245);
+    --l: rgb(235, 237, 240);
+    --l2: rgb(225, 227, 230);
+    --l3: rgb(230, 232, 235);
 }
 
 body {
@@ -71,6 +73,10 @@ button {
     font-weight: 600;
     cursor: pointer;
     line-height: 1;
+
+    &:hover {
+        background-color: var(--cz1);
+    }
 }
 
 select {
@@ -95,7 +101,7 @@ select {
 
 input {
     background-color: var(--cw1);
-    color: var(--cz0);
+    color: var(--cz1);
     width: 50dvh;
     border: none;
     text-align: left;
@@ -118,7 +124,7 @@ input {
 
 #blue {
     width: 100%;
-    background-color: var(--cb1);
+    background-color: var(--cb0);
 
     display: flex;
     flex-direction: column;
@@ -126,6 +132,9 @@ input {
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
 }
 
 header {
@@ -146,7 +155,11 @@ header {
     position: relative;
     padding: 1dvh 2dvh;
     display: flex;
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
+
+    & a {
+        padding: 0 0 0 2dvh;
+    }
 }
 
 #middle {
@@ -171,15 +184,33 @@ main {
     background-color: var(--l);
     border-radius: 1dvh;
     margin: 1dvh 0;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
 
     & .h1 {
         font-size: 4dvh;
         line-height: 1;
         padding: 2dvh 0;
+
+        &.ps {
+            font-size: 4dvh;
+            line-height: 1;
+            padding: 2dvh 0 0 0;
+            font-weight: 700;
+        }
     }
     &:hover {
         background-color: var(--l2);
     }
+}
+
+.ps {
+    font-size: 1dvh;
+    line-height: 0.8;
+    padding: 0dvh 0 2dvh 0;
+    font-weight: 300;
 }
 
 .oPara {
@@ -203,8 +234,14 @@ main {
 }
 
 .Para1 {
-    width: 16dvh;
+    min-width: 16dvh;
+    max-width: 16dvh;
     font-weight: 700;
+    padding: 0 0 0.5dvh 0;
+
+    &.red {
+        color: red;
+    }
 }
 
 .wt {
@@ -228,4 +265,86 @@ div.span {
     &:hover {
         background-color: var(--cb1);
     }
+}
+
+#fixed {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cb0);
+    z-index: 2;
+
+    & #special {
+        width: 60dvw;
+        padding: 1dvh 2dvh;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        & .h1 {
+            color: var(--cw0);
+            font-size: 2vh;
+            font-weight: 600;
+        }
+    }
+
+    & div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+            padding: 0 0 0 2dvh;
+        }
+    }
+}
+
+.uprightbox {
+    position: relative;
+    margin: 2vh 1vh;
+}
+
+.spantos {
+    color: var(--cw0);
+    background-color: var(--cb0);
+    padding: 0.5dvh 1dvh;
+    border-radius: 0.5vh;
+    line-height: 1;
+    margin: 0 0 0.5dvh 0;
+    font-size: 2vh;
+}
+
+.box-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.box-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 10dvw;
+    margin-left: 2vh;
+}
+
+.poster {
+    margin: 2vh 0;
+    width: 10dvw;
 }
