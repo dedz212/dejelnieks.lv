@@ -9,9 +9,6 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-
     scroll-behavior: auto;
     box-sizing: border-box;
 }
@@ -31,11 +28,13 @@
     --w: #fff;
 
     --cnw: 30vh;
+    --cnsw: 60vh;
     --cnf: 28vh;
     --img: 20vh;
 
     --f6: 6vh;
     --f8: 8vh;
+    --f12: 12vh;
     --hd: 80vh;
 }
 
@@ -114,6 +113,11 @@ section {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+
+    width: 90%;
+    margin: 1vh;
+    padding: 1vh;
+    position: relative;
 }
 
 .logo {
@@ -135,13 +139,8 @@ main {
     
 }
 
-.ate {
-    width: 90%;
-    margin: 1vh;
-    padding: 1vh;
-}
-
 #description {
+    height: 100dvh;
     display: flex;
     align-items: center;
     color: var(--c1);
@@ -149,8 +148,12 @@ main {
     line-height: 1;
     font-weight: 600;
     font-size: var(--f6);
-    animation: spin 2s ease-in-out forwards;
     
+}
+
+.desc {
+    opacity: 0;
+    animation: spin 1s 1s ease-in-out forwards; 
 }
 
 @keyframes spin {
@@ -158,12 +161,10 @@ main {
         transform: scale(0.3);
         opacity: 0;
     }
-    30% {
-        transform: scale(0.5);
-        opacity: 0;
+    50% {
+        opacity: 0.25;
     }
     70% {
-        transform: scale(0.5);
         opacity: 0.5;
     }
     100% {
@@ -183,6 +184,17 @@ main {
     }
 }
 
+@keyframes appear2 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
 @keyframes appearse {
     from {
         opacity: 0;
@@ -196,14 +208,22 @@ main {
     color: var(--c1);
     text-align: center;
     line-height: 1;
-    font-weight: 600;
-    font-size: var(--f8);
+    font-weight: 900;
+    font-size: var(--f12);
     animation: appear 1s ease-in-out forwards;
 
     opacity: 0;
     &.visible:first-child {
         animation: appear 1s 1s ease-in-out forwards;
     }
+    &.hh-visible:first-child {
+        animation: appear2 1s ease-in-out forwards;
+    }
+
+    position: absolute;
+    top: 12vh;
+    /*left: 1vh;
+    margin: 0;*/
 }
 
 .cardlist {
@@ -213,6 +233,7 @@ main {
     align-content: center;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 10vh;
 }
 
 .cardlist.active-styles {
@@ -276,7 +297,7 @@ main {
             background: linear-gradient(180deg, #0000 20.55%, var(--c1) 94.17%);
             background-color: var(--c1);
             &:hover {
-                background-color: var(--c5);
+                background-color: var(--c1);
             }
         }
     }
@@ -288,6 +309,59 @@ main {
     &.non {
         background: rgb(255 32 78 / 0.2);
     }
+}
+
+.cn_special {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 1dvh;
+    padding: 1dvh;
+
+    width: var(--cnsw);
+    height: 98%;
+    transform: translateY(0dvh);
+    word-wrap: break-word;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+
+    & .t {
+        color: var(--c1);
+        font-size: 4vh;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 1vh;
+    }
+    
+    & .tt {
+        color: var(--c1);
+        font-size: 6vh;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 1vh;
+    }
+
+    & .diva {
+        color: var(--c4);
+        padding: 1vh;
+        font-size: 3vh;
+    }
+
+    &.visible {
+        background: linear-gradient(0deg, #0000 7vh, var(--c4) 8vh);
+        background-color: var(--c1);
+    }
+}
+
+.yeaflex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .face {
@@ -447,13 +521,40 @@ main {
     }
 }
 
-@media screen and (min-width: 1390px){
+.music-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: var(--f6);
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 950px){
     #musiclist {
         overflow-x: scroll;
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
-        width: 87dvw;
+        width: 100%;
         height: 48dvh;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-direction: column;
+    }
+    #weblist {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        height: 54dvh;
         justify-content: flex-start;
         align-content: flex-start;
         flex-direction: column;
@@ -472,11 +573,13 @@ main {
 @media screen and (max-width: 979px) {
     :root {
         --f6: 4vh;
+        --f12: 10vh;
     }
 }
 @media screen and (max-width: 719px) {
     :root {
         --f6: 3vh;
+        --f12: 8vh;
     }
     #bbe {
         flex-direction: column;

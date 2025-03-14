@@ -132,43 +132,50 @@
             "href": "https://jackboxbalt.icu",
             "tt": "jackboxbalt.icu",
             "t": "p_jbu",
+            "img": "/assets/img/jbu.png",
             "rednew": ""
         },
         {
             "href": "https://ydkjarchive.com",
             "tt": "ydkjarchive.com",
             "t": "p_ydka",
+            "img": "/assets/img/ydka.png",
             "rednew": ""
         },
         {
             "href": "/ydkjs",
             "tt": "YDKJ Screensaver",
             "t": "p_ydkjs",
-            "rednew": ""
+            "rednew": "",
+            "hide": true
         },
         {
             "href": "https://csns.dejelnieks.lv",
             "tt": "Ceļu Satiksmes Negadījumu Statistika",
             "t": "p_csns",
-            "rednew": ""
+            "rednew": "",
+            "hide": true
         },
         {
             "href": "/jsinstruments/timer.html",
             "tt": "Timer",
             "t": "p_timer",
-            "rednew": ""
+            "rednew": "",
+            "hide": true
         },
         {
             "href": "https://dewikia.dejelnieks.lv",
             "tt": "Dewikia",
             "t": "p_dewikia",
-            "rednew": ""
+            "rednew": "",
+            "hide": true
         },
         {
             "href": "https://jackbox.dejelnieks.lv",
             "tt": "Jackbox Games Hub",
             "t": "p_jackbox",
-            "rednew": ""
+            "rednew": "",
+            "hide": true
         },
         {
             "href": "",

@@ -4,41 +4,43 @@
 		"h_music": "MUSIC",
         "h_web": "WEBSITE",
 		"p_jbu": "Website for choosing the controller Estonian, Latvian and Lithuanian language of fun games from Jackbox Games!",
-		"p_ydka": "Website where everything related to You Don't Know Jack (almost everything) is stored!",
+		"p_ydka": "Website where (almost) everything related to You Don't Know Jack is stored!",
         "p_ydkjs": "YDKJ German Screensaver game created on April 1999 now in website!",
         "p_csns": "Website designed for displaying and analyzing statistical data on road traffic accidents and related incidents.",
         "p_timer": "Timer in javascript with pause and resume",
         "p_dewikia": "Author's articles website by Dejelnieks",
         "p_jackbox": "Your ultimate destination for all things Jackbox. Explore games, live player stats, community content, and start games directly from our site.",
 
-		"desc": "Hello, I'm Dejelnieks, but you can call me Dale, also known online as Tere-Zander. I'm an 19-year-old student from Latvia, passionate about music of all genres, and a lover of languages—currently studying English, Latvian, Russian, and Japanese. I enjoy watching anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">my list</a>), and though I'm not a gamer, I do play Minecraft and Jackbox occasionally. Additionally, I dabble in programming, having created the <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a> website, and I also make music <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">tracks</a>.",
+		"desc": "Hello, I'm Dejelnieks, but you can call me Dale, also known online as Tere-Zander. I'm an 19-year-old student from Latvia, passionate about music of all genres, and a lover of languages—currently studying English, Latvian, Russian, and Japanese. I enjoy watching anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">my list</a>), and though I'm not a gamer, I do play Minecraft and Jackbox occasionally. Additionally, I engage in programming, having created the <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a> website, and I also make music <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">tracks</a>.",
         "album": "Album",
         "single": "Single",
-        "new": "NEW"
+        "new": "NEW",
+        "open": "Open"
     },
 	"lv": {
 		"lang": "Latviešu",
 		"h_music": "MŪZIKA",
         "h_web": "VIETNE",
 		"p_jbu": "Vietne, kur izvēlēties kontrolieris igauņu, latviešu un lietuviešu valodā jautras spēles no Jackbox Games!",
-		"p_ydka": "Vietne, kurā glabājas viss, kas saistīts ar You Don't Know Jack (gandrīz viss)!",
+		"p_ydka": "Vietne, kurā glabājas (gandrīz) viss, kas saistīts ar You Don't Know Jack!",
         "p_ydkjs": "YDKJ vācu ekrānsaudzētāja spēle, izveidota 1999. gada aprīlī, tagad ir pieejama vietnē!",
         "p_csns": "Vietne, kurā paredzēta statistikas datu par ceļu satiksmes negadījumiem ar tiem saistītiem starpgadījumiem attēlošanai un analīzei.",
         "p_timer": "Taimeris JavaScript valodā ar pauzes un atsākšanas funkciju",
         "p_dewikia": "Autora rakstu vietne, ko veidojis Dejelnieks",
         "p_jackbox": "Jūsu galamērķis visam, kas saistīts ar Jackbox. Izpētiet spēles, tiešraides spēlētāju statistiku, kopienas saturu un sāciet spēles tieši no mūsu vietnes.",
 
-		"desc": "Sveiki, es esmu Dejelnieks, sauciet mani vienkārši Dejl. Esmu 19 gadus vecs students no Latvijas, melomāns par visu žanru mūziku, un pašlaik mācos angļu, latviešu, krievu un japāņu valodu. Man patīk skatīties anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">mans saraksts</a>), un, lai gan es neesmu spēlētājs, dažreiz spēlēju Minecraft un Jackbox. Turklāt es nedaudz nodarbojos ar programmēšanu, esmu izveidojis vietni <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, un arī veidoju <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">skaņdarbus</a>.",
+		"desc": "Sveiki, es esmu Dejelnieks, sauciet mani vienkārši Deils. Esmu 19 gadus vecs students no Latvijas, melomāns par visu žanru mūziku, un pašlaik mācos angļu, latviešu, krievu un japāņu valodu. Man patīk skatīties anime (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">mans saraksts</a>), un, lai gan es neesmu spēlētājs, dažreiz spēlēju Minecraft un Jackbox. Turklāt es nedaudz nodarbojos ar programmēšanu, esmu izveidojis vietni <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, un arī veidoju <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">skaņdarbus</a>.",
         "album": "Albums",
         "single": "Dziesma",
-        "new": "JAUNS"
+        "new": "JAUNS",
+        "open": "Atvērt"
 	},
 	"ru": {
 		"lang": "Русский",
 		"h_music": "МУЗЫКА",
         "h_web": "САЙТ",
         "p_jbu": "Сайт для выбора контроллера на эстонском, латышском и литовском языках для веселых игр от Jackbox Games!",
-        "p_ydka": "Сайт, где хранится все, что связано с You Don't Know Jack (почти все)!",
+        "p_ydka": "Сайт, где хранится все (почти), что связано с You Don't Know Jack!",
         "p_ydkjs": "Игра YDKJ German Screensaver, созданная в апреле 1999 года, теперь на сайте!",
         "p_csns": "Сайт, предназначенный для отображения и анализа статистических данных о дорожно-транспортных происшествиях и связанных с ними инцидентах.",
         "p_timer": "Таймер на JavaScript с функцией паузы и возобновления",
@@ -48,7 +50,8 @@
         "desc": "Привет, я Dejelnieks, но вы можете называть меня Дейл. Я 19-летний студент из Латвии, увлеченный музыкой всех жанров, и любитель языков — в настоящее время изучаю английский, латышский, русский и японский. Мне нравится смотреть аниме (<a class=\"la\" href=\"https://shikimori.me/Dejelnieks+「デイル」/list/anime\">мой список</a>), и хотя я не геймер, иногда играю в Minecraft и Jackbox. Кроме того, я немного занимаюсь программированием, создав сайт <a class=\"la\" href=\"https://ydkjarchive.com\">YDKJ Archive</a>, а также создаю музыкальные <a class=\"la\" href=\"https://open.spotify.com/artist/0eOFofZ6rGQc9AjR7zWLdw\">треки</a>.",
         "album": "Альбом",
         "single": "Трек",
-        "new": "НОВИНКА"
+        "new": "НОВИНКА",
+        "open": "Открыть"
 	},
     "ja": {
         "desc": "マジでどうやって！？"
