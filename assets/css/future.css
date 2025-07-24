@@ -152,7 +152,6 @@ main {
 }
 
 .desc {
-    opacity: 0;
     animation: spin 1s 1s ease-in-out forwards; 
 }
 

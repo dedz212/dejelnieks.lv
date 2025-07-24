@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stage Player</title>
+  <style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #222;
+        color: white;
+    }
+    #container {
+        display: flex;
+        margin-top: 20px;
+    }
+    canvas {
+        background: #111;
+        border: 1px solid #555;
+    }
+    #info {
+        width: 300px;
+        margin-left: 20px;
+        font-size: 14px;
+        background: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    #controls {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    button {
+        padding: 5px 10px;
+        background: #444;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="range"] {
+        width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <canvas id="stage"></canvas>
+    <div id="info">
+      <div>🎞️ <b>Кадр:</b> <span id="frameDisplay">0</span></div>
+      <hr>
+      <div id="layerInfo"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button onclick="prevFrame()">⏮</button>
+    <button onclick="togglePlay()" id="playPauseBtn">▶️</button>
+    <button onclick="nextFrame()">⏭</button>
+    <input type="range" id="frameSlider" value="0" min="0" max="377" oninput="goToFrame(this.value)">
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

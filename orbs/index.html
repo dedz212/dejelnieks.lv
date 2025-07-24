@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Конвертер Орбсов</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    input[type="number"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      font-size: 16px;
+    }
+    .checkbox {
+      margin: 15px 0;
+    }
+    .tariffs {
+      margin-top: 40px;
+      text-align: left;
+    }
+    .tariff-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #f9f9f9;
+    }
+    .tariff-card h4 {
+      margin: 0 0 10px;
+    }
+    .price {
+      font-size: 16px;
+    }
+    .price span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Конвертер Орбсов ↔ Евро</h2>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="nitroCheckbox" />
+      У меня есть Nitro
+    </label>
+  </div>
+
+  <div>
+    <label>Орбсы:</label><br />
+    <input type="number" id="orbsInput" min="0" placeholder="Введите количество Орбсов" />
+  </div>
+
+  <div>
+    <label>Евро (€):</label><br />
+    <input type="number" id="euroInput" min="0" placeholder="Введите сумму в евро" step="0.01" />
+  </div>
+
+  <div class="tariffs">
+    <h3>Доступные тарифы:</h3>
+
+    <div class="tariff-card">
+      <h4>4100 Орбсов</h4>
+      <div class="price">Обычная цена: <span>5,99 €</span></div>
+      <div class="price">С Nitro: <span>4,99 €</span></div>
+    </div>
+
+    <div class="tariff-card">
+      <h4>7600 Орбсов</h4>
+      <div class="price">Обычная цена: <span>10,99 €</span></div>
+      <div class="price">С Nitro: <span>8,99 €</span></div>
+    </div>
+
+    <div class="tariff-card">
+      <h4>8200 Орбсов</h4>
+      <div class="price">Обычная цена: <span>11,99 €</span></div>
+      <div class="price">С Nitro: <span>8,49 €</span></div>
+    </div>
+  </div>
+
+  <script>
+    const orbsInput = document.getElementById("orbsInput");
+    const euroInput = document.getElementById("euroInput");
+    const nitroCheckbox = document.getElementById("nitroCheckbox");
+
+    function getRate() {
+      return nitroCheckbox.checked ? (4.99 / 4100) : (5.99 / 4100);
+    }
+
+    let lock = false;
+
+    function onOrbsChange() {
+      if (lock) return;
+      lock = true;
+      const orbs = parseFloat(orbsInput.value);
+      const rate = getRate();
+      euroInput.value = isNaN(orbs) ? "" : (orbs * rate).toFixed(2);
+      lock = false;
+    }
+
+    function onEuroChange() {
+      if (lock) return;
+      lock = true;
+      const euros = parseFloat(euroInput.value);
+      const rate = getRate();
+      orbsInput.value = isNaN(euros) ? "" : Math.floor(euros / rate);
+      lock = false;
+    }
+
+    orbsInput.addEventListener("input", onOrbsChange);
+    euroInput.addEventListener("input", onEuroChange);
+    nitroCheckbox.addEventListener("change", () => {
+      onOrbsChange();
+    });
+  </script>
+</body>
+</html>

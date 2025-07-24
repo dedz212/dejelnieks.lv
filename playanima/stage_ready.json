@@ -1,0 +1,608 @@
+{
+    "name": "Country Stage Ready",
+    "id": "stage_ready",
+    "meta": {
+        "albania": {
+            "country": "ALBANIA",
+            "artist": "ALBINA AND KELMENDI FAMILY",
+            "song": "UDJE",
+            "c1": "red",
+            "c2": "black",
+            "c3": "white"
+        },
+        "latvia": {
+            "country": "LATVIA",
+            "artist": "HOLLOW",
+            "song": "DONS",
+            "c1": "red",
+            "c2": "red",
+            "c3": "white"
+        }
+    },
+    "fps": 60,
+    "frames": 377,
+    "canva": {
+        "weight": 1920,
+        "height": 1080
+    },
+    "state": [
+        {
+            "name": "start",
+            "frame": {
+                "start": 0,
+                "end": 139
+            },
+            "func": "next"
+        },
+        {
+            "name": "middle",
+            "frame": {
+                "start": 140,
+                "end": 340
+            },
+            "func": "next"
+        },
+        {
+            "name": "end",
+            "frame": {
+                "start": 341,
+                "end": 377
+            },
+            "func": "end"
+        }
+    ],
+    "e": [
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 512,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 10,
+                        "y": 10
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 0,
+                "end": 11
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 512,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": -100,
+                        "y": 10
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -50,
+                        "y": 500
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 2
+                }
+            ],
+            "frame": {
+                "start": 12,
+                "end": 22
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": -50,
+                        "y": 10
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 23,
+                "end": 33
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country:firstletter",
+                    "size": 512,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": -50,
+                        "y": 10
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country:firstletter",
+                    "size": 512,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 1050,
+                        "y": 10
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 34,
+                "end": 45
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--artist",
+                    "size": 512,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": -200,
+                        "y": 10
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 46,
+                "end": 59
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--artist",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": -30,
+                        "y": 30
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 60,
+                "end": 76
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--artist",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": -30,
+                        "y": 30
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 200,
+                        "y": 130
+                    },
+                    "z": 2
+                }
+            ],
+            "frame": {
+                "start": 77,
+                "end": 82
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--artist",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -30,
+                        "y": 1030
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 200,
+                        "y": 130
+                    },
+                    "z": 2
+                }
+            ],
+            "frame": {
+                "start": 83,
+                "end": 92
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--artist",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -30,
+                        "y": 1030
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 200,
+                        "y": 130
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": 400,
+                        "y": 330
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 93,
+                "end": 98
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--song",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 1000,
+                        "y": 1030
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 200,
+                        "y": 430
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": 400,
+                        "y": 330
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 99,
+                "end": 114
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--song",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 1000,
+                        "y": 1030
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 200,
+                        "y": 430
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -50,
+                        "y": 330
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 115,
+                "end": 131
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--song",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 1000,
+                        "y": 1030
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 200,
+                        "y": 430
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -50,
+                        "y": 330
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 64,
+                    "weight": "regular",
+                    "color": "--c3",
+                    "coords": {
+                        "x": -50,
+                        "y": 330
+                    },
+                    "z": 2
+                }
+            ],
+            "frame": {
+                "start": 132,
+                "end": 139
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 200,
+                        "y": 430
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--song",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": 300,
+                        "y": 630
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 64,
+                    "weight": "regular",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 400,
+                        "y": 730
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 140,
+                "end": 340
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 200,
+                        "y": 430
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--song",
+                    "size": 128,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": 300,
+                        "y": 630
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 64,
+                    "weight": "regular",
+                    "color": "--c3",
+                    "coords": {
+                        "x": 400,
+                        "y": 730
+                    },
+                    "z": 1
+                },
+                {
+                    "text": "--artist",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c2",
+                    "coords": {
+                        "x": -400,
+                        "y": -10
+                    },
+                    "outline": {
+                        "color": "--c1",
+                        "px": "10",
+                        "corner": "edge"
+                    },
+                    "z": 2
+                }
+            ],
+            "frame": {
+                "start": 341,
+                "end": 351
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": 100,
+                        "y": 50
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 352,
+                "end": 362
+            }
+        },
+        {
+            "layers": [
+                {
+                    "text": "--country",
+                    "size": 256,
+                    "weight": "bold",
+                    "color": "--c1",
+                    "coords": {
+                        "x": -200,
+                        "y": 20
+                    },
+                    "z": 1
+                }
+            ],
+            "frame": {
+                "start": 363,
+                "end": 377
+            }
+        }
+    ]
+}
